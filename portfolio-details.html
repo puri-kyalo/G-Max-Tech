@@ -4,158 +4,286 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - Nexa Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  
+  <title>Project Showcase | G-Max Tech - Premium Portfolio</title>
+  <meta name="description" content="Explore the in-depth details of our premium creative projects. From branding and graphic design to complete e-commerce and digital transformations by G-Max Tech.">
+  <meta name="keywords" content="Portfolio Details, G-Max Tech Projects, Web Design Showcase, Graphic Design Portfolio, Tech Case Studies">
+  <meta name="author" content="G-Max KE Creatives">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#008870">
+  <link rel="canonical" href="https://www.gmaxtech.com/portfolio-details.html" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.gmaxtech.com/portfolio-details.html">
+  <meta property="og:title" content="Project Showcase | G-Max Tech">
+  <meta property="og:description" content="Dive into the details of our latest digital transformations and creative branding projects.">
+  <meta property="og:image" content="assets/img/portfolio/portfolio-1.webp">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.gmaxtech.com/portfolio-details.html">
+  <meta property="twitter:title" content="Project Showcase | G-Max Tech">
+  <meta property="twitter:description" content="Dive into the details of our latest digital transformations and creative branding projects.">
+  <meta property="twitter:image" content="assets/img/portfolio/portfolio-1.webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemPage",
+    "mainEntity": {
+      "@type": "CreativeWork",
+      "name": "G-Max Tech Premium Portfolio Project",
+      "author": {
+        "@type": "Organization",
+        "name": "G-Max KE Creatives"
+      },
+      "image": "https://www.gmaxtech.com/assets/img/portfolio/portfolio-1.webp",
+      "description": "In-depth case study and visual gallery of our premium digital solutions."
+    }
+  }
+  </script>
+
+  <link href="assets/img/gmax.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  
 </head>
 
-<body class="portfolio-details-page">
+<body class="portfolio-details-page premium-layout">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
+  <div class="scroll-progress-bar" id="scrollIndicator"></div>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Nexa</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <div class="header-social-links">
+  <div id="topbar" class="d-flex align-items-center premium-topbar d-none d-lg-flex">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:gmaxkedesigns@gmail.com">gmaxkedesigns@gmail.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+254 798 667 892</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span>Mon-Sat: 9AM - 7PM</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
+    </div>
+  </div>
+
+  <header id="header" class="header d-flex align-items-center sticky-top premium-header glass-effect">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" data-aos="fade-right" data-aos-duration="1000">
+        <img src="assets/img/gmax.png" alt="G-Max Tech Logo"> 
+        <h1 class="sitename">G-Max Tech</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="100">
+        <ul>
+          <li><a href="index.html" class="nav-hover-fx">Home</a></li>
+          <li><a href="about.html" class="nav-hover-fx">About</a></li>
+          
+          <li class="dropdown mega-dropdown premium-mega">
+            <a href="#" class="nav-hover-fx"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <div class="mega-menu glassmorphism-menu">
+              <div class="mega-column fade-in-up">
+                <h4><i class="bi bi-vector-pen text-accent me-2"></i> Graphic Design</h4>
+                <ul>
+                  <li><a href="index.html#Branding & Logo" class="mega-link">Branding & Logo</a></li>
+                  <li><a href="index.html#Company Profiles" class="mega-link">Company Profiles</a></li>
+                  <li><a href="index.html#Corporate Posters" class="mega-link">Corporate Posters</a></li>
+                  <li><a href="index.html#Web Developer" class="mega-link">Web Developer</a></li>
+                </ul>
+              </div>
+              <div class="mega-column fade-in-up delay-1">
+                <h4><i class="bi bi-file-earmark-text text-accent me-2"></i> eCitizen Services</h4>
+                <ul>
+                  <li><a href="index.html#Business Registration" class="mega-link">Business Registration</a></li>
+                  <li><a href="index.html#Passport & ID Services" class="mega-link">Passport & ID Services</a></li>
+                  <li><a href="index.html#eCitizen Support" class="mega-link">eCitizen Support</a></li>
+                  <li><a href="index.html#KRA & Tax Services" class="mega-link">KRA & Tax Services</a></li>
+                </ul>
+              </div>
+              <div class="mega-column fade-in-up delay-2">
+                <h4><i class="bi bi-laptop text-accent me-2"></i> Cyber Services</h4>
+                <ul>
+                  <li><a href="index.html#Internet Services" class="mega-link">Internet Services</a></li>
+                  <li><a href="index.html#Printing & Scanning" class="mega-link">Printing & Scanning</a></li>
+                  <li><a href="index.html#Typing & Formatting" class="mega-link">Typing & Formatting</a></li>
+                  <li><a href="index.html#CV & Application Support" class="mega-link">CV & Application Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="index.html#portfolio" class="nav-hover-fx active">Portfolio</a></li>
+          <li><a href="contact.html" class="nav-hover-fx">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list premium-toggle"></i>
+      </nav>
+
+      <div class="header-actions d-none d-xl-flex align-items-center" data-aos="fade-left" data-aos-duration="1000">
+        <a href="index.html#contact" class="btn-get-started premium-btn shadow-glow">Get a Quote</a>
+      </div>
 
     </div>
   </header>
 
-  <main class="main">
+  <main class="main premium-main">
 
-    <!-- Page Title -->
-    <div class="page-title light-background">
-      <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+    <div class="page-title premium-page-hero position-relative overflow-hidden pt-5 pb-5">
+      <div class="hero-overlay-gradient"></div>
+      <div class="bg-abstract-shapes animate-shapes"></div>
+      
+      <div class="container position-relative z-index-2 d-lg-flex justify-content-between align-items-center pt-5 pb-4">
+        <div data-aos="fade-right" data-aos-duration="1000">
+          <span class="badge premium-badge mb-3">Project Showcase</span>
+          <h1 class="mb-2 mb-lg-0 fw-bolder display-4 text-white">Portfolio Details</h1>
+          <p class="text-white-50 fs-5 mt-2 max-w-600">A deep dive into our strategic process, premium design choices, and the final transformative results.</p>
+        </div>
+        
+        <nav class="breadcrumbs glass-breadcrumbs px-4 py-3 rounded-pill mt-4 mt-lg-0 shadow-lg" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <ol class="mb-0 d-flex align-items-center m-0 p-0">
+            <li><a href="index.html" class="text-white text-decoration-none fw-medium hover-accent"><i class="bi bi-house-door me-2"></i>Home</a></li>
+            <li class="mx-3 text-white-50">/</li>
+            <li class="current text-accent fw-bold">Portfolio Details</li>
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
-
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
+    </div><section id="portfolio-details" class="portfolio-details section premium-bg-darker pt-5 mt-4">
 
       <div class="container" data-aos="fade-up">
 
-        <div class="row gy-4 g-lg-5">
-          <div class="col-lg-6">
-            <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid mb-4" alt="">
+        <div class="row gy-4 g-lg-5 position-relative">
+          
+          <div class="col-lg-7">
+            <div class="portfolio-gallery-wrapper d-flex flex-column gap-4 pe-lg-4">
+              
+              <div class="image-box premium-image-reveal overflow-hidden rounded-4 shadow-lg border border-secondary border-opacity-25" data-aos="fade-up" data-aos-delay="100">
+                <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox" data-gallery="portfolio-gallery">
+                  <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid w-100 hover-scale transition-all" alt="Project Mockup 1">
+                </a>
+              </div>
+              
+              <div class="image-box premium-image-reveal overflow-hidden rounded-4 shadow-lg border border-secondary border-opacity-25" data-aos="fade-up" data-aos-delay="200">
+                <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox" data-gallery="portfolio-gallery">
+                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid w-100 hover-scale transition-all" alt="Project Mockup 2">
+                </a>
+              </div>
+              
+              <div class="image-box premium-image-reveal overflow-hidden rounded-4 shadow-lg border border-secondary border-opacity-25" data-aos="fade-up" data-aos-delay="300">
+                <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox" data-gallery="portfolio-gallery">
+                  <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid w-100 hover-scale transition-all" alt="Project Mockup 3">
+                </a>
+              </div>
+              
+              <div class="row g-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-md-6">
+                  <div class="image-box premium-image-reveal overflow-hidden rounded-4 shadow-lg border border-secondary border-opacity-25 h-100">
+                    <a href="assets/img/portfolio/portfolio-4.webp" class="glightbox" data-gallery="portfolio-gallery">
+                      <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid w-100 h-100 object-fit-cover hover-scale transition-all" alt="Project Details">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="image-box premium-image-reveal overflow-hidden rounded-4 shadow-lg border border-secondary border-opacity-25 h-100">
+                    <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox" data-gallery="portfolio-gallery">
+                      <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid w-100 h-100 object-fit-cover hover-scale transition-all" alt="Project Details">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="image-box premium-image-reveal overflow-hidden rounded-4 shadow-lg border border-secondary border-opacity-25" data-aos="fade-up" data-aos-delay="500">
+                <a href="assets/img/portfolio/portfolio-11.webp" class="glightbox" data-gallery="portfolio-gallery">
+                  <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid w-100 hover-scale transition-all" alt="Project Output">
+                </a>
+              </div>
+              
+              <div class="image-box premium-image-reveal overflow-hidden rounded-4 shadow-lg border border-secondary border-opacity-25" data-aos="fade-up" data-aos-delay="600">
+                <a href="assets/img/portfolio/portfolio-8.webp" class="glightbox" data-gallery="portfolio-gallery">
+                  <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid w-100 hover-scale transition-all" alt="Final Assets">
+                </a>
+              </div>
+
+            </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-5">
 
-            <div class="position-sticky" style="top: 40px">
-              <div class="portfolio-description">
-                <h2>This is an example of portfolio details</h2>
-                <p>
+            <div class="position-sticky portfolio-sidebar-sticky" style="top: 100px;">
+              
+              <div class="portfolio-description premium-glass-panel rounded-5 shadow-2xl bg-dark-glass border border-secondary border-opacity-25 p-4 p-md-5 mb-4">
+                <h2 class="fw-bold text-white mb-4 display-6">Comprehensive Design Showcase</h2>
+                <div class="title-divider mb-4 bg-accent" style="width: 60px; height: 4px; border-radius: 2px;"></div>
+                
+                <p class="text-white-50 lh-lg fs-6">
                   Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
                 </p>
-                <p>
+                <p class="text-white-50 lh-lg fs-6 mb-4">
                   Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque natus ut cum nam et. Praesentium error dolores rerum minus sequi quia veritatis eum. Eos et doloribus doloremque nesciunt molestiae laboriosam.
                 </p>
 
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
+                <div class="testimonial-item premium-review-card bg-white bg-opacity-10 p-4 rounded-4 border border-secondary border-opacity-10 position-relative mt-5 mb-4 shadow-sm hover-lift-sm transition-all">
+                  <i class="bi bi-quote quote-icon-premium position-absolute top-0 start-0 text-accent opacity-25 ms-3 mt-2" style="font-size: 3rem; transform: translateY(-30%);"></i>
+                  <p class="fst-italic text-white-50 mb-4 position-relative z-index-2 pt-2 lh-lg">
+                    "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa. The final output exceeded all our creative expectations."
                   </p>
-                  <div>
-                    <img src="assets/img/person/person-f-5.webp" class="testimonial-img" alt="">
-                    <h3>Sara Wilsson</h3>
-                    <h4>Designer</h4>
+                  <div class="d-flex align-items-center">
+                    <img src="assets/img/person/person-f-5.webp" class="testimonial-img rounded-circle border border-2 border-accent me-3" alt="Sara Wilsson" style="width: 55px; height: 55px; object-fit: cover;">
+                    <div>
+                      <h3 class="fw-bold text-white mb-1 fs-6">Sara Wilsson</h3>
+                      <h4 class="text-accent small mb-0 fw-semibold text-uppercase tracking-wider">Lead Designer</h4>
+                    </div>
                   </div>
                 </div>
 
-                <p>
-                  Impedit ipsum quae et aliquid doloribus et voluptatem quasi. Perspiciatis occaecati earum et magnam animi. Quibusdam non qui ea vitae suscipit vitae sunt. Repudiandae incidunt cumque minus deserunt assumenda tempore. Delectus voluptas necessitatibus est.
+                <p class="text-white-50 lh-lg fs-6 mt-4">
+                  Impedit ipsum quae et aliquid doloribus et voluptatem quasi. Perspiciatis occaecati earum et magnam animi. Quibusdam non qui ea vitae suscipit vitae sunt. Repudiandae incidunt cumque minus deserunt assumenda tempore.
                 </p>
 
-                <p>
+                <p class="text-white-50 lh-lg fs-6 mb-0">
                   Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et autem libero. Explicabo et quod necessitatibus similique quis dolor eum. Numquam eaque praesentium rem et qui nesciunt.
                 </p>
 
               </div>
 
-              <div class="portfolio-info mt-5">
-                <h3>Project information</h3>
-                <ul>
-                  <li><strong>Category</strong> Web design</li>
-                  <li><strong>Client</strong> ASU Company</li>
-                  <li><strong>Project date</strong> 01 March, 2020</li>
-                  <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
-                  <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
+              <div class="portfolio-info premium-glass-panel rounded-5 shadow-2xl bg-gradient-premium border border-secondary border-opacity-25 p-4 p-md-5">
+                <h3 class="fw-bold text-white mb-4 h4 d-flex align-items-center"><i class="bi bi-info-circle text-accent me-2"></i> Project Specs</h3>
+                
+                <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+                  <li class="d-flex justify-content-between align-items-center border-bottom border-white border-opacity-10 pb-3">
+                    <span class="text-white-50 fw-medium d-flex align-items-center"><i class="bi bi-tag me-2 text-accent"></i> Category</span> 
+                    <strong class="text-white">Premium Web Design</strong>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center border-bottom border-white border-opacity-10 pb-3">
+                    <span class="text-white-50 fw-medium d-flex align-items-center"><i class="bi bi-building me-2 text-accent"></i> Client</span> 
+                    <strong class="text-white">ASU Global Company</strong>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center border-bottom border-white border-opacity-10 pb-3">
+                    <span class="text-white-50 fw-medium d-flex align-items-center"><i class="bi bi-calendar-check me-2 text-accent"></i> Date</span> 
+                    <strong class="text-white">01 March, 2024</strong>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center pb-2">
+                    <span class="text-white-50 fw-medium d-flex align-items-center"><i class="bi bi-link-45deg me-2 text-accent"></i> Project URL</span> 
+                    <a href="#" class="text-accent text-decoration-none fw-bold hover-white transition-all">www.example.com</a>
+                  </li>
                 </ul>
+                
+                <a href="#" class="btn premium-primary-btn w-100 py-3 rounded-pill fw-bold shadow-glow d-flex justify-content-center align-items-center">
+                  Live Preview <i class="bi bi-box-arrow-up-right ms-2"></i>
+                </a>
               </div>
+
             </div>
 
           </div>
@@ -163,86 +291,160 @@
 
       </div>
 
-    </section><!-- /Portfolio Details Section -->
+    </section></main>
 
-  </main>
+  <footer id="footer" class="footer position-relative mt-0">
+    <div class="footer-top border-top border-secondary border-opacity-10 py-5">
+      <div class="container mt-4">
+        <div class="row gy-5">
+          
+          <div class="col-lg-4 col-md-12 footer-about pe-lg-5">
+            <a href="index.html" class="logo d-flex align-items-center mb-4 text-decoration-none">
+              <img src="assets/img/gmax.png" alt="G-Max Tech" height="40" class="me-2">
+              <span class="sitename fs-3 fw-bold text-white">G-Max Tech</span>
+            </a>
+            <p class="text-white-50 lh-lg pe-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, and elite professional IT training tailored specifically for the modern digital era.</p>
+            <div class="social-links d-flex gap-2 mt-4">
+              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
 
-  <footer id="footer" class="footer light-background">
+          <div class="col-lg-2 col-6 footer-links">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Our Services</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Web Design</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Web Development</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Product Management</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Marketing</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Graphic Design</a></li>
+            </ul>
+          </div>
 
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div class="address">
-            <h4>Address</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p></p>
+          <div class="col-lg-3 col-6 footer-links">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">More Services</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Brand Identity</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">UI/UX Design</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">SEO Optimization</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Printing Services</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start mt-5 mt-lg-0">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact & Hours</h4>
+            <div class="text-white-50 mt-3 lh-lg">
+              <p class="mb-1"><i class="bi bi-telephone-fill text-accent me-2"></i> +254 798 667 892</p>
+              <p class="mb-3"><i class="bi bi-envelope-fill text-accent me-2"></i> gmaxkedesigns@gmail.com</p>
+              
+              <p class="mb-1 fw-bold text-white"><i class="bi bi-clock-fill text-accent me-2"></i> Opening Hours</p>
+              <p class="mb-1">Mon–Fri: 8AM - 6PM</p>
+              <p class="mb-1">Saturday: 9AM - 4PM</p>
+              <p class="mb-0 text-danger fw-bold">Sunday: Closed</p>
+            </div>
           </div>
 
         </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Contact</h4>
-            <p>
-              <strong>Phone:</strong> <span>+1 5589 55488 55</span><br>
-              <strong>Email:</strong> <span>info@example.com</span><br>
-            </p>
-          </div>
+      </div>
+    </div>
+    <div class="footer-bottom bg-black bg-opacity-50 py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-0 text-white-50 small">© <span>Copyright</span> <strong class="text-white px-1 sitename">G-Max Tech</strong> All Rights Reserved.</p>
+        <div class="credits text-white-50 small mt-2 mt-md-0">
+          Designed with Premium Excellence by <a href="#" class="text-accent text-decoration-none fw-bold hover-white transition-all">G-Max KE Creatives</a>
         </div>
+      </div>
+    </div>
+  </footer>
 
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Opening Hours</h4>
-            <p>
-              <strong>Mon-Sat:</strong> <span>11AM - 23PM</span><br>
-              <strong>Sunday</strong>: <span>Closed</span>
-            </p>
-          </div>
-        </div>
+  <a href="https://wa.me/254798667892" class="whatsapp-float hover-lift shadow-glow" target="_blank" data-aos="zoom-in" data-aos-delay="1000">
+     <i class="bi bi-whatsapp"></i>
+  </a>
 
-        <div class="col-lg-3 col-md-6">
-          <h4>Follow Us</h4>
-          <div class="social-links d-flex">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
+  <div class="chat-toggle hover-lift shadow-glow" onclick="toggleChat()" data-aos="zoom-in" data-aos-delay="1200">
+    <i class="bi bi-chat-dots-fill"></i>
+    <span class="chat-badge premium-badge-pulse">1</span>
+  </div>
 
+  <div class="chat-box premium-chat-box shadow-2xl rounded-4 overflow-hidden" id="chatBox">
+    <div class="chat-header bg-gradient-premium d-flex justify-content-between align-items-center p-3 border-bottom border-white border-opacity-25">
+      <h6 class="mb-0 text-white fw-bold d-flex align-items-center"><i class="bi bi-headset me-2 text-accent"></i> Live Chat</h6>
+      <span onclick="toggleChat()" class="close-btn text-white fs-4 cursor-pointer hover-accent transition-all">×</span>
+    </div>
+
+    <div class="chat-body bg-dark-glass p-4 text-white-50" style="height: 250px; overflow-y: auto;">
+      <div class="chat-message received bg-white bg-opacity-10 p-3 rounded-3 mb-3" style="max-width: 85%; border-bottom-left-radius: 0;">
+        <p class="mb-0 small text-white">Hello 👋 How can we help you today?</p>
       </div>
     </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Nexa</strong> <span>All Rights Reserved</span></p>
-      
+    <div class="chat-footer p-3 bg-dark d-flex gap-2 border-top border-secondary border-opacity-25">
+      <input type="text" class="form-control bg-white bg-opacity-10 border-0 text-white rounded-pill px-3 shadow-none focus-ring" placeholder="Type a message...">
+      <button class="btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">
+        <i class="bi bi-send-fill ms-1"></i>
+      </button>
     </div>
+  </div>
+  
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center hover-lift shadow-glow"><i class="bi bi-arrow-up-short"></i></a>
 
-  </footer>
+  <div id="preloader">
+    <div class="premium-loader"></div>
+  </div>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+  <script>
+    // Chat Box Toggle
+    function toggleChat() {
+      var chat = document.getElementById("chatBox");
+      if (chat.style.display === "flex") {
+        chat.style.opacity = "0";
+        setTimeout(() => { chat.style.display = "none"; }, 300);
+      } else {
+        chat.style.display = "flex";
+        setTimeout(() => { chat.style.opacity = "1"; }, 10);
+      }
+    }
 
+    document.addEventListener("DOMContentLoaded", function () {
+      
+      // Scroll Progress Bar
+      window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        var indicator = document.getElementById("scrollIndicator");
+        if(indicator) indicator.style.width = scrolled + "%";
+      };
+
+      // Init AOS
+      AOS.init({
+        once: true,
+        offset: 50,
+        easing: 'ease-out-cubic'
+      });
+
+      // Init Glightbox for Gallery
+      GLightbox({ 
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+      });
+    });
+  </script>
+</body>
 </html>
