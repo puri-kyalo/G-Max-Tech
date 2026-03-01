@@ -1,669 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
   <title>About Us | G-Max Tech - Premium Digital Solutions</title>
-  <meta name="description" content="Learn about G-Max Tech's journey from a startup to a trusted premium creative partner. We specialize in graphic design, eCitizen services, and digital solutions.">
-  <meta name="keywords" content="About G-Max Tech, Creative Agency Kenya, Graphic Design Experts, Web Development Team, eCitizen Services, IT Solutions Nairobi">
-  <meta name="author" content="G-Max KE Creatives">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="theme-color" content="#008870">
-  <link rel="canonical" href="https://www.gmaxtech.com/about.html" />
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.gmaxtech.com/about.html">
-  <meta property="og:title" content="About Us | G-Max Tech - Premium Digital Solutions">
-  <meta property="og:description" content="Discover our story. G-Max Tech specializes in high-end graphic design, seamless eCitizen services, and professional IT training.">
-  <meta property="og:image" content="assets/img/gmax.png">
-
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.gmaxtech.com/about.html">
-  <meta property="twitter:title" content="About Us | G-Max Tech - Premium Digital Solutions">
-  <meta property="twitter:description" content="Discover our story. G-Max Tech specializes in high-end graphic design, seamless eCitizen services, and professional IT training.">
-  <meta property="twitter:image" content="assets/img/gmax.png">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "G-Max Tech",
-      "foundingDate": "2021",
-      "description": "Gmax KE Creatives has completed 185+ projects, specializing in graphic design, branding, eCitizen services, and digital solutions.",
-      "image": "https://www.gmaxtech.com/assets/img/gmax.png",
-      "url": "https://www.gmaxtech.com/",
-      "telephone": "+254798667892",
-      "email": "gmaxkedesigns@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Thika Road",
-        "addressLocality": "Nairobi",
-        "addressCountry": "KE"
-      }
-    }
-  }
-  </script>
-
   <link href="assets/img/gmax.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="starter-page-page premium-layout">
 
-  <div class="scroll-progress-bar" id="scrollIndicator"></div>
+  <div id="preloader"><div class="loader-content"><div class="neon-ring"></div><div class="loader-text">INITIALIZING...</div></div></div>
+  <canvas id="neuron-canvas"></canvas>
 
-  <div id="topbar" class="d-flex align-items-center premium-topbar d-none d-lg-flex">
-    <div class="container d-flex justify-content-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:gmaxkedesigns@gmail.com">gmaxkedesigns@gmail.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+254 798 667 892</span></i>
-        <i class="bi bi-clock d-flex align-items-center ms-4"><span>Mon-Sat: 9AM - 7PM</span></i>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" target="_self">
+              <img src="assets/img/gmax.png" alt="Logo" style="height: 35px;">
+              <span class="ms-2 fw-bold text-white">G-Max Tech</span>
+          </a>
+          <button class="sidebar-close" id="sidebarClose"><span class="material-icons">close</span></button>
       </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <ul class="sidebar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><span class="material-icons">home</span> Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html" target="_self"><span class="material-icons">info</span> About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><span class="material-icons">design_services</span> Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Portfolio.html" target="_self"><span class="material-icons">work</span> Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><span class="material-icons">contact_mail</span> Contact</a></li>
+      </ul>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg fixed-top premium-header glass-effect">
+      <div class="container">
+          <button class="sidebar-toggle d-xl-none me-3" type="button" id="sidebarToggle"><span class="material-icons">menu</span></button>
+          <a class="navbar-brand d-flex align-items-center me-auto" href="index.html" target="_self">
+              <img src="assets/img/gmax.png" alt="Logo" style="height: 40px;">
+              <span class="ms-2 fw-bold text-white fs-4 d-none d-sm-block">G-Max Tech</span>
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto align-items-center">
+                  <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><i class="material-icons me-1">home</i> Home</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="about.html" target="_self"><i class="material-icons me-1">info</i> About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><i class="material-icons me-1">design_services</i> Services</a></li>
+                  <li class="nav-item"><a class="nav-link" href="Portfolio.html" target="_self"><i class="material-icons me-1">work</i> Portfolio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><i class="material-icons me-1">contact_mail</i> Contact</a></li>
+              </ul>
+              <a href="contact.html" target="_self" class="btn premium-primary-btn ms-4 rounded-pill shadow-glow hover-lift">Get Quote</a>
+          </div>
+      </div>
+  </nav>
+
+  <main class="main premium-main pt-5 mt-4 z-index-2 position-relative">
+    <div class="page-title premium-page-hero position-relative overflow-hidden pt-5 pb-5 border-bottom border-secondary border-opacity-10 text-center">
+      <div class="container position-relative z-index-2">
+        <span class="badge premium-badge mb-3" data-aos="fade-up">Our Identity</span>
+        <h1 class="display-4 fw-bold text-white mb-3" data-aos="fade-up" data-aos-delay="100">About Us</h1>
+        <p class="lead text-white-50 max-w-600 mx-auto" data-aos="fade-up" data-aos-delay="200">Discover the passionate creatives and engineers behind our award-winning digital solutions.</p>
       </div>
     </div>
-  </div>
 
-  <header id="header" class="header d-flex align-items-center sticky-top premium-header glass-effect">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" data-aos="fade-right" data-aos-duration="1000">
-        <img src="assets/img/gmax.png" alt="G-Max Tech Logo"> 
-        <h1 class="sitename">G-Max Tech</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="100">
-        <ul>
-          <li><a href="index.html" class="nav-hover-fx">Home</a></li>
-          <li><a href="about.html" class="nav-hover-fx active">About</a></li>
-          
-          <li class="dropdown mega-dropdown premium-mega">
-            <a href="#" class="nav-hover-fx"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <div class="mega-menu glassmorphism-menu">
-              <div class="mega-column fade-in-up">
-                <h4><i class="bi bi-vector-pen text-accent me-2"></i> Graphic Design</h4>
-                <ul>
-                  <li><a href="index.html#Branding & Logo" class="mega-link">Branding & Logo</a></li>
-                  <li><a href="index.html#Company Profiles" class="mega-link">Company Profiles</a></li>
-                  <li><a href="index.html#Corporate Posters" class="mega-link">Corporate Posters</a></li>
-                  <li><a href="index.html#Web Developer" class="mega-link">Web Developer</a></li>
-                </ul>
-              </div>
-              <div class="mega-column fade-in-up delay-1">
-                <h4><i class="bi bi-file-earmark-text text-accent me-2"></i> eCitizen Services</h4>
-                <ul>
-                  <li><a href="index.html#Business Registration" class="mega-link">Business Registration</a></li>
-                  <li><a href="index.html#Passport & ID Services" class="mega-link">Passport & ID Services</a></li>
-                  <li><a href="index.html#eCitizen Support" class="mega-link">eCitizen Support</a></li>
-                  <li><a href="index.html#KRA & Tax Services" class="mega-link">KRA & Tax Services</a></li>
-                </ul>
-              </div>
-              <div class="mega-column fade-in-up delay-2">
-                <h4><i class="bi bi-laptop text-accent me-2"></i> Cyber Services</h4>
-                <ul>
-                  <li><a href="index.html#Internet Services" class="mega-link">Internet Services</a></li>
-                  <li><a href="index.html#Printing & Scanning" class="mega-link">Printing & Scanning</a></li>
-                  <li><a href="index.html#Typing & Formatting" class="mega-link">Typing & Formatting</a></li>
-                  <li><a href="index.html#CV & Application Support" class="mega-link">CV & Application Support</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li><a href="index.html#portfolio" class="nav-hover-fx">Portfolio</a></li>
-          <li><a href="index.html#contact" class="nav-hover-fx">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list premium-toggle"></i>
-      </nav>
-
-      <div class="header-actions d-none d-xl-flex align-items-center" data-aos="fade-left" data-aos-duration="1000">
-        <a href="index.html#contact" class="btn-get-started premium-btn shadow-glow">Get a Quote</a>
-      </div>
-
-    </div>
-  </header>
-
-  <main class="main premium-main">
-
-    <div class="page-title premium-page-hero position-relative overflow-hidden pt-5 pb-5">
-      <div class="hero-overlay-gradient"></div>
-      <div class="bg-abstract-shapes animate-shapes"></div>
-      
-      <div class="container position-relative z-index-2 d-lg-flex justify-content-between align-items-center pt-5 pb-4">
-        <div data-aos="fade-right" data-aos-duration="1000">
-          <span class="badge premium-badge mb-3">Our Identity</span>
-          <h1 class="mb-2 mb-lg-0 fw-bolder display-4 text-white">About Us</h1>
-          <p class="text-white-50 fs-5 mt-2 max-w-600">Discover the passionate creatives and engineers behind our award-winning digital solutions.</p>
-        </div>
-        
-        <nav class="breadcrumbs glass-breadcrumbs px-4 py-3 rounded-pill mt-4 mt-lg-0 shadow-lg" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-          <ol class="mb-0 d-flex align-items-center m-0 p-0">
-            <li><a href="index.html" class="text-white text-decoration-none fw-medium hover-accent"><i class="bi bi-house-door me-2"></i>Home</a></li>
-            <li class="mx-3 text-white-50">/</li>
-            <li class="current text-accent fw-bold">About Us</li>
-          </ol>
-        </nav>
-      </div>
-    </div><section id="about" class="about section premium-section overflow-hidden mt-5">
+    <section id="about" class="about section premium-section overflow-hidden mt-5">
       <div class="container section-title" data-aos="fade-up" data-aos-duration="1000">
         <span class="description-title text-gradient-bg">About</span>
-        <h2 class="premium-heading">About Us</h2>
-        <p class="premium-subheading">Our journey from a startup to a trusted premium creative partner</p>
-      </div><div class="container">
+        <h2 class="premium-heading">Our Story</h2>
+      </div>
+      <div class="container">
         <div class="row gx-0 gx-lg-5 gy-5 align-items-center">
-          
-          <div class="col-lg-6" data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="200">
+          <div class="col-lg-6" data-aos="zoom-out" data-aos-duration="1200">
             <div class="image-wrapper premium-image-reveal">
               <div class="image-box hover-scale">
-                <img src="assets/img/design1.jpg" class="img-fluid rounded-4 shadow-xl" alt="About G-Max Tech" loading="lazy">
-                <div class="image-overlay-glass"></div>
+                <img src="assets/img/design1.jpg" class="img-fluid rounded-4 shadow-xl" alt="About G-Max Tech">
               </div>
-              <div class="experience-box floating-box glassmorphism" data-aos="flip-up" data-aos-delay="600">
+              <div class="experience-box floating-box glassmorphism" data-aos="flip-up" data-aos-delay="400">
                 <div class="years text-gradient">5+</div>
                 <div class="text text-light">Years of<br>Premium Experience</div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200">
             <div class="content ps-lg-4">
-              <div class="section-header">
-                <span class="subtitle-badge">Discover</span>
-                <h2 class="display-6 fw-bold mb-4">Our Story</h2>
-              </div>
-
               <p class="highlight-text lead fw-medium text-white-50">Gmax KE Creatives, founded in 2021, has masterfully completed 185+ projects, specializing in high-end graphic design, premium branding, seamless eCitizen services, and bespoke digital solutions.</p>
-     
               <div class="features-list premium-timeline mt-5">
-                
-                <div class="feature-item timeline-item" data-aos="fade-up" data-aos-delay="500">
-                  <div class="icon-box pulse-hover">
-                    <i class="bi bi-calendar-check text-white"></i>
-                  </div>
+                <div class="feature-item timeline-item" data-aos="fade-up" data-aos-delay="200">
+                  <div class="icon-box pulse-hover"><i class="material-icons text-white">rocket_launch</i></div>
                   <div class="text">
                     <h4 class="fw-bold">2021</h4>
                     <p class="fw-semibold text-white mb-1">Gmax KE Creatives Founded</p>
                     <p class="text-muted small">Started with a grand vision to provide unparalleled creative solutions.</p>
                   </div>
                 </div>
-
-                <div class="feature-item timeline-item" data-aos="fade-up" data-aos-delay="600">
-                  <div class="icon-box pulse-hover">
-                    <i class="bi bi-calendar-check text-white"></i>
-                  </div>
+                <div class="feature-item timeline-item" data-aos="fade-up" data-aos-delay="400">
+                  <div class="icon-box pulse-hover"><i class="material-icons text-white">emoji_events</i></div>
                   <div class="text">
                     <h4 class="fw-bold">2022</h4>
                     <p class="fw-semibold text-white mb-1">First 50 Milestone Projects</p>
                     <p class="text-muted small">Firmly established our impeccable reputation in graphic design.</p>
                   </div>
                 </div>
-
-                <div class="feature-item timeline-item" data-aos="fade-up" data-aos-delay="700">
-                  <div class="icon-box pulse-hover">
-                    <i class="bi bi-calendar-check text-white"></i>
-                  </div>
+                <div class="feature-item timeline-item" data-aos="fade-up" data-aos-delay="600">
+                  <div class="icon-box pulse-hover"><i class="material-icons text-white">public</i></div>
                   <div class="text">
                     <h4 class="fw-bold">2023 - 2026</h4>
                     <p class="fw-semibold text-white mb-1">Massive Service Expansion</p>
                     <p class="text-muted small">Integrated comprehensive eCitizen and advanced cyber services.</p>
                   </div>
                 </div>
-
-              </div>
-
-              <div class="cta-buttons mt-5" data-aos="fade-up" data-aos-delay="800">
-                <a href="#services" class="btn premium-primary-btn me-3">Learn More <i class="bi bi-arrow-right ms-2"></i></a>
-                <a href="#contact" class="btn premium-outline-btn">Get Started</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section><section id="services" class="services section premium-bg-alt pt-0">
+    </section>
+
+    <section class="services section premium-bg-alt pt-5 pb-5">
       <div class="container section-title mt-5" data-aos="fade-up">
         <span class="description-title text-gradient-bg">Core Focus</span>
         <h2 class="premium-heading">Vision & Mission</h2>
-        <p class="premium-subheading">The driving force behind our premium quality</p>
       </div>
-
-      <div class="container">
-        <div class="services-container mb-5">
-          <div class="row g-4 justify-content-center">
-            
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-              <div class="service-item premium-card hover-lift">
-                <div class="service-icon glass-icon">
-                  <i class="bi bi-eye-fill"></i>
-                </div>
-                <div class="service-content">
-                  <h3 class="service-title fw-bold">Our Vision</h3>
-                  <p class="service-text text-white-50">To be the absolute leading creative agency in Kenya, fundamentally transforming businesses through innovative, high-end design solutions and comprehensive digital services that aggressively drive success.</p>
-                </div>
-                <div class="card-glow-effect"></div>
-              </div>
+      <div class="container mb-5 pb-5">
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="premium-card hover-lift p-5 bg-dark-glass rounded-4 h-100 text-center border border-secondary border-opacity-25">
+              <i class="material-icons text-accent display-3 mb-3">visibility</i>
+              <h3 class="fw-bold text-white mb-3">Our Vision</h3>
+              <p class="text-white-50">To be the absolute leading creative agency in Kenya, fundamentally transforming businesses through innovative, high-end design solutions and comprehensive digital services that aggressively drive success.</p>
             </div>
-
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <div class="service-item premium-card hover-lift">
-                <div class="service-icon glass-icon">
-                  <i class="bi bi-bullseye"></i>
-                </div>
-                <div class="service-content">
-                  <h3 class="service-title fw-bold">Our Mission</h3>
-                  <p class="service-text text-white-50">To deliver exceptional, bespoke creative solutions that dramatically exceed client expectations while simultaneously providing accessible digital services that empower individuals and global businesses.</p>
-                </div>
-                <div class="card-glow-effect"></div>
-              </div>
-            </div>
-
           </div>
-        </div>
-
-        <div class="cta-wrapper mt-5 text-center" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1200">
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <div class="cta-box premium-glass-banner shadow-2xl rounded-5 overflow-hidden position-relative">
-                <div class="banner-bg-elements"></div>
-                <div class="row align-items-center position-relative z-index-2 p-4 p-md-5">
-                  <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="cta-image image-reveal-left">
-                      <img src="assets/img/services/services-8.webp" alt="Founder" class="img-fluid rounded-circle border-premium shadow-lg">
-                    </div>
-                  </div>
-                  <div class="col-lg-8">
-                    <div class="cta-content text-lg-start">
-                      <i class="bi bi-quote fs-1 text-accent mb-3 d-block opacity-50"></i>
-                      <p class="lead fw-medium fst-italic text-white">"Every single project is an extraordinary opportunity to create something visually breathtaking. We don't just design – we masterfully craft premium experiences that tell compelling stories and build lifelong connections."</p>
-                      <hr class="border-secondary w-25 my-4 mx-auto mx-lg-0">
-                      <h5 class="fw-bold mb-0 text-gradient">Founder</h5>
-                      <p class="text-white-50 small mb-0">Gmax KE Creatives</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="premium-card hover-lift p-5 bg-dark-glass rounded-4 h-100 text-center border border-secondary border-opacity-25">
+              <i class="material-icons text-accent display-3 mb-3">track_changes</i>
+              <h3 class="fw-bold text-white mb-3">Our Mission</h3>
+              <p class="text-white-50">To deliver exceptional, bespoke creative solutions that dramatically exceed client expectations while simultaneously providing accessible digital services that empower individuals and global businesses.</p>
             </div>
           </div>
         </div>
       </div>
-    </section><section id="steps" class="steps section premium-section overflow-hidden">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title text-gradient-bg">Process</span>
-        <h2 class="premium-heading">Steps</h2>
-        <p class="premium-subheading">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="steps-wrapper position-relative py-5">
-          <div class="process-line d-none d-lg-block"></div>
-          
-          <div class="row gy-5">
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-              <div class="process-item premium-step-card text-center position-relative">
-                <div class="step-icon-wrapper rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center">
-                  <i class="bi bi-pencil-square fs-2 text-white"></i>
-                </div>
-                <h3 class="fw-bold text-white h5 mb-3"><span class="text-accent opacity-50 me-2">01</span>Project Planning</h3>
-                <p class="text-white-50 small">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-              </div>
-            </div>
+    </section>
+  </main>
 
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
-              <div class="process-item premium-step-card text-center position-relative mt-lg-5">
-                <div class="step-icon-wrapper rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center">
-                  <i class="bi bi-gear fs-2 text-white"></i>
-                </div>
-                <h3 class="fw-bold text-white h5 mb-3"><span class="text-accent opacity-50 me-2">02</span>Development Phase</h3>
-                <p class="text-white-50 small">Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.</p>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
-              <div class="process-item premium-step-card text-center position-relative">
-                <div class="step-icon-wrapper rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center">
-                  <i class="bi bi-search fs-2 text-white"></i>
-                </div>
-                <h3 class="fw-bold text-white h5 mb-3"><span class="text-accent opacity-50 me-2">03</span>Testing & QA</h3>
-                <p class="text-white-50 small">Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero.</p>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
-              <div class="process-item premium-step-card text-center position-relative mt-lg-5">
-                <div class="step-icon-wrapper rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center">
-                  <i class="bi bi-rocket-takeoff fs-2 text-white"></i>
-                </div>
-                <h3 class="fw-bold text-white h5 mb-3"><span class="text-accent opacity-50 me-2">04</span>Launch & Support</h3>
-                <p class="text-white-50 small">Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><section id="contact" class="contact section premium-bg-darker position-relative overflow-hidden">
-      <div class="blur-blob top-right"></div>
-      <div class="blur-blob bottom-left"></div>
-
-      <div class="container section-title z-index-2 position-relative" data-aos="fade-up">
-        <span class="description-title text-gradient-bg">Contact</span>
-        <h2 class="premium-heading">Contact</h2>
-        <p class="premium-subheading">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div>
-
-      <div class="container z-index-2 position-relative" data-aos="fade-up" data-aos-delay="200">
-        <div class="contact-wrapper premium-contact-grid rounded-5 overflow-hidden shadow-2xl bg-dark-glass border border-secondary border-opacity-25 p-0">
-          <div class="row g-0">
-            
-            <div class="col-lg-5 contact-info-panel bg-gradient-premium p-5 text-white d-flex flex-column">
-              <div class="contact-info-header mb-5">
-                <h3 class="fw-bold display-6 mb-3">Let's Connect</h3>
-                <p class="opacity-75 lh-lg">Ready to create something extraordinary? Our team of premium specialists is on standby to assist you.</p>
-              </div>
-
-              <div class="contact-info-cards d-flex flex-column gap-4 flex-grow-1">
-                <div class="info-card d-flex align-items-center hover-lift-sm transition-all p-3 rounded-4 bg-white bg-opacity-10">
-                  <div class="icon-container rounded-circle bg-white bg-opacity-25 d-flex align-items-center justify-content-center me-4" style="width: 50px; height: 50px;">
-                    <i class="bi bi-envelope-open fs-4"></i>
-                  </div>
-                  <div class="card-content">
-                    <h4 class="h6 fw-bold mb-1">Email Us</h4>
-                    <p class="mb-0 opacity-75 small">gmaxkedesigns@gmail.com</p>
-                  </div>
-                </div>
-
-                <div class="info-card d-flex align-items-center hover-lift-sm transition-all p-3 rounded-4 bg-white bg-opacity-10">
-                  <div class="icon-container rounded-circle bg-white bg-opacity-25 d-flex align-items-center justify-content-center me-4" style="width: 50px; height: 50px;">
-                    <i class="bi bi-telephone-fill fs-4"></i>
-                  </div>
-                  <div class="card-content">
-                    <h4 class="h6 fw-bold mb-1">Call Us</h4>
-                    <p class="mb-0 opacity-75 small">+254 798 667 892</p>
-                  </div>
-                </div>
-
-                <div class="info-card d-flex align-items-center hover-lift-sm transition-all p-3 rounded-4 bg-white bg-opacity-10">
-                  <div class="icon-container rounded-circle bg-white bg-opacity-25 d-flex align-items-center justify-content-center me-4" style="width: 50px; height: 50px;">
-                    <i class="bi bi-clock-history fs-4"></i>
-                  </div>
-                  <div class="card-content">
-                    <h4 class="h6 fw-bold mb-1">Business Hours</h4>
-                    <p class="mb-1 opacity-75 small">Monday - Friday: 8:00AM - 6:00PM</p>
-                    <p class="mb-1 opacity-75 small">Saturday: 9:00AM - 4:00PM</p>
-                    <p class="mb-0 opacity-75 small">Sunday: Closed</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="social-links-panel mt-5 pt-4 border-top border-white border-opacity-25">
-                <h5 class="fw-bold mb-3 h6">Follow Us</h5>
-                <div class="social-icons d-flex gap-3">
-                  <a href="#" class="btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;"><i class="bi bi-facebook"></i></a>
-                  <a href="#" class="btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#" class="btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;"><i class="bi bi-instagram"></i></a>
-                  <a href="#" class="btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;"><i class="bi bi-linkedin"></i></a>
-                  <a href="#" class="btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;"><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-7 p-5 d-flex flex-column justify-content-center bg-dark-glass">
-              <div class="form-container">
-                <h3 class="fw-bold text-white mb-2">Send Us a Message</h3>
-                <p class="text-white-50 mb-5">We're here to help you transform your ideas into reality. Reach out to us through any of these channels.</p>
-
-                <form action="forms/contact.php" method="post" class="php-email-form premium-form">
-                  <div class="row g-4">
-                    <div class="col-md-6">
-                      <div class="form-floating premium-floating">
-                        <input type="text" class="form-control bg-transparent text-white border-secondary" id="nameInput" name="name" placeholder="Full Name" required>
-                        <label for="nameInput" class="text-white-50">Full Name</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="form-floating premium-floating">
-                        <input type="email" class="form-control bg-transparent text-white border-secondary" id="emailInput" name="email" placeholder="Email Address" required>
-                        <label for="emailInput" class="text-white-50">Email Address</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="form-floating premium-floating">
-                        <input type="tel" class="form-control bg-transparent text-white border-secondary" id="contactPhone" name="phone" placeholder="Enter your Phone Number" required>
-                        <label for="contactPhone" class="text-white-50">Phone Number</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="form-floating premium-floating">
-                        <select class="form-select bg-transparent text-white border-secondary premium-select" name="subject" id="contactSubject" required>
-                          <option value="" selected disabled class="text-dark">Select a Service</option>
-                          <option value="web-design" class="text-dark">Graphic Design</option>
-                          <option value="web-development" class="text-dark">Web Development</option>
-                          <option value="logo-design" class="text-dark">Logo Design</option>
-                          <option value="company-reg" class="text-dark">Company Registration</option>
-                          <option value="eCitizen" class="text-dark">eCitizen Services</option>
-                          <option value="cyber" class="text-dark">Cyber Services</option>
-                          <option value="training" class="text-dark">Training/Classes</option>
-                          <option value="others" class="text-dark">Others</option>
-                        </select>
-                        <label for="contactSubject" class="text-white-50">Service Needed</label>
-                      </div>
-                    </div>
-
-                    <div class="col-12">
-                      <div class="form-floating premium-floating">
-                        <textarea class="form-control bg-transparent text-white border-secondary" id="messageInput" name="message" placeholder="Project Details" style="height: 150px" required></textarea>
-                        <label for="messageInput" class="text-white-50">Tell us about your Project Requirements, Budget, Timeline and any other specific details</label>
-                      </div>
-                    </div>
-
-                    <div class="col-12 my-2">
-                      <div class="loading text-accent d-none">Loading</div>
-                      <div class="error-message text-danger d-none"></div>
-                      <div class="sent-message text-success fw-bold d-none">Your message has been sent. Thank you!</div>
-                    </div>
-
-                    <div class="col-12">
-                      <button type="submit" class="btn premium-primary-btn w-100 py-3 rounded-3 fw-bold fs-5 shadow-glow hover-lift">Send Message <i class="bi bi-send-fill ms-2"></i></button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section></main>
-
-  <footer id="footer" class="footer position-relative mt-0">
+  <footer id="footer" class="footer position-relative z-index-2">
     <div class="footer-top border-top border-secondary border-opacity-10 py-5">
       <div class="container mt-4">
         <div class="row gy-5">
-          
           <div class="col-lg-4 col-md-12 footer-about pe-lg-5">
             <a href="index.html" class="logo d-flex align-items-center mb-4 text-decoration-none">
               <img src="assets/img/gmax.png" alt="G-Max Tech" height="40" class="me-2">
               <span class="sitename fs-3 fw-bold text-white">G-Max Tech</span>
             </a>
-            <p class="text-white-50 lh-lg pe-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, and elite professional IT training tailored specifically for the modern digital era.</p>
-            <div class="social-links d-flex gap-2 mt-4">
-              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-twitter-x"></i></a>
-              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-linkedin"></i></a>
-            </div>
+            <p class="text-white-50 lh-lg pe-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, and elite professional IT training.</p>
           </div>
-
           <div class="col-lg-2 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Our Services</h4>
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Navigation</h4>
             <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Web Design</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Web Development</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Product Management</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Marketing</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Graphic Design</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="index.html" target="_self" class="text-white-50 text-decoration-none">Home</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="about.html" target="_self" class="text-white-50 text-decoration-none">About Us</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" target="_self" class="text-white-50 text-decoration-none">Services</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="Portfolio.html" target="_self" class="text-white-50 text-decoration-none">Portfolio</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="contact.html" target="_self" class="text-white-50 text-decoration-none">Contact</a></li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">More Services</h4>
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Services</h4>
             <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Brand Identity</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">UI/UX Design</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">SEO Optimization</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Printing Services</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Consulting</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Graphic Design</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">eCitizen Support</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Web Development</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">IT Training</a></li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start mt-5 mt-lg-0">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact & Hours</h4>
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact</h4>
             <div class="text-white-50 mt-3 lh-lg">
-              <p class="mb-1"><i class="bi bi-telephone-fill text-accent me-2"></i> +1 5589 55488 55</p>
-              <p class="mb-3"><i class="bi bi-envelope-fill text-accent me-2"></i> info@example.com</p>
-              
-              <p class="mb-1 fw-bold text-white"><i class="bi bi-clock-fill text-accent me-2"></i> Opening Hours</p>
-              <p class="mb-1">Mon–Sat: 11AM - 23PM</p>
-              <p class="mb-0">Sunday: Closed</p>
+              <p class="mb-1"><i class="bi bi-geo-alt-fill text-accent me-2"></i> Thika Road, Nairobi, Kenya</p>
+              <p class="mb-1"><i class="bi bi-telephone-fill text-accent me-2"></i> +254 798 667 892</p>
+              <p class="mb-3"><i class="bi bi-envelope-fill text-accent me-2"></i> gmaxkedesigns@gmail.com</p>
             </div>
           </div>
-
         </div>
       </div>
     </div>
     <div class="footer-bottom bg-black bg-opacity-50 py-4">
-      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <p class="mb-0 text-white-50 small">© <span>Copyright</span> <strong class="text-white px-1 sitename">G-Max Tech</strong> All Rights Reserved.</p>
-        <div class="credits text-white-50 small mt-2 mt-md-0">
-          Designed with Premium Excellence by <a href="#" class="text-accent text-decoration-none fw-bold hover-white transition-all">G-Max KE Creatives</a>
-        </div>
+      <div class="container text-center">
+        <p class="mb-0 text-white-50 small">© 2026 <strong class="text-white px-1">G-Max Tech</strong> All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/155895548855" class="whatsapp-float hover-lift shadow-glow" target="_blank" data-aos="zoom-in" data-aos-delay="1000">
-     <i class="bi bi-whatsapp"></i>
-  </a>
-
-  <div class="chat-toggle hover-lift shadow-glow" onclick="toggleChat()" data-aos="zoom-in" data-aos-delay="1200">
-    <i class="bi bi-chat-dots-fill"></i>
-    <span class="chat-badge premium-badge-pulse">1</span>
-  </div>
-
-  <div class="chat-box premium-chat-box shadow-2xl rounded-4 overflow-hidden" id="chatBox">
-    <div class="chat-header bg-gradient-premium d-flex justify-content-between align-items-center p-3 border-bottom border-white border-opacity-25">
-      <h6 class="mb-0 text-white fw-bold d-flex align-items-center"><i class="bi bi-headset me-2 text-accent"></i> Live Chat</h6>
-      <span onclick="toggleChat()" class="close-btn text-white fs-4 cursor-pointer hover-accent transition-all">&times;</span>
-    </div>
-
-    <div class="chat-body bg-dark-glass p-4 text-white-50" style="height: 250px; overflow-y: auto;">
-      <div class="chat-message received bg-white bg-opacity-10 p-3 rounded-3 mb-3" style="max-width: 85%; border-bottom-left-radius: 0;">
-        <p class="mb-0 small text-white">Hello 👋 How can we help you today?</p>
-      </div>
-    </div>
-
-    <div class="chat-footer p-3 bg-dark d-flex gap-2 border-top border-secondary border-opacity-25">
-      <input type="text" class="form-control bg-white bg-opacity-10 border-0 text-white rounded-pill px-3 shadow-none focus-ring" placeholder="Type a message...">
-      <button class="btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">
-        <i class="bi bi-send-fill ms-1"></i>
-      </button>
-    </div>
-  </div>
-  
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center hover-lift shadow-glow"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader">
-    <div class="premium-loader"></div>
-  </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
   <script src="assets/js/main.js"></script>
-
-  <script>
-    // Chat Box Toggle
-    function toggleChat() {
-      var chat = document.getElementById("chatBox");
-      if (chat.style.display === "flex") {
-        chat.style.opacity = "0";
-        setTimeout(() => { chat.style.display = "none"; }, 300);
-      } else {
-        chat.style.display = "flex";
-        setTimeout(() => { chat.style.opacity = "1"; }, 10);
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      
-      // Scroll Progress Bar
-      window.onscroll = function() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        var indicator = document.getElementById("scrollIndicator");
-        if(indicator) indicator.style.width = scrolled + "%";
-      };
-
-      // Init AOS
-      AOS.init({
-        once: true,
-        offset: 50,
-        easing: 'ease-out-cubic'
-      });
-
-      // Init Isotope
-      const isoContainer = document.querySelector('.isotope-container');
-      let iso;
-      if (isoContainer) {
-        iso = new Isotope(isoContainer, {
-          itemSelector: '.isotope-item',
-          layoutMode: 'fitRows'
-        });
-      }
-
-      // Filter buttons
-      const filterButtons = document.querySelectorAll('.isotope-filters li');
-      filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filterValue = btn.getAttribute('data-filter');
-          iso.arrange({ filter: filterValue });
-
-          filterButtons.forEach(b => b.classList.remove('filter-active', 'bg-accent', 'text-white'));
-          btn.classList.add('filter-active', 'bg-accent', 'text-white');
-        });
-      });
-
-      // Init Glightbox
-      GLightbox({ selector: '.glightbox' });
-    });
-  </script>
 </body>
 </html>

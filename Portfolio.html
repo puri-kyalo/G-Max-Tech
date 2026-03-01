@@ -1,173 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
   <title>Our Portfolio | G-Max Tech - Premium Digital Solutions</title>
-  <meta name="description" content="Explore G-Max Tech's diverse range of premium creative projects and success stories. Discover our top-tier branding, web development, and digital marketing portfolios.">
-  <meta name="keywords" content="G-Max Tech Portfolio, Premium Graphic Design, Web Development Showcase, Brand Identity Examples, E-commerce Platforms">
-  <meta name="author" content="G-Max KE Creatives">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="theme-color" content="#008870">
-  <link rel="canonical" href="https://www.gmaxtech.com/Portfolio.html" />
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.gmaxtech.com/Portfolio.html">
-  <meta property="og:title" content="Our Premium Portfolio | G-Max Tech">
-  <meta property="og:description" content="Explore G-Max Tech's diverse range of premium creative projects and success stories.">
-  <meta property="og:image" content="assets/img/portfolio/portfolio-3.webp">
-
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.gmaxtech.com/Portfolio.html">
-  <meta property="twitter:title" content="Our Premium Portfolio | G-Max Tech">
-  <meta property="twitter:description" content="Explore G-Max Tech's diverse range of premium creative projects and success stories.">
-  <meta property="twitter:image" content="assets/img/portfolio/portfolio-3.webp">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "G-Max Tech Portfolio",
-    "description": "Gallery of premium web development, graphic design, and branding projects.",
-    "url": "https://www.gmaxtech.com/Portfolio.html",
-    "publisher": {
-      "@type": "Organization",
-      "name": "G-Max Tech"
-    }
-  }
-  </script>
-
   <link href="assets/img/gmax.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="starter-page-page premium-layout">
 
-  <div class="scroll-progress-bar" id="scrollIndicator"></div>
+  <div id="preloader"><div class="loader-content"><div class="neon-ring"></div><div class="loader-text">INITIALIZING...</div></div></div>
+  <canvas id="neuron-canvas"></canvas>
 
-  <div id="topbar" class="d-flex align-items-center premium-topbar d-none d-lg-flex">
-    <div class="container d-flex justify-content-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:gmaxkedesigns@gmail.com">gmaxkedesigns@gmail.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+254 798 667 892</span></i>
-        <i class="bi bi-clock d-flex align-items-center ms-4"><span>Mon-Sat: 9AM - 7PM</span></i>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" target="_self">
+              <img src="assets/img/gmax.png" alt="Logo" style="height: 35px;">
+              <span class="ms-2 fw-bold text-white">G-Max Tech</span>
+          </a>
+          <button class="sidebar-close" id="sidebarClose"><span class="material-icons">close</span></button>
       </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <ul class="sidebar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><span class="material-icons">home</span> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" target="_self"><span class="material-icons">info</span> About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><span class="material-icons">design_services</span> Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Portfolio.html" target="_self"><span class="material-icons">work</span> Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><span class="material-icons">contact_mail</span> Contact</a></li>
+      </ul>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg fixed-top premium-header glass-effect">
+      <div class="container">
+          <button class="sidebar-toggle d-xl-none me-3" type="button" id="sidebarToggle"><span class="material-icons">menu</span></button>
+          <a class="navbar-brand d-flex align-items-center me-auto" href="index.html" target="_self">
+              <img src="assets/img/gmax.png" alt="Logo" style="height: 40px;">
+              <span class="ms-2 fw-bold text-white fs-4 d-none d-sm-block">G-Max Tech</span>
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto align-items-center">
+                  <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><i class="material-icons me-1">home</i> Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html" target="_self"><i class="material-icons me-1">info</i> About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><i class="material-icons me-1">design_services</i> Services</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="Portfolio.html" target="_self"><i class="material-icons me-1">work</i> Portfolio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><i class="material-icons me-1">contact_mail</i> Contact</a></li>
+              </ul>
+              <a href="contact.html" target="_self" class="btn premium-primary-btn ms-4 rounded-pill shadow-glow hover-lift">Get Quote</a>
+          </div>
+      </div>
+  </nav>
+
+  <main class="main premium-main pt-5 mt-4 z-index-2 position-relative">
+    <div class="page-title premium-page-hero position-relative overflow-hidden pt-5 pb-5 border-bottom border-secondary border-opacity-10 text-center">
+      <div class="container position-relative z-index-2">
+        <span class="badge premium-badge mb-3" data-aos="fade-up">Our Showcase</span>
+        <h1 class="display-4 fw-bold text-white mb-3" data-aos="fade-up" data-aos-delay="100">Our Premium Projects</h1>
+        <p class="lead text-white-50 max-w-600 mx-auto" data-aos="fade-up" data-aos-delay="200">Explore an exclusive gallery of our highly acclaimed creative projects.</p>
       </div>
     </div>
-  </div>
 
-  <header id="header" class="header d-flex align-items-center sticky-top premium-header glass-effect">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" data-aos="fade-right" data-aos-duration="1000">
-        <img src="assets/img/gmax.png" alt="G-Max Tech Logo"> 
-        <h1 class="sitename">G-Max Tech</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="100">
-        <ul>
-          <li><a href="index.html" class="nav-hover-fx">Home</a></li>
-          <li><a href="about.html" class="nav-hover-fx">About</a></li>
-          
-          <li class="dropdown mega-dropdown premium-mega">
-            <a href="#" class="nav-hover-fx"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <div class="mega-menu glassmorphism-menu">
-              <div class="mega-column fade-in-up">
-                <h4><i class="bi bi-vector-pen text-accent me-2"></i> Graphic Design</h4>
-                <ul>
-                  <li><a href="index.html#Branding & Logo" class="mega-link">Branding & Logo</a></li>
-                  <li><a href="index.html#Company Profiles" class="mega-link">Company Profiles</a></li>
-                  <li><a href="index.html#Corporate Posters" class="mega-link">Corporate Posters</a></li>
-                  <li><a href="index.html#Web Developer" class="mega-link">Web Developer</a></li>
-                </ul>
-              </div>
-              <div class="mega-column fade-in-up delay-1">
-                <h4><i class="bi bi-file-earmark-text text-accent me-2"></i> eCitizen Services</h4>
-                <ul>
-                  <li><a href="index.html#Business Registration" class="mega-link">Business Registration</a></li>
-                  <li><a href="index.html#Passport & ID Services" class="mega-link">Passport & ID Services</a></li>
-                  <li><a href="index.html#eCitizen Support" class="mega-link">eCitizen Support</a></li>
-                  <li><a href="index.html#KRA & Tax Services" class="mega-link">KRA & Tax Services</a></li>
-                </ul>
-              </div>
-              <div class="mega-column fade-in-up delay-2">
-                <h4><i class="bi bi-laptop text-accent me-2"></i> Cyber Services</h4>
-                <ul>
-                  <li><a href="index.html#Internet Services" class="mega-link">Internet Services</a></li>
-                  <li><a href="index.html#Printing & Scanning" class="mega-link">Printing & Scanning</a></li>
-                  <li><a href="index.html#Typing & Formatting" class="mega-link">Typing & Formatting</a></li>
-                  <li><a href="index.html#CV & Application Support" class="mega-link">CV & Application Support</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li><a href="Portfolio.html" class="nav-hover-fx active">Portfolio</a></li>
-          <li><a href="contact.html" class="nav-hover-fx">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list premium-toggle"></i>
-      </nav>
-
-      <div class="header-actions d-none d-xl-flex align-items-center" data-aos="fade-left" data-aos-duration="1000">
-        <a href="contact.html" class="btn-get-started premium-btn shadow-glow">Get a Quote</a>
-      </div>
-
-    </div>
-  </header>
-
-  <main class="main premium-main">
-
-    <div class="page-title premium-page-hero position-relative overflow-hidden pt-5 pb-5">
-      <div class="hero-overlay-gradient"></div>
-      <div class="bg-abstract-shapes animate-shapes"></div>
-      
-      <div class="container position-relative z-index-2 d-lg-flex justify-content-between align-items-center pt-5 pb-4">
-        <div data-aos="fade-right" data-aos-duration="1000">
-          <span class="badge premium-badge mb-3">Our Work</span>
-          <h1 class="mb-2 mb-lg-0 fw-bolder display-4 text-white">Portfolio</h1>
-          <p class="text-white-50 fs-5 mt-2 max-w-600">Explore our diverse range of creative projects and success stories.</p>
-        </div>
-        
-        <nav class="breadcrumbs glass-breadcrumbs px-4 py-3 rounded-pill mt-4 mt-lg-0 shadow-lg" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-          <ol class="mb-0 d-flex align-items-center m-0 p-0">
-            <li><a href="index.html" class="text-white text-decoration-none fw-medium hover-accent"><i class="bi bi-house-door me-2"></i>Home</a></li>
-            <li class="mx-3 text-white-50">/</li>
-            <li class="current text-accent fw-bold">Portfolio</li>
-          </ol>
-        </nav>
-      </div>
-    </div><section id="portfolio" class="portfolio section premium-section overflow-hidden mt-5">
-
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title text-gradient-bg">Showcase</span>
-        <h2 class="premium-heading">Our Portfolio</h2>
-        <p class="premium-subheading">Explore our diverse range of creative projects and success stories</p>
-      </div><div class="container" data-aos="fade-up" data-aos-delay="100">
-
+    <section id="portfolio" class="portfolio section premium-section overflow-hidden mt-5 pt-0">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
 
           <div class="portfolio-filters-wrapper mb-5" data-aos="fade-up" data-aos-delay="100">
-            <ul class="portfolio-filters isotope-filters premium-filters nav-pills d-flex justify-content-center gap-3">
+            <ul class="portfolio-filters isotope-filters premium-filters nav-pills d-flex justify-content-center gap-3 flex-wrap">
               <li data-filter="*" class="filter-active rounded-pill px-4 py-2">All Projects</li>
               <li data-filter=".filter-branding" class="rounded-pill px-4 py-2">Branding</li>
               <li data-filter=".filter-web" class="rounded-pill px-4 py-2">Logos</li>
@@ -177,358 +86,150 @@
             </ul>
           </div>
 
-          <div class="row gy-5 portfolio-grid isotope-container" data-aos="fade-up" data-aos-delay="200">
-
+          <div class="row gy-5 portfolio-grid isotope-container pb-5" data-aos="fade-up" data-aos-delay="200">
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass">
-                <div class="image-container">
-                  <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid w-100" alt="Brand Identity" loading="lazy">
+              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
+                <div class="image-container flex-shrink-0 position-relative">
+                  <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid w-100" alt="Brand Identity">
                   <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <div class="overlay-content text-center">
-                      <div class="d-flex gap-3 justify-content-center">
-                        <a href="assets/img/portfolio/portfolio-3.webp" class="glightbox zoom-link btn btn-icon-premium rounded-circle" title="Brand Identity Project">
-                          <i class="bi bi-zoom-in"></i>
-                        </a>
-                        <a href="portfolio-details.html" class="details-link btn btn-icon-premium rounded-circle" title="View Project Details">
-                          <i class="bi bi-link-45deg"></i>
-                        </a>
-                      </div>
-                    </div>
+                    <a href="assets/img/portfolio/portfolio-3.webp" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
                   </div>
                 </div>
                 <div class="content p-4 text-center">
-                  <h3 class="fw-bold text-white mb-2 fs-5">Tech Startup Logo</h3>
+                  <h3 class="fw-bold text-white mb-2 fs-5">Tech Startup Identity</h3>
                   <p class="text-white-50 small mb-0">Corporate branding and visual identity system</p>
                 </div>
               </div>
-            </div><div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web filter-websites">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass">
-                <div class="image-container">
-                  <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid w-100" alt="E-commerce Platform" loading="lazy">
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-websites">
+              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
+                <div class="image-container flex-shrink-0 position-relative">
+                  <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid w-100" alt="E-commerce">
                   <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <div class="overlay-content text-center">
-                      <div class="d-flex gap-3 justify-content-center">
-                        <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox zoom-link btn btn-icon-premium rounded-circle" title="E-commerce Platform">
-                          <i class="bi bi-zoom-in"></i>
-                        </a>
-                        <a href="portfolio-details.html" class="details-link btn btn-icon-premium rounded-circle" title="View Project Details">
-                          <i class="bi bi-link-45deg"></i>
-                        </a>
-                      </div>
-                    </div>
+                    <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
                   </div>
                 </div>
                 <div class="content p-4 text-center">
-                  <h3 class="fw-bold text-white mb-2 fs-5">E-commerce Platform</h3>
+                  <h3 class="fw-bold text-white mb-2 fs-5">E-Commerce App</h3>
                   <p class="text-white-50 small mb-0">Modern online shopping experience</p>
                 </div>
               </div>
-            </div><div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-print">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass">
-                <div class="image-container">
-                  <img src="assets/img/portfolio/portfolio-portrait-5.png" class="img-fluid w-100" alt="Magazine Design" loading="lazy">
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-print">
+              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
+                <div class="image-container flex-shrink-0 position-relative">
+                  <img src="assets/img/portfolio/portfolio-portrait-5.png" class="img-fluid w-100" alt="Editorial">
                   <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <div class="overlay-content text-center">
-                      <div class="d-flex gap-3 justify-content-center">
-                        <a href="assets/img/portfolio/portfolio-portrait-5.png" class="glightbox zoom-link btn btn-icon-premium rounded-circle" title="Magazine Design">
-                          <i class="bi bi-zoom-in"></i>
-                        </a>
-                        <a href="portfolio-details.html" class="details-link btn btn-icon-premium rounded-circle" title="View Project Details">
-                          <i class="bi bi-link-45deg"></i>
-                        </a>
-                      </div>
-                    </div>
+                    <a href="assets/img/portfolio/portfolio-portrait-5.png" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
                   </div>
                 </div>
                 <div class="content p-4 text-center">
-                  <h3 class="fw-bold text-white mb-2 fs-5">Magazine Design</h3>
-                  <p class="text-white-50 small mb-0">Editorial layout and typography</p>
+                  <h3 class="fw-bold text-white mb-2 fs-5">Editorial Layout</h3>
+                  <p class="text-white-50 small mb-0">High-end editorial design and typography</p>
                 </div>
               </div>
-            </div><div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-motion">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass">
-                <div class="image-container">
-                  <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid w-100" alt="Motion Graphics" loading="lazy">
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-motion">
+              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
+                <div class="image-container flex-shrink-0 position-relative">
+                  <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid w-100" alt="Motion Graphics">
                   <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <div class="overlay-content text-center">
-                      <div class="d-flex gap-3 justify-content-center">
-                        <a href="assets/img/portfolio/portfolio-8.webp" class="glightbox zoom-link btn btn-icon-premium rounded-circle" title="Motion Graphics">
-                          <i class="bi bi-zoom-in"></i>
-                        </a>
-                        <a href="portfolio-details.html" class="details-link btn btn-icon-premium rounded-circle" title="View Project Details">
-                          <i class="bi bi-link-45deg"></i>
-                        </a>
-                      </div>
-                    </div>
+                    <a href="assets/img/portfolio/portfolio-8.webp" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
                   </div>
                 </div>
                 <div class="content p-4 text-center">
-                  <h3 class="fw-bold text-white mb-2 fs-5">Motion Graphics</h3>
+                  <h3 class="fw-bold text-white mb-2 fs-5">Motion Banners</h3>
                   <p class="text-white-50 small mb-0">Animated visual storytelling</p>
                 </div>
               </div>
-            </div><div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding filter-web">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass">
-                <div class="image-container">
-                  <img src="assets/img/portfolio/portfolio-9.webp" class="img-fluid w-100" alt="Logo Collection" loading="lazy">
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
+                <div class="image-container flex-shrink-0 position-relative">
+                  <img src="assets/img/portfolio/portfolio-9.webp" class="img-fluid w-100" alt="Logo">
                   <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <div class="overlay-content text-center">
-                      <div class="d-flex gap-3 justify-content-center">
-                        <a href="assets/img/portfolio/portfolio-9.webp" class="glightbox zoom-link btn btn-icon-premium rounded-circle" title="Logo Collection">
-                          <i class="bi bi-zoom-in"></i>
-                        </a>
-                        <a href="portfolio-details.html" class="details-link btn btn-icon-premium rounded-circle" title="View Project Details">
-                          <i class="bi bi-link-45deg"></i>
-                        </a>
-                      </div>
-                    </div>
+                    <a href="assets/img/portfolio/portfolio-9.webp" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
                   </div>
                 </div>
                 <div class="content p-4 text-center">
-                  <h3 class="fw-bold text-white mb-2 fs-5">Logo Collection</h3>
+                  <h3 class="fw-bold text-white mb-2 fs-5">Logo Architecture</h3>
                   <p class="text-white-50 small mb-0">Diverse brand mark explorations</p>
                 </div>
               </div>
-            </div><div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web filter-websites">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass">
-                <div class="image-container">
-                  <img src="assets/img/portfolio/portfolio-portrait-8.png" class="img-fluid w-100" alt="Mobile App Design" loading="lazy">
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-websites">
+              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
+                <div class="image-container flex-shrink-0 position-relative">
+                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid w-100" alt="Packaging">
                   <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <div class="overlay-content text-center">
-                      <div class="d-flex gap-3 justify-content-center">
-                        <a href="assets/img/portfolio/portfolio-portrait-8.png" class="glightbox zoom-link btn btn-icon-premium rounded-circle" title="Mobile App Design">
-                          <i class="bi bi-zoom-in"></i>
-                        </a>
-                        <a href="portfolio-details.html" class="details-link btn btn-icon-premium rounded-circle" title="View Project Details">
-                          <i class="bi bi-link-45deg"></i>
-                        </a>
-                      </div>
-                    </div>
+                    <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
                   </div>
                 </div>
                 <div class="content p-4 text-center">
-                  <h3 class="fw-bold text-white mb-2 fs-5">Mobile App Design</h3>
-                  <p class="text-white-50 small mb-0">User-centered interface design</p>
+                  <h3 class="fw-bold text-white mb-2 fs-5">Product Packaging</h3>
+                  <p class="text-white-50 small mb-0">Sustainable packaging design</p>
                 </div>
               </div>
-            </div><div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-print">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass">
-                <div class="image-container">
-                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid w-100" alt="Packaging Design" loading="lazy">
-                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <div class="overlay-content text-center">
-                      <div class="d-flex gap-3 justify-content-center">
-                        <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox zoom-link btn btn-icon-premium rounded-circle" title="Packaging Design">
-                          <i class="bi bi-zoom-in"></i>
-                        </a>
-                        <a href="portfolio-details.html" class="details-link btn btn-icon-premium rounded-circle" title="View Project Details">
-                          <i class="bi bi-link-45deg"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="content p-4 text-center">
-                  <h3 class="fw-bold text-white mb-2 fs-5">Packaging Design</h3>
-                  <p class="text-white-50 small mb-0">Sustainable product packaging solutions</p>
-                </div>
-              </div>
-            </div><div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-motion">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass">
-                <div class="image-container">
-                  <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid w-100" alt="Brand Animation" loading="lazy">
-                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <div class="overlay-content text-center">
-                      <div class="d-flex gap-3 justify-content-center">
-                        <a href="assets/img/portfolio/portfolio-11.webp" class="glightbox zoom-link btn btn-icon-premium rounded-circle" title="Brand Animation">
-                          <i class="bi bi-zoom-in"></i>
-                        </a>
-                        <a href="portfolio-details.html" class="details-link btn btn-icon-premium rounded-circle" title="View Project Details">
-                          <i class="bi bi-link-45deg"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="content p-4 text-center">
-                  <h3 class="fw-bold text-white mb-2 fs-5">Brand Animation</h3>
-                  <p class="text-white-50 small mb-0">Dynamic brand identity systems</p>
-                </div>
-              </div>
-            </div></div></div>
-
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
 
-    </section></main>
-
-  <footer id="footer" class="footer position-relative mt-0">
+  <footer id="footer" class="footer position-relative z-index-2">
     <div class="footer-top border-top border-secondary border-opacity-10 py-5">
       <div class="container mt-4">
         <div class="row gy-5">
-          
           <div class="col-lg-4 col-md-12 footer-about pe-lg-5">
             <a href="index.html" class="logo d-flex align-items-center mb-4 text-decoration-none">
               <img src="assets/img/gmax.png" alt="G-Max Tech" height="40" class="me-2">
               <span class="sitename fs-3 fw-bold text-white">G-Max Tech</span>
             </a>
-            <p class="text-white-50 lh-lg pe-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, and elite professional IT training tailored specifically for the modern digital era.</p>
-            <div class="social-links d-flex gap-2 mt-4">
-              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-twitter-x"></i></a>
-              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10 text-white hover-accent transition-all" style="width: 40px; height:40px;"><i class="bi bi-linkedin"></i></a>
-            </div>
+            <p class="text-white-50 lh-lg pe-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, and elite professional IT training.</p>
           </div>
-
           <div class="col-lg-2 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Our Services</h4>
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Navigation</h4>
             <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Web Design</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Web Development</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Product Management</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Marketing</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Graphic Design</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="index.html" target="_self" class="text-white-50 text-decoration-none">Home</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="about.html" target="_self" class="text-white-50 text-decoration-none">About Us</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" target="_self" class="text-white-50 text-decoration-none">Services</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="Portfolio.html" target="_self" class="text-white-50 text-decoration-none">Portfolio</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="contact.html" target="_self" class="text-white-50 text-decoration-none">Contact</a></li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">More Services</h4>
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Services</h4>
             <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Brand Identity</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">UI/UX Design</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">SEO Optimization</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Printing Services</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="#" class="text-white-50 text-decoration-none hover-white transition-all">Consulting</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Graphic Design</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">eCitizen Support</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Web Development</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">IT Training</a></li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start mt-5 mt-lg-0">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact & Hours</h4>
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact</h4>
             <div class="text-white-50 mt-3 lh-lg">
+              <p class="mb-1"><i class="bi bi-geo-alt-fill text-accent me-2"></i> Thika Road, Nairobi, Kenya</p>
               <p class="mb-1"><i class="bi bi-telephone-fill text-accent me-2"></i> +254 798 667 892</p>
               <p class="mb-3"><i class="bi bi-envelope-fill text-accent me-2"></i> gmaxkedesigns@gmail.com</p>
-              
-              <p class="mb-1 fw-bold text-white"><i class="bi bi-clock-fill text-accent me-2"></i> Opening Hours</p>
-              <p class="mb-1">Mon–Fri: 8AM - 6PM</p>
-              <p class="mb-1">Saturday: 9AM - 4PM</p>
-              <p class="mb-0 text-danger fw-bold">Sunday: Closed</p>
             </div>
           </div>
-
         </div>
       </div>
     </div>
     <div class="footer-bottom bg-black bg-opacity-50 py-4">
-      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <p class="mb-0 text-white-50 small">© <span>Copyright</span> <strong class="text-white px-1 sitename">G-Max Tech</strong> All Rights Reserved.</p>
-        <div class="credits text-white-50 small mt-2 mt-md-0">
-          Designed with Premium Excellence by <a href="#" class="text-accent text-decoration-none fw-bold hover-white transition-all">G-Max KE Creatives</a>
-        </div>
+      <div class="container text-center">
+        <p class="mb-0 text-white-50 small">© 2026 <strong class="text-white px-1">G-Max Tech</strong> All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/254798667892" class="whatsapp-float hover-lift shadow-glow" target="_blank" data-aos="zoom-in" data-aos-delay="1000">
-     <i class="bi bi-whatsapp"></i>
-  </a>
-
-  <div class="chat-toggle hover-lift shadow-glow" onclick="toggleChat()" data-aos="zoom-in" data-aos-delay="1200">
-    <i class="bi bi-chat-dots-fill"></i>
-    <span class="chat-badge premium-badge-pulse">1</span>
-  </div>
-
-  <div class="chat-box premium-chat-box shadow-2xl rounded-4 overflow-hidden" id="chatBox">
-    <div class="chat-header bg-gradient-premium d-flex justify-content-between align-items-center p-3 border-bottom border-white border-opacity-25">
-      <h6 class="mb-0 text-white fw-bold d-flex align-items-center"><i class="bi bi-headset me-2 text-accent"></i> Live Chat</h6>
-      <span onclick="toggleChat()" class="close-btn text-white fs-4 cursor-pointer hover-accent transition-all">×</span>
-    </div>
-
-    <div class="chat-body bg-dark-glass p-4 text-white-50" style="height: 250px; overflow-y: auto;">
-      <div class="chat-message received bg-white bg-opacity-10 p-3 rounded-3 mb-3" style="max-width: 85%; border-bottom-left-radius: 0;">
-        <p class="mb-0 small text-white">Hello 👋 How can we help you today?</p>
-      </div>
-    </div>
-
-    <div class="chat-footer p-3 bg-dark d-flex gap-2 border-top border-secondary border-opacity-25">
-      <input type="text" class="form-control bg-white bg-opacity-10 border-0 text-white rounded-pill px-3 shadow-none focus-ring" placeholder="Type a message...">
-      <button class="btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">
-        <i class="bi bi-send-fill ms-1"></i>
-      </button>
-    </div>
-  </div>
-  
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center hover-lift shadow-glow"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader">
-    <div class="premium-loader"></div>
-  </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
   <script src="assets/js/main.js"></script>
-
-  <script>
-    function toggleChat() {
-      var chat = document.getElementById("chatBox");
-      if (chat.style.display === "flex") {
-        chat.style.opacity = "0";
-        setTimeout(() => { chat.style.display = "none"; }, 300);
-      } else {
-        chat.style.display = "flex";
-        setTimeout(() => { chat.style.opacity = "1"; }, 10);
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // Scroll Progress Bar
-      window.onscroll = function() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        var indicator = document.getElementById("scrollIndicator");
-        if(indicator) indicator.style.width = scrolled + "%";
-      };
-
-      // Init AOS
-      AOS.init({
-        once: true,
-        offset: 50,
-        easing: 'ease-out-cubic'
-      });
-
-      // Init Isotope
-      const isoContainer = document.querySelector('.isotope-container');
-      let iso;
-      if (isoContainer) {
-        iso = new Isotope(isoContainer, {
-          itemSelector: '.isotope-item',
-          layoutMode: 'fitRows'
-        });
-      }
-
-      // Filter buttons
-      const filterButtons = document.querySelectorAll('.isotope-filters li');
-      filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filterValue = btn.getAttribute('data-filter');
-          iso.arrange({ filter: filterValue });
-
-          // Update active class
-          filterButtons.forEach(b => b.classList.remove('filter-active', 'bg-accent', 'text-white'));
-          btn.classList.add('filter-active', 'bg-accent', 'text-white');
-        });
-      });
-
-      // Init Glightbox
-      GLightbox({ selector: '.glightbox' });
-    });
-  </script>
 </body>
 </html>

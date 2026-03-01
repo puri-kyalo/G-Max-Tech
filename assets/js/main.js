@@ -1,315 +1,175 @@
 /**
-* G-Max Tech Premium - Fixed Mobile Navigation & UI Logic
+* G-Max Tech Multi-Page Global Logic (Swiftsync Sidebar integrated)
 */
 
-(function () {
-  "use strict";
+document.addEventListener('DOMContentLoaded', () => {
+    "use strict";
 
-  /* =====================================================
-     SCROLL: Add .scrolled class to body
-  ===================================================== */
-  function toggleScrolled() {
-    const body = document.querySelector('body');
-    const header = document.querySelector('#header');
-    if (!header) return;
-    window.scrollY > 100 ? body.classList.add('scrolled') : body.classList.remove('scrolled');
-  }
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
-
-  /* =====================================================
-     SCROLL PROGRESS BAR
-  ===================================================== */
-  function updateScrollProgress() {
-    const indicator = document.getElementById("scrollIndicator");
-    if (indicator) {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
-      indicator.style.width = scrolled + "%";
+    /* =====================================================
+       1. PRELOADER
+    ===================================================== */
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => { preloader.remove(); }, 600);
+            }, 300);
+        });
     }
-  }
-  document.addEventListener('scroll', updateScrollProgress);
 
-  /* =====================================================
-     MOBILE NAV SIDEBAR — FIXED
-  ===================================================== */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-  const navMenu = document.querySelector('.navmenu');
-  const body = document.querySelector('body');
+    /* =====================================================
+       2. SWIFTSYNC SIDEBAR LOGIC (MOBILE NAV)
+    ===================================================== */
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-  function openMobileNav() {
-    body.classList.add('mobile-nav-active');
-    if (mobileNavToggleBtn) {
-      mobileNavToggleBtn.classList.remove('bi-list');
-      mobileNavToggleBtn.classList.add('bi-x');
+    function openSidebar() {
+        if(sidebar) sidebar.classList.add('active');
+        if(sidebarOverlay) sidebarOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Lock background scrolling
     }
-  }
 
-  function closeMobileNav() {
-    body.classList.remove('mobile-nav-active');
-    if (mobileNavToggleBtn) {
-      mobileNavToggleBtn.classList.add('bi-list');
-      mobileNavToggleBtn.classList.remove('bi-x');
+    function closeSidebar() {
+        if(sidebar) sidebar.classList.remove('active');
+        if(sidebarOverlay) sidebarOverlay.classList.remove('active');
+        document.body.style.overflow = '';
     }
-  }
 
-  function mobileNavToggle() {
-    if (body.classList.contains('mobile-nav-active')) {
-      closeMobileNav();
-    } else {
-      openMobileNav();
-    }
-  }
+    if (sidebarToggle) sidebarToggle.addEventListener('click', openSidebar);
+    if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+    if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
 
-  if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      mobileNavToggle();
-    });
-  }
-
-  // Close nav when clicking the overlay (outside the sidebar)
-  document.addEventListener('click', function (e) {
-    if (!body.classList.contains('mobile-nav-active')) return;
-
-    const clickedInsideNav = navMenu && navMenu.contains(e.target);
-    const clickedToggle = mobileNavToggleBtn && mobileNavToggleBtn.contains(e.target);
-
-    if (!clickedInsideNav && !clickedToggle) {
-      closeMobileNav();
-    }
-  });
-
-  // Close nav when a nav link (not a dropdown toggle) is clicked
-  document.querySelectorAll('#navmenu a').forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      // Don't close if clicking the chevron / dropdown toggle
-      if (e.target.classList.contains('toggle-dropdown') || e.target.closest('.toggle-dropdown')) return;
-      if (body.classList.contains('mobile-nav-active')) {
-        closeMobileNav();
-      }
-    });
-  });
-
-  /* =====================================================
-     MOBILE DROPDOWN / MEGA MENU TOGGLE
-  ===================================================== */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(function (toggleBtn) {
-    toggleBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      const parentLi = this.closest('li.dropdown');
-      if (!parentLi) return;
-
-      // Close siblings
-      document.querySelectorAll('.navmenu li.dropdown.open').forEach(function (openItem) {
-        if (openItem !== parentLi) {
-          openItem.classList.remove('open');
+    /* =====================================================
+       3. TOP NAVBAR SCROLL EFFECT
+    ===================================================== */
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (navbar) {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-effect', 'shadow-sm');
+            } else {
+                // Remove effect if completely at top, or keep glass based on preference
+                // navbar.classList.remove('shadow-sm'); 
+            }
         }
-      });
-
-      parentLi.classList.toggle('open');
     });
-  });
 
-  /* =====================================================
-     PRELOADER
-  ===================================================== */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', function () {
-      setTimeout(function () {
-        preloader.style.opacity = '0';
-        preloader.style.transition = 'opacity 0.5s ease';
-        setTimeout(function () { preloader.remove(); }, 500);
-      }, 300);
-    });
-  }
-
-  /* =====================================================
-     SCROLL TOP BUTTON
-  ===================================================== */
-  const scrollTopBtn = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTopBtn) {
-      window.scrollY > 100 ? scrollTopBtn.classList.add('active') : scrollTopBtn.classList.remove('active');
+    /* =====================================================
+       4. HERO SLIDER LOGIC
+    ===================================================== */
+    const slides = document.querySelectorAll(".hero-slide");
+    if (slides.length > 1) {
+        let slideIndex = 0;
+        setInterval(() => {
+            slides[slideIndex].classList.remove("active");
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add("active");
+        }, 6000);
     }
-  }
 
-  if (scrollTopBtn) {
-    scrollTopBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
-
-  /* =====================================================
-     AOS ANIMATION INIT
-  ===================================================== */
-  function aosInit() {
+    /* =====================================================
+       5. INITIALIZE PLUGINS (AOS, Swiper, Typed, Isotope, GLightbox)
+    ===================================================== */
+    
+    // AOS
     if (typeof AOS !== 'undefined') {
-      AOS.init({
-        duration: 800,
-        easing: 'ease-out-cubic',
-        once: true,
-        mirror: false,
-        offset: 50
-      });
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
     }
-  }
-  window.addEventListener('load', aosInit);
 
-  /* =====================================================
-     SWIPER SLIDERS INIT
-  ===================================================== */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper, .premium-swiper-container").forEach(function (swiperEl) {
-      const configEl = swiperEl.querySelector(".swiper-config");
-      if (configEl && typeof Swiper !== 'undefined') {
-        try {
-          const config = JSON.parse(configEl.innerHTML.trim());
-          new Swiper(swiperEl, config);
-        } catch (e) {
-          console.warn('Swiper config parse error:', e);
+    // Typed.js
+    if (typeof Typed !== 'undefined') {
+        const typedEl = document.querySelector('.typed');
+        if (typedEl) {
+            const strings = typedEl.getAttribute('data-typed-items');
+            if (strings) {
+                new Typed('.typed', {
+                    strings: strings.split(', '), typeSpeed: 50, backSpeed: 30, backDelay: 2000, loop: true, cursorChar: '|'
+                });
+            }
         }
-      }
-    });
-  }
-  window.addEventListener("load", initSwiper);
-
-  /* =====================================================
-     ISOTOPE PORTFOLIO FILTER
-  ===================================================== */
-  window.addEventListener('load', function () {
-    document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
-      const layout = isotopeItem.getAttribute('data-layout') || 'fitRows';
-      const filter = isotopeItem.getAttribute('data-default-filter') || '*';
-      const container = isotopeItem.querySelector('.isotope-container');
-      if (!container || typeof Isotope === 'undefined') return;
-
-      let initIsotope;
-
-      function initIso() {
-        initIsotope = new Isotope(container, {
-          itemSelector: '.isotope-item',
-          layoutMode: layout,
-          filter: filter
-        });
-      }
-
-      if (typeof imagesLoaded !== 'undefined') {
-        imagesLoaded(container, initIso);
-      } else {
-        initIso();
-      }
-
-      isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filterBtn) {
-        filterBtn.addEventListener('click', function () {
-          const activeFilter = isotopeItem.querySelector('.isotope-filters .filter-active');
-          if (activeFilter) activeFilter.classList.remove('filter-active');
-          this.classList.add('filter-active');
-          if (initIsotope) {
-            initIsotope.arrange({ filter: this.getAttribute('data-filter') });
-          }
-        });
-      });
-    });
-  });
-
-  /* =====================================================
-     FAQ ACCORDION
-  ===================================================== */
-  document.querySelectorAll('.faq-item .faq-header').forEach(function (faqHeader) {
-    faqHeader.addEventListener('click', function () {
-      const item = faqHeader.parentNode;
-
-      document.querySelectorAll('.faq-item').forEach(function (i) {
-        if (i !== item) {
-          i.classList.remove('faq-active');
-          const icon = i.querySelector('.faq-toggle i');
-          if (icon) {
-            icon.classList.remove('bi-chevron-up');
-            icon.classList.add('bi-chevron-down');
-          }
-        }
-      });
-
-      item.classList.toggle('faq-active');
-      const currentIcon = item.querySelector('.faq-toggle i');
-      if (currentIcon) {
-        if (item.classList.contains('faq-active')) {
-          currentIcon.classList.replace('bi-chevron-down', 'bi-chevron-up');
-        } else {
-          currentIcon.classList.replace('bi-chevron-up', 'bi-chevron-down');
-        }
-      }
-    });
-  });
-
-  /* =====================================================
-     CHAT BOX TOGGLE
-  ===================================================== */
-  window.toggleChat = function () {
-    const chat = document.getElementById("chatBox");
-    if (!chat) return;
-
-    if (chat.style.display === "flex") {
-      chat.style.opacity = "0";
-      setTimeout(function () { chat.style.display = "none"; }, 300);
-    } else {
-      chat.style.display = "flex";
-      void chat.offsetWidth; // Force reflow
-      chat.style.opacity = "1";
     }
-  };
 
-  /* =====================================================
-     GLIGHTBOX INIT
-  ===================================================== */
-  window.addEventListener('load', function () {
+    // Swiper
+    document.querySelectorAll(".premium-swiper-container").forEach((swiperEl) => {
+        const configEl = swiperEl.querySelector(".swiper-config");
+        if (configEl && typeof Swiper !== 'undefined') {
+            try { new Swiper(swiperEl, JSON.parse(configEl.innerHTML.trim())); } 
+            catch (e) { console.warn('Swiper parse error:', e); }
+        }
+    });
+
+    // Isotope (Portfolio Filtering)
+    if (typeof Isotope !== 'undefined') {
+        const isoContainer = document.querySelector('.isotope-container');
+        if (isoContainer) {
+            // Wait for images to load if imagesLoaded is present
+            let initIso = function() {
+                let iso = new Isotope(isoContainer, {
+                    itemSelector: '.isotope-item',
+                    layoutMode: 'fitRows'
+                });
+                const filterButtons = document.querySelectorAll('.isotope-filters li');
+                filterButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const filterValue = btn.getAttribute('data-filter');
+                        iso.arrange({ filter: filterValue });
+                        filterButtons.forEach(b => b.classList.remove('filter-active'));
+                        btn.classList.add('filter-active');
+                    });
+                });
+            };
+
+            if(typeof imagesLoaded !== 'undefined') {
+                imagesLoaded(isoContainer, initIso);
+            } else {
+                initIso();
+            }
+        }
+    }
+
+    // GLightbox
     if (typeof GLightbox !== 'undefined') {
-      GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true });
+        GLightbox({ selector: '.glightbox' });
     }
-  });
 
-  /* =====================================================
-     TYPED.JS INIT
-  ===================================================== */
-  window.addEventListener('load', function () {
-    const typedEl = document.querySelector('.typed');
-    if (typedEl && typeof Typed !== 'undefined') {
-      const strings = typedEl.getAttribute('data-typed-items');
-      if (strings) {
-        new Typed('.typed', {
-          strings: strings.split(', '),
-          typeSpeed: 50,
-          backSpeed: 30,
-          backDelay: 2000,
-          loop: true,
-          cursorChar: '|',
-          autoInsertCss: true
+    /* =====================================================
+       6. NEURON CANVAS BACKGROUND
+    ===================================================== */
+    const canvas = document.getElementById('neuron-canvas');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         });
-      }
+        
+        const particles = Array.from({ length: 40 }, () => ({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
+            radius: Math.random() * 2 + 1
+        }));
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'rgba(0, 136, 112, 0.4)';
+            particles.forEach(p => {
+                p.x += p.vx; p.y += p.vy;
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            requestAnimationFrame(draw);
+        }
+        draw();
     }
-  });
-
-  /* =====================================================
-     HERO SLIDER (Simple CSS-based fallback)
-  ===================================================== */
-  const slides = document.querySelectorAll(".hero-slide");
-  let slideIndex = 0;
-
-  if (slides.length > 1) {
-    setInterval(function () {
-      slides[slideIndex].classList.remove("active");
-      slideIndex = (slideIndex + 1) % slides.length;
-      slides[slideIndex].classList.add("active");
-    }, 6000);
-  }
-
-})();
+});
