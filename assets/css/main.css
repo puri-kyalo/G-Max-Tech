@@ -506,10 +506,38 @@ select.premium-select option {
     100% { transform: translate(-50%, -50%) translateY(0px) scale(1); }
 }
 
-/* Responsive adjustments */
+/* --------------------------------------------------------------------------
+   13. RESPONSIVE FIXES (Mobile Layouts & Additions)
+   -------------------------------------------------------------------------- */
 @media (max-width: 991px) {
     .display-3 { font-size: 2.5rem; }
     .display-4 { font-size: 2rem; }
     .display-5 { font-size: 1.8rem; }
     .premium-main { padding-top: 60px !important; }
+
+    /* ADDITIONS: Ensure hero container adapts correctly without overlapping */
+    .hero-slide .container {
+        height: auto !important;
+        min-height: 100vh;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    /* ADDITIONS: Force the hidden hero images to display on small screens and stack underneath the text */
+    .hero-slide .d-none.d-lg-block {
+        display: block !important;
+    }
+    
+    .hero-image {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* ADDITIONS: Make the image responsive and well-proportioned for mobile */
+    .hero-neon-image {
+        width: 85% !important;
+        max-width: 350px;
+        margin: 0 auto;
+        display: block;
+    }
 }
