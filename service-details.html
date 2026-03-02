@@ -5,27 +5,28 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
-  <title>Service Details | G-Max Tech - Premium Digital Solutions</title>
+  <title>Service Deep Dive | G-Max Tech - Premium Digital Solutions</title>
+  <meta name="title" content="Service Deep Dive | G-Max Tech - Premium Digital Solutions">
   <meta name="description" content="Discover the comprehensive details of our premium services. G-Max Tech offers top-tier graphic design, bespoke web development, eCitizen support, and strategic digital marketing.">
-  <meta name="keywords" content="Service Details, G-Max Tech Services, Premium IT Solutions, Digital Marketing Strategy, Brand Development Kenya">
-  <meta name="author" content="G-Max KE Creatives">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="keywords" content="Service Details, G-Max Tech Services, Premium IT Solutions, Web Development Strategy, Brand Development Kenya, Tech Agency Nairobi">
+  <meta name="author" content="G-Max Tech">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#008870">
-  <link rel="canonical" href="https://www.gmaxtech.com/service-details.html" />
+  <link rel="canonical" href="https://gmaxtech.co.ke/service-details.html" />
 
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://www.gmaxtech.com/service-details.html">
-  <meta property="og:title" content="Service Details | G-Max Tech">
+  <meta property="og:url" content="https://gmaxtech.co.ke/service-details.html">
+  <meta property="og:title" content="Service Deep Dive | G-Max Tech">
   <meta property="og:description" content="In-depth breakdown of our strategy, execution, and premium delivery processes.">
   <meta property="og:image" content="assets/img/services/services-7.webp">
 
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.gmaxtech.com/service-details.html">
-  <meta property="twitter:title" content="Service Details | G-Max Tech">
+  <meta property="twitter:url" content="https://gmaxtech.co.ke/service-details.html">
+  <meta property="twitter:title" content="Service Deep Dive | G-Max Tech">
   <meta property="twitter:description" content="In-depth breakdown of our strategy, execution, and premium delivery processes.">
   <meta property="twitter:image" content="assets/img/services/services-7.webp">
 
-  <link href="assets/img/gmax.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -41,6 +42,20 @@
 
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* Specific styling for scroll progress bar */
+    .scroll-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: var(--accent-color);
+      box-shadow: 0 0 10px var(--accent-color);
+      z-index: 9999;
+      width: 0%;
+      transition: width 0.1s ease;
+    }
+  </style>
 </head>
 
 <body class="service-details-page premium-layout">
@@ -53,17 +68,18 @@
           <div class="loader-text">INITIALIZING...</div>
       </div>
   </div>
+  
   <canvas id="neuron-canvas"></canvas>
 
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <nav class="sidebar" id="sidebar">
+  <nav class="sidebar" id="sidebar" aria-label="Mobile Navigation">
       <div class="sidebar-header">
           <a class="navbar-brand d-flex align-items-center" href="index.html" target="_self">
-              <img src="assets/img/gmax.png" alt="Logo" style="height: 35px;">
+              <img src="assets/img/gmax.png" alt="G-Max Tech Logo" style="height: 35px;">
               <span class="ms-2 fw-bold text-white">G-Max Tech</span>
           </a>
-          <button class="sidebar-close" id="sidebarClose">
+          <button class="sidebar-close" id="sidebarClose" aria-label="Close Sidebar">
               <span class="material-icons">close</span>
           </button>
       </div>
@@ -72,10 +88,10 @@
               <a class="nav-link" href="index.html" target="_self"><span class="material-icons">home</span> Home</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="about.html" target="_self"><span class="material-icons">info</span> About Us</a>
+              <a class="nav-link active" href="service.html" target="_self"><span class="material-icons">layers</span> Services</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link active" href="service.html" target="_self"><span class="material-icons">design_services</span> Services</a>
+              <a class="nav-link" href="about.html" target="_self"><span class="material-icons">info</span> About Us</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="Portfolio.html" target="_self"><span class="material-icons">work</span> Portfolio</a>
@@ -86,44 +102,46 @@
       </ul>
   </nav>
 
-  <nav class="navbar navbar-expand-lg fixed-top premium-header glass-effect">
-      <div class="container">
-          <button class="sidebar-toggle d-xl-none me-3" type="button" id="sidebarToggle">
-              <span class="material-icons">menu</span>
-          </button>
+  <header>
+      <nav class="navbar navbar-expand-lg fixed-top premium-header glass-effect" aria-label="Main Navigation">
+          <div class="container">
+              <button class="sidebar-toggle d-xl-none me-3" type="button" id="sidebarToggle" aria-label="Toggle Navigation">
+                  <span class="material-icons">menu</span>
+              </button>
 
-          <a class="navbar-brand d-flex align-items-center me-auto" href="index.html" target="_self">
-              <img src="assets/img/gmax.png" alt="Logo" style="height: 40px;">
-              <span class="ms-2 fw-bold text-white fs-4 d-none d-sm-block">G-Max Tech</span>
-          </a>
-          
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto align-items-center">
-                  <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><i class="material-icons me-1">home</i> Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html" target="_self"><i class="material-icons me-1">info</i> About</a></li>
-                  <li class="nav-item"><a class="nav-link active" href="service.html" target="_self"><i class="material-icons me-1">design_services</i> Services</a></li>
-                  <li class="nav-item"><a class="nav-link" href="Portfolio.html" target="_self"><i class="material-icons me-1">work</i> Portfolio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><i class="material-icons me-1">contact_mail</i> Contact</a></li>
-              </ul>
-              <a href="contact.html" target="_self" class="btn premium-primary-btn ms-4 rounded-pill shadow-glow hover-lift">Get Quote</a>
+              <a class="navbar-brand d-flex align-items-center me-auto" href="index.html" target="_self">
+                  <img src="assets/img/gmax.png" alt="G-Max Tech Logo" style="height: 40px;">
+                  <span class="ms-2 fw-bold text-white fs-4 d-none d-sm-block">G-Max Tech</span>
+              </a>
+              
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto align-items-center">
+                      <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><i class="material-icons me-1">home</i> Home</a></li>
+                      <li class="nav-item"><a class="nav-link active" href="service.html" target="_self"><i class="material-icons me-1">layers</i> Services</a></li>
+                      <li class="nav-item"><a class="nav-link" href="about.html" target="_self"><i class="material-icons me-1">info</i> About</a></li>
+                      <li class="nav-item"><a class="nav-link" href="Portfolio.html" target="_self"><i class="material-icons me-1">work</i> Portfolio</a></li>
+                      <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><i class="material-icons me-1">contact_mail</i> Contact</a></li>
+                  </ul>
+                  <a href="contact.html" target="_self" class="btn premium-primary-btn ms-4 rounded-pill shadow-glow hover-lift">Get a Quote</a>
+              </div>
           </div>
-      </div>
-  </nav>
+      </nav>
+  </header>
 
   <main class="main premium-main pt-5 mt-4 z-index-2 position-relative">
 
     <div class="page-title premium-page-hero position-relative overflow-hidden pt-5 pb-5">
-      <div class="hero-overlay-gradient"></div>
-      <div class="bg-abstract-shapes animate-shapes"></div>
+      <div class="hero-glow-orb position-absolute top-50 start-50 translate-middle" style="width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,136,112,0.2) 0%, transparent 70%); z-index: 0; filter: blur(50px);"></div>
+      <div class="bg-abstract-shapes animate-shapes opacity-25"></div>
       
-      <div class="container position-relative z-index-2 d-lg-flex justify-content-between align-items-center pt-5 pb-4">
+      <div class="container position-relative z-index-2 d-lg-flex justify-content-between align-items-center pt-5 pb-4 border-bottom border-secondary border-opacity-10">
         <div data-aos="fade-right" data-aos-duration="1000">
-          <span class="badge premium-badge mb-3">Our Expertise</span>
-          <h1 class="mb-2 mb-lg-0 fw-bolder display-4 text-white">Service Details</h1>
-          <p class="text-white-50 fs-5 mt-2 max-w-600">Explore the comprehensive methodology and value proposition of our specialized solutions.</p>
+          <span class="badge premium-badge mb-3 px-4 py-2">Our Expertise</span>
+          <h1 class="mb-2 mb-lg-0 fw-black display-4 text-white">Service Details</h1>
+          <p class="text-white-50 fs-5 mt-2 max-w-600">Explore the comprehensive methodology, deliverables, and premium value proposition of our specialized solutions.</p>
         </div>
         
-        <nav class="breadcrumbs glass-breadcrumbs px-4 py-3 rounded-pill mt-4 mt-lg-0 shadow-lg" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <nav class="breadcrumbs glass-breadcrumbs px-4 py-3 rounded-pill mt-4 mt-lg-0 shadow-neon border border-secondary border-opacity-25" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
           <ol class="mb-0 d-flex align-items-center m-0 p-0" style="list-style: none;">
             <li><a href="index.html" target="_self" class="text-white text-decoration-none fw-medium hover-accent"><i class="material-icons me-2 align-middle" style="font-size:18px;">home</i>Home</a></li>
             <li class="mx-3 text-white-50">/</li>
@@ -141,69 +159,76 @@
 
           <div class="col-lg-8 pe-lg-5" data-aos="fade-up" data-aos-delay="200">
             
-            <div class="service-hero position-relative rounded-5 overflow-hidden shadow-2xl mb-5">
-              <img src="assets/img/services/services-7.webp" alt="Service Representation" class="img-fluid w-100 hover-scale transition-all" style="min-height: 400px; object-fit: cover;">
-              <div class="service-badge position-absolute top-0 end-0 m-4">
-                <span class="badge bg-accent text-white fs-6 py-2 px-4 rounded-pill shadow-glow">Premium Service</span>
+            <div class="service-hero position-relative rounded-5 overflow-hidden shadow-neon border border-secondary border-opacity-25 mb-5 neon-glow-card">
+              <div class="neon-border opacity-50"></div>
+              <img src="assets/img/services/services-7.webp" alt="Digital Marketing Strategy Representation" class="img-fluid w-100 hover-scale transition-all position-relative z-index-1" style="min-height: 450px; object-fit: cover;">
+              <div class="service-badge position-absolute top-0 end-0 m-4 z-index-2">
+                <span class="badge bg-gradient-premium text-white fs-6 py-2 px-4 rounded-pill shadow-glow border border-white border-opacity-25 backdrop-blur-sm">Premium Service</span>
               </div>
-              <div class="hero-overlay-glass position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(transparent, rgba(0,0,0,0.8));"></div>
+              <div class="hero-overlay-glass position-absolute bottom-0 start-0 w-100 p-5 z-index-2" style="background: linear-gradient(transparent, rgba(0,0,0,0.9));">
+                 <h2 class="display-5 fw-black text-white mb-0">Web Development &amp; Architecture</h2>
+              </div>
             </div>
 
-            <div class="service-content">
+            <div class="service-content text-white-50 lh-lg fs-6">
               <div class="service-header mb-5">
-                <h2 class="display-6 fw-bold text-white mb-3">Digital Marketing Strategy &amp; Implementation</h2>
-                <div class="title-divider mb-4 bg-accent" style="width: 60px; height: 4px; border-radius: 2px;"></div>
-                <p class="service-intro text-white-50 fs-5 lh-lg">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                <div class="title-divider mb-4 bg-accent" style="width: 80px; height: 4px; border-radius: 2px;"></div>
+                <p class="service-intro fs-5 text-white">We don't just build websites; we architect scalable digital ecosystems. Our web development service bridges the gap between stunning aesthetic design and high-performance backend infrastructure, ensuring your platform dominates in speed, security, and SEO.</p>
+                <p class="mt-3">Whether you need a dynamic corporate portal, a high-converting e-commerce platform, or a complex custom web application, our elite team of developers utilizes the latest frameworks (React, Node.js, Next.js) to deliver code that is clean, secure, and infinitely scalable.</p>
               </div>
 
               <div class="service-features mb-5">
-                <h4 class="fw-bold text-white mb-4 h3"><i class="bi bi-star-fill text-accent me-2"></i> What You'll Get</h4>
+                <h4 class="fw-bold text-white mb-4 h3 d-flex align-items-center"><i class="material-icons text-accent me-3 fs-2">diamond</i> What You'll Get</h4>
                 <div class="row gy-4">
                   
                   <div class="col-md-6">
-                    <div class="feature-item premium-glass-panel bg-dark-glass rounded-4 p-4 h-100 border border-secondary border-opacity-10 hover-lift shadow-sm d-flex flex-column align-items-start">
-                      <div class="feature-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3 text-accent transition-all" style="width: 60px; height: 60px; font-size: 24px;">
-                        <i class="bi bi-graph-up-arrow"></i>
+                    <div class="feature-item neon-glow-card premium-glass-panel bg-dark-glass rounded-4 p-4 h-100 border border-secondary border-opacity-25 hover-lift shadow-sm d-flex flex-column align-items-start position-relative overflow-hidden">
+                      <div class="neon-border"></div>
+                      <div class="glow-icon feature-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3 text-accent transition-all shadow-glow" style="width: 60px; height: 60px;">
+                        <i class="material-icons fs-3 text-white">speed</i>
                       </div>
-                      <div class="feature-content mt-2">
-                        <h5 class="fw-bold text-white mb-2">Analytics &amp; Reporting</h5>
-                        <p class="text-white-50 small mb-0 lh-lg">Comprehensive tracking and performance analysis to ensure data-driven growth.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="feature-item premium-glass-panel bg-dark-glass rounded-4 p-4 h-100 border border-secondary border-opacity-10 hover-lift shadow-sm d-flex flex-column align-items-start">
-                      <div class="feature-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3 text-accent transition-all" style="width: 60px; height: 60px; font-size: 24px;">
-                        <i class="bi bi-people"></i>
-                      </div>
-                      <div class="feature-content mt-2">
-                        <h5 class="fw-bold text-white mb-2">Audience Targeting</h5>
-                        <p class="text-white-50 small mb-0 lh-lg">Precise demographic and behavioral targeting capturing high-quality leads.</p>
+                      <div class="feature-content mt-2 position-relative z-index-2">
+                        <h5 class="fw-bold text-white mb-2">Lightning-Fast Performance</h5>
+                        <p class="text-white-50 small mb-0 lh-lg">Optimized code architecture and advanced caching strategies to ensure sub-second load times.</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="col-md-6">
-                    <div class="feature-item premium-glass-panel bg-dark-glass rounded-4 p-4 h-100 border border-secondary border-opacity-10 hover-lift shadow-sm d-flex flex-column align-items-start">
-                      <div class="feature-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3 text-accent transition-all" style="width: 60px; height: 60px; font-size: 24px;">
-                        <i class="bi bi-megaphone"></i>
+                    <div class="feature-item neon-glow-card premium-glass-panel bg-dark-glass rounded-4 p-4 h-100 border border-secondary border-opacity-25 hover-lift shadow-sm d-flex flex-column align-items-start position-relative overflow-hidden">
+                      <div class="neon-border border-accent-alt"></div>
+                      <div class="glow-icon feature-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3 text-accent transition-all shadow-glow" style="width: 60px; height: 60px;">
+                        <i class="material-icons fs-3 text-white">security</i>
                       </div>
-                      <div class="feature-content mt-2">
-                        <h5 class="fw-bold text-white mb-2">Multi-Channel Campaigns</h5>
-                        <p class="text-white-50 small mb-0 lh-lg">Integrated social media and scalable search marketing infrastructures.</p>
+                      <div class="feature-content mt-2 position-relative z-index-2">
+                        <h5 class="fw-bold text-white mb-2">Enterprise-Grade Security</h5>
+                        <p class="text-white-50 small mb-0 lh-lg">Implementation of strict SSL protocols, data encryption, and robust firewall protections.</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="col-md-6">
-                    <div class="feature-item premium-glass-panel bg-dark-glass rounded-4 p-4 h-100 border border-secondary border-opacity-10 hover-lift shadow-sm d-flex flex-column align-items-start">
-                      <div class="feature-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3 text-accent transition-all" style="width: 60px; height: 60px; font-size: 24px;">
-                        <i class="bi bi-gear"></i>
+                    <div class="feature-item neon-glow-card premium-glass-panel bg-dark-glass rounded-4 p-4 h-100 border border-secondary border-opacity-25 hover-lift shadow-sm d-flex flex-column align-items-start position-relative overflow-hidden">
+                      <div class="neon-border"></div>
+                      <div class="glow-icon feature-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3 text-accent transition-all shadow-glow" style="width: 60px; height: 60px;">
+                        <i class="material-icons fs-3 text-white">devices</i>
                       </div>
-                      <div class="feature-content mt-2">
-                        <h5 class="fw-bold text-white mb-2">Strategy Optimization</h5>
-                        <p class="text-white-50 small mb-0 lh-lg">Continuous refinement for maximum ROI and premium sustained scaling.</p>
+                      <div class="feature-content mt-2 position-relative z-index-2">
+                        <h5 class="fw-bold text-white mb-2">Flawless Responsiveness</h5>
+                        <p class="text-white-50 small mb-0 lh-lg">Pixel-perfect rendering across all devices, from ultra-wide desktops to mobile screens.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="feature-item neon-glow-card premium-glass-panel bg-dark-glass rounded-4 p-4 h-100 border border-secondary border-opacity-25 hover-lift shadow-sm d-flex flex-column align-items-start position-relative overflow-hidden">
+                      <div class="neon-border border-accent-alt"></div>
+                      <div class="glow-icon feature-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3 text-accent transition-all shadow-glow" style="width: 60px; height: 60px;">
+                        <i class="material-icons fs-3 text-white">trending_up</i>
+                      </div>
+                      <div class="feature-content mt-2 position-relative z-index-2">
+                        <h5 class="fw-bold text-white mb-2">Technical SEO Mastered</h5>
+                        <p class="text-white-50 small mb-0 lh-lg">Semantic HTML, structured data, and clean URL routing to dominate search engine rankings.</p>
                       </div>
                     </div>
                   </div>
@@ -211,67 +236,68 @@
                 </div>
               </div>
 
-              <div class="service-process mb-5 position-relative">
-                <h4 class="fw-bold text-white mb-4 h3"><i class="bi bi-bezier2 text-accent me-2"></i> Our Methodology</h4>
+              <div class="service-process mb-5 position-relative mt-5 pt-4">
+                <h4 class="fw-bold text-white mb-5 h3 d-flex align-items-center"><i class="material-icons text-accent me-3 fs-2">route</i> Our Methodology</h4>
                 
-                <div class="process-steps ps-3 ps-md-4 border-start border-2 border-accent border-opacity-50 ms-3 ms-md-4 mt-4">
-                  
+                <div class="process-steps ps-4 border-start border-2 border-secondary border-opacity-50 ms-3 mt-4 position-relative">
+                  <div class="position-absolute top-0 start-0 h-100 bg-accent" style="width: 2px; margin-left: -2px; opacity: 0.5; box-shadow: 0 0 10px var(--accent-color);"></div>
+
                   <div class="process-step position-relative pb-5">
-                    <div class="step-number position-absolute bg-gradient-premium rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-glow" style="width: 45px; height: 45px; left: -24px; top: 0; transform: translateX(-50%); font-size: 1.1rem; border: 4px solid var(--background-color);">01</div>
-                    <div class="step-content pt-1 ms-3">
-                      <h5 class="fw-bold text-white mb-2">Discovery &amp; Analysis</h5>
-                      <p class="text-white-50 small lh-lg">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+                    <div class="step-number position-absolute bg-dark-glass rounded-circle d-flex align-items-center justify-content-center text-accent fw-bold shadow-neon" style="width: 50px; height: 50px; left: -25px; top: 0; transform: translateX(-50%); font-size: 1.2rem; border: 2px solid var(--accent-color); z-index: 2;">01</div>
+                    <div class="step-content pt-1 ms-4">
+                      <h5 class="fw-bold text-white mb-2 fs-4">Discovery &amp; Blueprinting</h5>
+                      <p class="text-white-50 small lh-lg">We dive deep into your business logic, defining user personas, feature requirements, and mapping the entire site architecture before writing a single line of code.</p>
                     </div>
                   </div>
 
                   <div class="process-step position-relative pb-5">
-                    <div class="step-number position-absolute bg-gradient-premium rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-glow" style="width: 45px; height: 45px; left: -24px; top: 0; transform: translateX(-50%); font-size: 1.1rem; border: 4px solid var(--background-color);">02</div>
-                    <div class="step-content pt-1 ms-3">
-                      <h5 class="fw-bold text-white mb-2">Strategy Development</h5>
-                      <p class="text-white-50 small lh-lg">Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus.</p>
+                    <div class="step-number position-absolute bg-dark-glass rounded-circle d-flex align-items-center justify-content-center text-accent fw-bold shadow-neon" style="width: 50px; height: 50px; left: -25px; top: 0; transform: translateX(-50%); font-size: 1.2rem; border: 2px solid var(--accent-color); z-index: 2;">02</div>
+                    <div class="step-content pt-1 ms-4">
+                      <h5 class="fw-bold text-white mb-2 fs-4">High-Fidelity UI/UX Design</h5>
+                      <p class="text-white-50 small lh-lg">Our designers craft stunning, interactive prototypes using Figma. We ensure the user journey is intuitive, visually striking, and perfectly aligned with your brand identity.</p>
                     </div>
                   </div>
 
                   <div class="process-step position-relative pb-5">
-                    <div class="step-number position-absolute bg-gradient-premium rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-glow" style="width: 45px; height: 45px; left: -24px; top: 0; transform: translateX(-50%); font-size: 1.1rem; border: 4px solid var(--background-color);">03</div>
-                    <div class="step-content pt-1 ms-3">
-                      <h5 class="fw-bold text-white mb-2">Implementation Execution</h5>
-                      <p class="text-white-50 small lh-lg">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit eget tincidunt nibh pulvinar.</p>
+                    <div class="step-number position-absolute bg-dark-glass rounded-circle d-flex align-items-center justify-content-center text-accent fw-bold shadow-neon" style="width: 50px; height: 50px; left: -25px; top: 0; transform: translateX(-50%); font-size: 1.2rem; border: 2px solid var(--accent-color); z-index: 2;">03</div>
+                    <div class="step-content pt-1 ms-4">
+                      <h5 class="fw-bold text-white mb-2 fs-4">Agile Development</h5>
+                      <p class="text-white-50 small lh-lg">Our engineering team brings the designs to life using modern tech stacks. We build in sprints, allowing for continuous feedback and transparent progress tracking.</p>
                     </div>
                   </div>
 
                   <div class="process-step position-relative">
-                    <div class="step-number position-absolute bg-gradient-premium rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-glow" style="width: 45px; height: 45px; left: -24px; top: 0; transform: translateX(-50%); font-size: 1.1rem; border: 4px solid var(--background-color);">04</div>
-                    <div class="step-content pt-1 ms-3">
-                      <h5 class="fw-bold text-white mb-2">Monitoring &amp; Optimization</h5>
-                      <p class="text-white-50 small lh-lg mb-0">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus donec sollicitudin molestie.</p>
+                    <div class="step-number position-absolute bg-gradient-premium rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-glow" style="width: 50px; height: 50px; left: -25px; top: 0; transform: translateX(-50%); font-size: 1.2rem; border: 2px solid var(--accent-color); z-index: 2;">04</div>
+                    <div class="step-content pt-1 ms-4">
+                      <h5 class="fw-bold text-white mb-2 fs-4">QA Testing &amp; Deployment</h5>
+                      <p class="text-white-50 small lh-lg mb-0">Rigorous cross-browser, device, and security testing ensures a flawless launch. We then deploy to production servers and provide ongoing premium support.</p>
                     </div>
                   </div>
 
                 </div>
               </div>
 
-              <div class="service-gallery mt-5 pt-4 border-top border-secondary border-opacity-25" data-aos="fade-up" data-aos-delay="300">
-                <h4 class="fw-bold text-white mb-4 h3"><i class="bi bi-images text-accent me-2"></i> Showcase</h4>
+              <div class="service-gallery mt-5 pt-5 border-top border-secondary border-opacity-25" data-aos="fade-up" data-aos-delay="300">
+                <h4 class="fw-bold text-white mb-4 h3 d-flex align-items-center"><i class="material-icons text-accent me-3 fs-2">photo_library</i> Output Showcase</h4>
                 <div class="row gy-4">
                   <div class="col-md-4">
                     <a href="assets/img/services/services-2.webp" class="glightbox">
-                      <div class="rounded-4 overflow-hidden shadow-lg border border-secondary border-opacity-25">
-                        <img src="assets/img/services/services-2.webp" alt="Showcase 1" class="img-fluid w-100 hover-scale transition-all" style="height: 200px; object-fit: cover;">
+                      <div class="premium-image-reveal rounded-4 overflow-hidden shadow-neon border border-secondary border-opacity-25 hover-lift-sm">
+                        <img src="assets/img/services/services-2.webp" alt="Development Mockup 1" class="img-fluid w-100 hover-scale transition-all" style="height: 220px; object-fit: cover;">
                       </div>
                     </a>
                   </div>
                   <div class="col-md-4">
                     <a href="assets/img/services/services-8.webp" class="glightbox">
-                      <div class="rounded-4 overflow-hidden shadow-lg border border-secondary border-opacity-25">
-                        <img src="assets/img/services/services-8.webp" alt="Showcase 2" class="img-fluid w-100 hover-scale transition-all" style="height: 200px; object-fit: cover;">
+                      <div class="premium-image-reveal rounded-4 overflow-hidden shadow-neon border border-secondary border-opacity-25 hover-lift-sm">
+                        <img src="assets/img/services/services-8.webp" alt="Development Mockup 2" class="img-fluid w-100 hover-scale transition-all" style="height: 220px; object-fit: cover;">
                       </div>
                     </a>
                   </div>
                   <div class="col-md-4">
                     <a href="assets/img/services/services-11.webp" class="glightbox">
-                      <div class="rounded-4 overflow-hidden shadow-lg border border-secondary border-opacity-25">
-                        <img src="assets/img/services/services-11.webp" alt="Showcase 3" class="img-fluid w-100 hover-scale transition-all" style="height: 200px; object-fit: cover;">
+                      <div class="premium-image-reveal rounded-4 overflow-hidden shadow-neon border border-secondary border-opacity-25 hover-lift-sm">
+                        <img src="assets/img/services/services-11.webp" alt="Development Mockup 3" class="img-fluid w-100 hover-scale transition-all" style="height: 220px; object-fit: cover;">
                       </div>
                     </a>
                   </div>
@@ -282,72 +308,76 @@
           </div>
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-sidebar position-sticky" style="top: 100px;">
+            <div class="service-sidebar position-sticky" style="top: 120px; z-index: 10;">
 
-              <div class="service-menu premium-glass-panel bg-dark-glass p-4 rounded-5 mb-4 shadow-lg border border-secondary border-opacity-10">
-                <h4 class="fw-bold text-white mb-4 position-relative pb-2 border-bottom border-secondary border-opacity-25 d-inline-block">Categories</h4>
-                <div class="menu-list d-flex flex-column gap-2 mt-3">
-                  <a href="#" class="menu-item active bg-white bg-opacity-10 rounded-3 p-3 text-white text-decoration-none d-flex align-items-center justify-content-between fw-semibold border-start border-4 border-accent">
-                    <span>Digital Marketing</span> <i class="bi bi-arrow-right text-accent"></i>
+              <div class="service-menu neon-glow-card premium-glass-panel bg-dark-glass p-4 rounded-5 mb-4 shadow-neon border border-secondary border-opacity-25 overflow-hidden position-relative">
+                <div class="neon-border"></div>
+                <h4 class="fw-bold text-white mb-4 position-relative pb-2 border-bottom border-secondary border-opacity-25 d-inline-block z-index-2">All Services</h4>
+                <div class="menu-list d-flex flex-column gap-2 mt-3 position-relative z-index-2">
+                  <a href="#" class="menu-item active bg-gradient-premium rounded-3 p-3 text-white text-decoration-none d-flex align-items-center justify-content-between fw-bold shadow-glow border border-white border-opacity-25">
+                    <span>Web Development</span> <i class="material-icons">arrow_forward</i>
                   </a>
-                  <a href="#" class="menu-item bg-transparent rounded-3 p-3 text-white-50 text-decoration-none d-flex align-items-center justify-content-between hover-bg-light transition-all">
-                    <span>Web Development</span> <i class="bi bi-arrow-right opacity-0 transition-all icon-reveal"></i>
+                  <a href="#" class="menu-item bg-black bg-opacity-25 rounded-3 p-3 text-white-50 text-decoration-none d-flex align-items-center justify-content-between hover-bg-glass transition-all border border-transparent hover-border-accent">
+                    <span>Graphic Design</span> <i class="material-icons opacity-0 transition-all icon-reveal">arrow_forward</i>
                   </a>
-                  <a href="#" class="menu-item bg-transparent rounded-3 p-3 text-white-50 text-decoration-none d-flex align-items-center justify-content-between hover-bg-light transition-all">
-                    <span>Brand Strategy</span> <i class="bi bi-arrow-right opacity-0 transition-all icon-reveal"></i>
+                  <a href="#" class="menu-item bg-black bg-opacity-25 rounded-3 p-3 text-white-50 text-decoration-none d-flex align-items-center justify-content-between hover-bg-glass transition-all border border-transparent hover-border-accent">
+                    <span>eCitizen Solutions</span> <i class="material-icons opacity-0 transition-all icon-reveal">arrow_forward</i>
                   </a>
-                  <a href="#" class="menu-item bg-transparent rounded-3 p-3 text-white-50 text-decoration-none d-flex align-items-center justify-content-between hover-bg-light transition-all">
-                    <span>Content Creation</span> <i class="bi bi-arrow-right opacity-0 transition-all icon-reveal"></i>
+                  <a href="#" class="menu-item bg-black bg-opacity-25 rounded-3 p-3 text-white-50 text-decoration-none d-flex align-items-center justify-content-between hover-bg-glass transition-all border border-transparent hover-border-accent">
+                    <span>IT Masterclasses</span> <i class="material-icons opacity-0 transition-all icon-reveal">arrow_forward</i>
                   </a>
-                  <a href="#" class="menu-item bg-transparent rounded-3 p-3 text-white-50 text-decoration-none d-flex align-items-center justify-content-between hover-bg-light transition-all">
-                    <span>SEO Optimization</span> <i class="bi bi-arrow-right opacity-0 transition-all icon-reveal"></i>
+                  <a href="#" class="menu-item bg-black bg-opacity-25 rounded-3 p-3 text-white-50 text-decoration-none d-flex align-items-center justify-content-between hover-bg-glass transition-all border border-transparent hover-border-accent">
+                    <span>Cyber Services</span> <i class="material-icons opacity-0 transition-all icon-reveal">arrow_forward</i>
                   </a>
                 </div>
               </div>
 
-              <div class="service-info premium-glass-panel bg-dark-glass p-4 rounded-5 mb-4 shadow-lg border border-secondary border-opacity-10">
-                <h4 class="fw-bold text-white mb-4 position-relative pb-2 border-bottom border-secondary border-opacity-25 d-inline-block">Service Specs</h4>
-                <div class="info-list d-flex flex-column gap-3 mt-3">
+              <div class="service-info neon-glow-card premium-glass-panel bg-dark-glass p-4 rounded-5 mb-4 shadow-neon border border-secondary border-opacity-25 overflow-hidden position-relative">
+                <div class="neon-border border-accent-alt"></div>
+                <h4 class="fw-bold text-white mb-4 position-relative pb-2 border-bottom border-secondary border-opacity-25 d-inline-block z-index-2">Service Specs</h4>
+                <div class="info-list d-flex flex-column gap-3 mt-3 position-relative z-index-2">
                   <div class="info-item d-flex justify-content-between align-items-center pb-2 border-bottom border-white border-opacity-10">
-                    <span class="info-label text-white-50 fw-medium d-flex align-items-center"><i class="bi bi-clock-history text-accent me-2"></i> Duration</span>
-                    <span class="info-value text-white fw-bold">3-6 months</span>
+                    <span class="info-label text-white-50 fw-medium d-flex align-items-center"><i class="material-icons text-accent me-2 fs-5">timer</i> Timeline</span>
+                    <span class="info-value text-white fw-bold bg-white bg-opacity-10 px-2 py-1 rounded small">4-8 Weeks</span>
                   </div>
                   <div class="info-item d-flex justify-content-between align-items-center pb-2 border-bottom border-white border-opacity-10">
-                    <span class="info-label text-white-50 fw-medium d-flex align-items-center"><i class="bi bi-people-fill text-accent me-2"></i> Team Size</span>
-                    <span class="info-value text-white fw-bold">4-6 specialists</span>
+                    <span class="info-label text-white-50 fw-medium d-flex align-items-center"><i class="material-icons text-accent me-2 fs-5">group</i> Team</span>
+                    <span class="info-value text-white fw-bold bg-white bg-opacity-10 px-2 py-1 rounded small">3 Specialists</span>
                   </div>
                   <div class="info-item d-flex justify-content-between align-items-center pb-2 border-bottom border-white border-opacity-10">
-                    <span class="info-label text-white-50 fw-medium d-flex align-items-center"><i class="bi bi-box-seam text-accent me-2"></i> Delivery</span>
-                    <span class="info-value text-white fw-bold">Bi-weekly</span>
+                    <span class="info-label text-white-50 fw-medium d-flex align-items-center"><i class="material-icons text-accent me-2 fs-5">update</i> Milestones</span>
+                    <span class="info-value text-white fw-bold bg-white bg-opacity-10 px-2 py-1 rounded small">Weekly</span>
                   </div>
                   <div class="info-item d-flex justify-content-between align-items-center pb-1">
-                    <span class="info-label text-white-50 fw-medium d-flex align-items-center"><i class="bi bi-shield-check text-accent me-2"></i> Support</span>
-                    <span class="info-value text-white fw-bold">24/7 Dedicated</span>
+                    <span class="info-label text-white-50 fw-medium d-flex align-items-center"><i class="material-icons text-accent me-2 fs-5">support_agent</i> Support</span>
+                    <span class="info-value text-white fw-bold text-accent">1 Month Free</span>
                   </div>
                 </div>
               </div>
 
-              <div class="contact-card bg-gradient-premium rounded-5 p-4 p-md-5 shadow-2xl text-white position-relative overflow-hidden">
+              <div class="contact-card bg-gradient-premium rounded-5 p-4 p-md-5 shadow-2xl text-white position-relative overflow-hidden hover-lift border border-white border-opacity-25">
                 <div class="bg-abstract-shapes animate-shapes opacity-25"></div>
                 <div class="contact-content position-relative z-index-2 text-center">
-                  <div class="rounded-circle bg-white bg-opacity-25 d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 70px; height: 70px;">
-                    <i class="bi bi-headset fs-2 text-white"></i>
+                  <div class="glow-icon rounded-circle bg-white bg-opacity-25 d-flex align-items-center justify-content-center mx-auto mb-4 shadow-glow backdrop-blur-sm" style="width: 80px; height: 80px;">
+                    <i class="material-icons display-5 text-white">rocket_launch</i>
                   </div>
-                  <h4 class="fw-bold text-white mb-3">Need Custom Help?</h4>
-                  <p class="text-white-50 small lh-lg mb-4 px-2">Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+                  <h4 class="fw-black text-white mb-3 fs-3">Ready to Scale?</h4>
+                  <p class="text-white-50 small lh-lg mb-4 px-2">Don't let your digital infrastructure hold you back. Let's architect a premium solution tailored for massive growth.</p>
                   
-                  <div class="contact-info bg-black bg-opacity-25 rounded-4 p-3 mb-4 text-start">
-                    <div class="contact-item d-flex align-items-center mb-2">
-                      <i class="bi bi-telephone-fill text-accent me-3 fs-5"></i>
-                      <span class="fw-semibold">+254 798 667 892</span>
-                    </div>
-                    <div class="contact-item d-flex align-items-center">
-                      <i class="bi bi-envelope-fill text-accent me-3 fs-5"></i>
-                      <span class="fw-semibold small">gmaxkedesigns@gmail.com</span>
-                    </div>
+                  <div class="contact-info bg-black bg-opacity-40 rounded-4 p-3 mb-4 text-start backdrop-blur-sm border border-white border-opacity-10">
+                    <a href="tel:+254798667892" class="contact-item d-flex align-items-center mb-2 text-decoration-none hover-text-white transition-all">
+                      <i class="material-icons text-accent me-3 fs-5">call</i>
+                      <span class="fw-bold text-white">+254 798 667 892</span>
+                    </a>
+                    <a href="mailto:gmaxkedesigns@gmail.com" class="contact-item d-flex align-items-center text-decoration-none hover-text-white transition-all">
+                      <i class="material-icons text-accent me-3 fs-5">mail</i>
+                      <span class="fw-semibold small text-white-50">gmaxkedesigns@gmail.com</span>
+                    </a>
                   </div>
                   
-                  <a href="contact.html" target="_self" class="btn premium-white-btn rounded-pill w-100 py-3 fw-bold shadow-glow hover-lift">Get a Free Quote</a>
+                  <a href="contact.html" target="_self" class="btn btn-light text-dark rounded-pill w-100 py-3 fw-bold shadow-glow hover-lift d-flex align-items-center justify-content-center">
+                    Get Your Free Quote <i class="material-icons ms-2 fs-5">arrow_forward</i>
+                  </a>
                 </div>
               </div>
 
@@ -357,69 +387,108 @@
         </div>
 
       </div>
+    </section>
 
+    <section class="cta-section py-5 position-relative z-index-2 overflow-hidden border-top border-secondary border-opacity-10">
+        <div class="bg-abstract-shapes opacity-50"></div>
+        <div class="container py-5 text-center position-relative z-index-2" data-aos="zoom-in">
+            <h2 class="display-5 fw-bold text-white mb-4">Elevate Your Brand Today</h2>
+            <p class="lead text-white-50 mb-5 max-w-700 mx-auto">Join hundreds of successful businesses that have scaled using our premium tech solutions and design architecture.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="contact.html" class="btn premium-primary-btn btn-lg px-5 py-3 rounded-pill shadow-glow hover-lift fs-6 fw-semibold">Consult an Expert</a>
+                <a href="Portfolio.html" class="btn premium-outline-btn btn-lg px-5 py-3 rounded-pill hover-lift fs-6 fw-semibold">View Case Studies</a>
+            </div>
+        </div>
     </section>
 
   </main>
 
-  <footer id="footer" class="footer position-relative z-index-2 mt-5">
-    <div class="footer-top border-top border-secondary border-opacity-10 py-5">
+  <footer id="footer" class="footer position-relative z-index-2">
+    <div class="footer-top border-top border-secondary border-opacity-25 py-5 bg-darker">
       <div class="container mt-4">
         <div class="row gy-5">
+          
           <div class="col-lg-4 col-md-12 footer-about pe-lg-5">
             <a href="index.html" class="logo d-flex align-items-center mb-4 text-decoration-none">
-              <img src="assets/img/gmax.png" alt="G-Max Tech" height="40" class="me-2">
+              <img src="assets/img/gmax.png" alt="G-Max Tech Logo" height="45" class="me-2">
               <span class="sitename fs-3 fw-bold text-white">G-Max Tech</span>
             </a>
-            <p class="text-white-50 lh-lg pe-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, and elite professional IT training.</p>
-          </div>
-          <div class="col-lg-2 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Navigation</h4>
-            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="index.html" target="_self" class="text-white-50 text-decoration-none">Home</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="about.html" target="_self" class="text-white-50 text-decoration-none">About Us</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" target="_self" class="text-white-50 text-decoration-none">Services</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="Portfolio.html" target="_self" class="text-white-50 text-decoration-none">Portfolio</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="contact.html" target="_self" class="text-white-50 text-decoration-none">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Services</h4>
-            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Graphic Design</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">eCitizen Support</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Web Development</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">IT Training</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start mt-5 mt-lg-0">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact</h4>
-            <div class="text-white-50 mt-3 lh-lg">
-              <p class="mb-1"><i class="bi bi-geo-alt-fill text-accent me-2"></i> Thika Road, Nairobi, Kenya</p>
-              <p class="mb-1"><i class="bi bi-telephone-fill text-accent me-2"></i> +254 798 667 892</p>
-              <p class="mb-3"><i class="bi bi-envelope-fill text-accent me-2"></i> gmaxkedesigns@gmail.com</p>
+            <p class="text-white-50 lh-lg pe-4 mb-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, robust web development, and elite professional IT training in Kenya.</p>
+            <div class="social-links d-flex gap-2">
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
+          
+          <div class="col-lg-2 col-6 footer-links">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Quick Links</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="index.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Home</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Services</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="about.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">About Us</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="Portfolio.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Portfolio</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="contact.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-6 footer-links">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Services</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">Graphic Design</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">Web Development</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">eCitizen Support</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">IT Masterclasses</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4 col-md-12 footer-contact text-center text-md-start mt-5 mt-lg-0">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact Info</h4>
+            <div class="text-white-50 mt-3 lh-lg mb-4">
+              <p class="mb-2"><i class="bi bi-geo-alt-fill text-accent me-2 fs-5 align-middle"></i> Thika Road, Nairobi, Kenya</p>
+              <p class="mb-2"><i class="bi bi-telephone-fill text-accent me-2 fs-5 align-middle"></i> +254 798 667 892</p>
+              <p class="mb-2"><i class="bi bi-envelope-fill text-accent me-2 fs-5 align-middle"></i> gmaxkedesigns@gmail.com</p>
+            </div>
+            
+            <h5 class="text-white fw-semibold h6 mb-3">Subscribe to our Newsletter</h5>
+            <form action="#" class="d-flex position-relative">
+                <input type="email" class="form-control bg-dark-glass border-secondary border-opacity-25 text-white pe-5 py-2 rounded-pill" placeholder="Email address" required>
+                <button type="submit" class="btn premium-primary-btn position-absolute end-0 top-0 bottom-0 rounded-pill px-4">Subscribe</button>
+            </form>
+          </div>
+          
         </div>
       </div>
     </div>
-    <div class="footer-bottom bg-black bg-opacity-50 py-4">
+    <div class="footer-bottom bg-black py-4">
       <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <p class="mb-0 text-white-50 small">© 2026 <strong class="text-white px-1">G-Max Tech</strong> All Rights Reserved.</p>
+        <p class="mb-0 text-white-50 small">© <span id="currentYear">2026</span> <strong class="text-white px-1">G-Max Tech</strong> All Rights Reserved.</p>
+        <div class="text-white-50 small mt-2 mt-md-0 d-flex gap-3">
+            <a href="#" class="text-white-50 text-decoration-none hover-text-white">Privacy Policy</a>
+            <a href="#" class="text-white-50 text-decoration-none hover-text-white">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center hover-lift shadow-glow"><i class="material-icons">arrow_upward</i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center hover-lift shadow-glow bg-gradient-premium rounded-circle" aria-label="Scroll to Top">
+      <i class="material-icons text-white">arrow_upward</i>
+  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
   <script src="assets/js/main.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      // Dynamic Year
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      
+      // Scroll Indicator
       window.onscroll = function() {
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;

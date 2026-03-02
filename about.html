@@ -3,9 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About Us | G-Max Tech - Premium Digital Solutions</title>
-  <link href="assets/img/gmax.png" rel="icon">
   
+  <title>About Us | G-Max Tech - Premium Digital Solutions</title>
+  <meta name="title" content="About Us | G-Max Tech - Premium Digital Solutions">
+  <meta name="description" content="Discover the passionate creatives and engineers behind G-Max Tech. Learn about our story, vision, mission, and the core values that drive our digital solutions.">
+  <meta name="keywords" content="About G-Max Tech, Tech Agency Nairobi, Gmax KE Creatives, Digital Agency Story, Graphic Design Kenya, Premium Tech Team">
+  <meta name="author" content="G-Max Tech">
+  <meta name="robots" content="index, follow">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -14,192 +22,352 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="starter-page-page premium-layout">
+<body class="starter-page-page premium-layout about-page">
 
-  <div id="preloader"><div class="loader-content"><div class="neon-ring"></div><div class="loader-text">INITIALIZING...</div></div></div>
+  <div id="preloader">
+      <div class="loader-content">
+          <div class="neon-ring"></div>
+          <div class="loader-text">INITIALIZING...</div>
+      </div>
+  </div>
+  
   <canvas id="neuron-canvas"></canvas>
 
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <nav class="sidebar" id="sidebar">
+  <nav class="sidebar" id="sidebar" aria-label="Mobile Navigation">
       <div class="sidebar-header">
           <a class="navbar-brand d-flex align-items-center" href="index.html" target="_self">
-              <img src="assets/img/gmax.png" alt="Logo" style="height: 35px;">
+              <img src="assets/img/gmax.png" alt="G-Max Tech Logo" style="height: 35px;">
               <span class="ms-2 fw-bold text-white">G-Max Tech</span>
           </a>
-          <button class="sidebar-close" id="sidebarClose"><span class="material-icons">close</span></button>
+          <button class="sidebar-close" id="sidebarClose" aria-label="Close Sidebar">
+              <span class="material-icons">close</span>
+          </button>
       </div>
       <ul class="sidebar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><span class="material-icons">home</span> Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html" target="_self"><span class="material-icons">info</span> About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><span class="material-icons">design_services</span> Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="Portfolio.html" target="_self"><span class="material-icons">work</span> Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><span class="material-icons">contact_mail</span> Contact</a></li>
+          <li class="nav-item">
+              <a class="nav-link" href="index.html" target="_self"><span class="material-icons">home</span> Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="service.html" target="_self"><span class="material-icons">layers</span> Services</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" href="about.html" target="_self"><span class="material-icons">info</span> About Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="Portfolio.html" target="_self"><span class="material-icons">work</span> Portfolio</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="contact.html" target="_self"><span class="material-icons">contact_mail</span> Contact</a>
+          </li>
       </ul>
   </nav>
 
-  <nav class="navbar navbar-expand-lg fixed-top premium-header glass-effect">
-      <div class="container">
-          <button class="sidebar-toggle d-xl-none me-3" type="button" id="sidebarToggle"><span class="material-icons">menu</span></button>
-          <a class="navbar-brand d-flex align-items-center me-auto" href="index.html" target="_self">
-              <img src="assets/img/gmax.png" alt="Logo" style="height: 40px;">
-              <span class="ms-2 fw-bold text-white fs-4 d-none d-sm-block">G-Max Tech</span>
-          </a>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto align-items-center">
-                  <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><i class="material-icons me-1">home</i> Home</a></li>
-                  <li class="nav-item"><a class="nav-link active" href="about.html" target="_self"><i class="material-icons me-1">info</i> About</a></li>
-                  <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><i class="material-icons me-1">design_services</i> Services</a></li>
-                  <li class="nav-item"><a class="nav-link" href="Portfolio.html" target="_self"><i class="material-icons me-1">work</i> Portfolio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><i class="material-icons me-1">contact_mail</i> Contact</a></li>
-              </ul>
-              <a href="contact.html" target="_self" class="btn premium-primary-btn ms-4 rounded-pill shadow-glow hover-lift">Get Quote</a>
+  <header>
+      <nav class="navbar navbar-expand-lg fixed-top premium-header glass-effect" aria-label="Main Navigation">
+          <div class="container">
+              <button class="sidebar-toggle d-xl-none me-3" type="button" id="sidebarToggle" aria-label="Toggle Navigation">
+                  <span class="material-icons">menu</span>
+              </button>
+
+              <a class="navbar-brand d-flex align-items-center me-auto" href="index.html" target="_self">
+                  <img src="assets/img/gmax.png" alt="G-Max Tech Logo" style="height: 40px;">
+                  <span class="ms-2 fw-bold text-white fs-4 d-none d-sm-block">G-Max Tech</span>
+              </a>
+              
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto align-items-center">
+                      <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><i class="material-icons me-1">home</i> Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><i class="material-icons me-1">layers</i> Services</a></li>
+                      <li class="nav-item"><a class="nav-link active" href="about.html" target="_self"><i class="material-icons me-1">info</i> About</a></li>
+                      <li class="nav-item"><a class="nav-link" href="Portfolio.html" target="_self"><i class="material-icons me-1">work</i> Portfolio</a></li>
+                      <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><i class="material-icons me-1">contact_mail</i> Contact</a></li>
+                  </ul>
+                  <a href="contact.html" target="_self" class="btn premium-primary-btn ms-4 rounded-pill shadow-glow hover-lift">Get a Quote</a>
+              </div>
           </div>
-      </div>
-  </nav>
+      </nav>
+  </header>
 
   <main class="main premium-main pt-5 mt-4 z-index-2 position-relative">
+    
     <div class="page-title premium-page-hero position-relative overflow-hidden pt-5 pb-5 border-bottom border-secondary border-opacity-10 text-center">
-      <div class="container position-relative z-index-2">
-        <span class="badge premium-badge mb-3" data-aos="fade-up">Our Identity</span>
-        <h1 class="display-4 fw-bold text-white mb-3" data-aos="fade-up" data-aos-delay="100">About Us</h1>
-        <p class="lead text-white-50 max-w-600 mx-auto" data-aos="fade-up" data-aos-delay="200">Discover the passionate creatives and engineers behind our award-winning digital solutions.</p>
+      <div class="hero-glow-orb position-absolute top-50 start-50 translate-middle" style="width: 450px; height: 450px; background: radial-gradient(circle, rgba(0,136,112,0.2) 0%, transparent 70%); z-index: 0; filter: blur(50px);"></div>
+      <div class="container position-relative z-index-2 py-5">
+        <span class="badge premium-badge mb-3 px-4 py-2" data-aos="fade-down">Our Identity</span>
+        <h1 class="display-3 fw-black text-white mb-4" data-aos="fade-up" data-aos-delay="100">About <span class="text-gradient">G-Max Tech</span></h1>
+        <p class="lead text-white-50 max-w-700 mx-auto" data-aos="fade-up" data-aos-delay="200">Discover the passionate creatives, meticulous engineers, and strategic visionaries behind our award-winning digital solutions.</p>
       </div>
     </div>
 
-    <section id="about" class="about section premium-section overflow-hidden mt-5">
-      <div class="container section-title" data-aos="fade-up" data-aos-duration="1000">
-        <span class="description-title text-gradient-bg">About</span>
-        <h2 class="premium-heading">Our Story</h2>
+    <section class="stats-section py-4 border-bottom border-secondary border-opacity-10 premium-bg-darker position-relative z-index-2">
+        <div class="container">
+            <div class="row g-4 text-center justify-content-center">
+                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-box p-3">
+                        <h2 class="display-5 fw-black text-gradient mb-0">185<span class="text-white">+</span></h2>
+                        <p class="text-white-50 text-uppercase letter-spacing-1 small mt-2 fw-semibold">Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-box p-3">
+                        <h2 class="display-5 fw-black text-gradient mb-0">5<span class="text-white">+</span></h2>
+                        <p class="text-white-50 text-uppercase letter-spacing-1 small mt-2 fw-semibold">Years Experience</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-box p-3">
+                        <h2 class="display-5 fw-black text-gradient mb-0">99<span class="text-white">%</span></h2>
+                        <p class="text-white-50 text-uppercase letter-spacing-1 small mt-2 fw-semibold">Client Satisfaction</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-box p-3">
+                        <h2 class="display-5 fw-black text-gradient mb-0">24<span class="text-white">/7</span></h2>
+                        <p class="text-white-50 text-uppercase letter-spacing-1 small mt-2 fw-semibold">Premium Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about section premium-section overflow-hidden py-5 position-relative z-index-2">
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
+        <span class="description-title text-gradient-bg">Genesis</span>
+        <h2 class="premium-heading display-5 fw-bold text-white mt-2">Our Story</h2>
       </div>
+      
       <div class="container">
         <div class="row gx-0 gx-lg-5 gy-5 align-items-center">
+          
           <div class="col-lg-6" data-aos="zoom-out" data-aos-duration="1200">
-            <div class="image-wrapper premium-image-reveal">
-              <div class="image-box hover-scale">
-                <img src="assets/img/design1.jpg" class="img-fluid rounded-4 shadow-xl" alt="About G-Max Tech">
+            <div class="image-wrapper premium-image-reveal position-relative">
+              <div class="neon-border border-accent-alt rounded-4 position-absolute w-100 h-100 top-0 start-0 z-index-0 opacity-50 transform-scale-105"></div>
+              <div class="image-box hover-scale position-relative z-index-1">
+                <img src="assets/img/design1.jpg" class="img-fluid rounded-4 shadow-neon" alt="G-Max Tech Team at Work">
               </div>
-              <div class="experience-box floating-box glassmorphism" data-aos="flip-up" data-aos-delay="400">
-                <div class="years text-gradient">5+</div>
-                <div class="text text-light">Years of<br>Premium Experience</div>
+              <div class="experience-box floating-box glassmorphism bg-dark-glass border border-accent border-opacity-25 rounded-4 p-4 position-absolute bottom-0 start-0 translate-middle-x mb-4 ms-5 shadow-glow" data-aos="flip-up" data-aos-delay="400">
+                <div class="years text-gradient display-5 fw-black">5+</div>
+                <div class="text text-light fw-medium">Years of<br>Premium Excellence</div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200">
             <div class="content ps-lg-4">
-              <p class="highlight-text lead fw-medium text-white-50">Gmax KE Creatives, founded in 2021, has masterfully completed 185+ projects, specializing in high-end graphic design, premium branding, seamless eCitizen services, and bespoke digital solutions.</p>
-              <div class="features-list premium-timeline mt-5">
-                <div class="feature-item timeline-item" data-aos="fade-up" data-aos-delay="200">
-                  <div class="icon-box pulse-hover"><i class="material-icons text-white">rocket_launch</i></div>
-                  <div class="text">
-                    <h4 class="fw-bold">2021</h4>
-                    <p class="fw-semibold text-white mb-1">Gmax KE Creatives Founded</p>
-                    <p class="text-muted small">Started with a grand vision to provide unparalleled creative solutions.</p>
+              <h3 class="fw-bold text-white mb-4">Pioneering Digital Perfection</h3>
+              <p class="highlight-text lead fw-medium text-white-50 lh-lg mb-5">Gmax KE Creatives, founded in 2021, has masterfully architected over 185 projects. We evolved from a humble design studio into a full-scale digital agency, specializing in high-end graphic design, premium branding, robust web development, and seamless eCitizen services.</p>
+              
+              <div class="features-list premium-timeline position-relative border-start border-accent border-opacity-25 ps-4 ms-2">
+                <div class="feature-item timeline-item position-relative mb-5" data-aos="fade-up" data-aos-delay="200">
+                  <div class="icon-box pulse-hover position-absolute top-0 start-0 translate-middle bg-gradient-premium rounded-circle shadow-neon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; margin-left: -24px;">
+                      <i class="material-icons text-white fs-5">rocket_launch</i>
+                  </div>
+                  <div class="text ps-3">
+                    <h4 class="fw-black text-accent mb-1">2021</h4>
+                    <p class="fw-bold text-white fs-5 mb-2">Gmax KE Creatives Founded</p>
+                    <p class="text-white-50 small mb-0 lh-base">Started with a grand vision to provide unparalleled creative solutions and redefine local branding standards.</p>
                   </div>
                 </div>
-                <div class="feature-item timeline-item" data-aos="fade-up" data-aos-delay="400">
-                  <div class="icon-box pulse-hover"><i class="material-icons text-white">emoji_events</i></div>
-                  <div class="text">
-                    <h4 class="fw-bold">2022</h4>
-                    <p class="fw-semibold text-white mb-1">First 50 Milestone Projects</p>
-                    <p class="text-muted small">Firmly established our impeccable reputation in graphic design.</p>
+                <div class="feature-item timeline-item position-relative mb-5" data-aos="fade-up" data-aos-delay="400">
+                  <div class="icon-box pulse-hover position-absolute top-0 start-0 translate-middle bg-gradient-premium rounded-circle shadow-neon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; margin-left: -24px;">
+                      <i class="material-icons text-white fs-5">emoji_events</i>
+                  </div>
+                  <div class="text ps-3">
+                    <h4 class="fw-black text-accent mb-1">2022</h4>
+                    <p class="fw-bold text-white fs-5 mb-2">First 50 Milestone Projects</p>
+                    <p class="text-white-50 small mb-0 lh-base">Firmly established our impeccable reputation in graphic design by delivering massive value to corporate clients.</p>
                   </div>
                 </div>
-                <div class="feature-item timeline-item" data-aos="fade-up" data-aos-delay="600">
-                  <div class="icon-box pulse-hover"><i class="material-icons text-white">public</i></div>
-                  <div class="text">
-                    <h4 class="fw-bold">2023 - 2026</h4>
-                    <p class="fw-semibold text-white mb-1">Massive Service Expansion</p>
-                    <p class="text-muted small">Integrated comprehensive eCitizen and advanced cyber services.</p>
+                <div class="feature-item timeline-item position-relative" data-aos="fade-up" data-aos-delay="600">
+                  <div class="icon-box pulse-hover position-absolute top-0 start-0 translate-middle bg-gradient-premium rounded-circle shadow-neon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; margin-left: -24px;">
+                      <i class="material-icons text-white fs-5">public</i>
+                  </div>
+                  <div class="text ps-3">
+                    <h4 class="fw-black text-accent mb-1">2023 - Present</h4>
+                    <p class="fw-bold text-white fs-5 mb-2">Massive Service Expansion</p>
+                    <p class="text-white-50 small mb-0 lh-base">Integrated comprehensive eCitizen services, advanced cyber solutions, and elite IT Masterclass training programs.</p>
                   </div>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="services section premium-bg-alt pt-5 pb-5">
-      <div class="container section-title mt-5" data-aos="fade-up">
+    <section class="vision-mission section premium-bg-alt py-5 position-relative z-index-2">
+      <div class="container section-title text-center mt-4 mb-5" data-aos="fade-up">
         <span class="description-title text-gradient-bg">Core Focus</span>
-        <h2 class="premium-heading">Vision & Mission</h2>
+        <h2 class="premium-heading display-5 fw-bold text-white mt-2">Vision & Mission</h2>
       </div>
-      <div class="container mb-5 pb-5">
-        <div class="row g-4 justify-content-center">
+      
+      <div class="container mb-5">
+        <div class="row g-5 justify-content-center">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="premium-card hover-lift p-5 bg-dark-glass rounded-4 h-100 text-center border border-secondary border-opacity-25">
-              <i class="material-icons text-accent display-3 mb-3">visibility</i>
-              <h3 class="fw-bold text-white mb-3">Our Vision</h3>
-              <p class="text-white-50">To be the absolute leading creative agency in Kenya, fundamentally transforming businesses through innovative, high-end design solutions and comprehensive digital services that aggressively drive success.</p>
+            <div class="premium-card neon-glow-card p-5 bg-dark-glass rounded-5 h-100 text-center position-relative overflow-hidden hover-lift">
+              <div class="neon-border"></div>
+              <div class="glow-icon bg-gradient-premium rounded-circle d-inline-flex align-items-center justify-content-center mb-4 shadow-neon" style="width: 90px; height: 90px;">
+                  <i class="material-icons text-white display-4">visibility</i>
+              </div>
+              <h3 class="fw-black text-white mb-4 display-6">Our Vision</h3>
+              <p class="text-white-50 fs-6 lh-lg mb-0">To be the absolute leading creative and tech agency in Africa, fundamentally transforming businesses through innovative, high-end design solutions and comprehensive digital architectures that aggressively drive global success.</p>
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="premium-card hover-lift p-5 bg-dark-glass rounded-4 h-100 text-center border border-secondary border-opacity-25">
-              <i class="material-icons text-accent display-3 mb-3">track_changes</i>
-              <h3 class="fw-bold text-white mb-3">Our Mission</h3>
-              <p class="text-white-50">To deliver exceptional, bespoke creative solutions that dramatically exceed client expectations while simultaneously providing accessible digital services that empower individuals and global businesses.</p>
+            <div class="premium-card neon-glow-card p-5 bg-dark-glass rounded-5 h-100 text-center position-relative overflow-hidden hover-lift">
+              <div class="neon-border border-accent-alt"></div>
+              <div class="glow-icon bg-gradient-premium rounded-circle d-inline-flex align-items-center justify-content-center mb-4 shadow-neon" style="width: 90px; height: 90px;">
+                  <i class="material-icons text-white display-4">track_changes</i>
+              </div>
+              <h3 class="fw-black text-white mb-4 display-6">Our Mission</h3>
+              <p class="text-white-50 fs-6 lh-lg mb-0">To deliver exceptional, bespoke creative solutions that dramatically exceed client expectations while simultaneously providing accessible digital services and education that empower individuals and global businesses to scale.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="core-values py-5 premium-bg-darker position-relative z-index-2">
+        <div class="container py-4" data-aos="fade-up">
+            <div class="text-center mb-5">
+                <span class="description-title text-gradient-bg">Principles</span>
+                <h2 class="premium-heading text-white fw-bold mt-2">Our Core Values</h2>
+                <p class="text-white-50 mt-3 mx-auto" style="max-width: 600px;">The uncompromising standards that dictate every line of code we write and every pixel we design.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-card bg-transparent border border-secondary border-opacity-25 rounded-4 p-4 text-center h-100 hover-bg-glass transition-all neon-glow-card">
+                        <i class="material-icons text-accent fs-1 mb-3">lightbulb</i>
+                        <h4 class="text-white fw-bold h5">Innovation</h4>
+                        <p class="text-white-50 small mb-0">Constantly pushing the boundaries of what's possible in the digital realm.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-card bg-transparent border border-secondary border-opacity-25 rounded-4 p-4 text-center h-100 hover-bg-glass transition-all neon-glow-card">
+                        <i class="material-icons text-accent fs-1 mb-3">verified</i>
+                        <h4 class="text-white fw-bold h5">Excellence</h4>
+                        <p class="text-white-50 small mb-0">Delivering premium, flawless quality in every single project we touch.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-card bg-transparent border border-secondary border-opacity-25 rounded-4 p-4 text-center h-100 hover-bg-glass transition-all neon-glow-card">
+                        <i class="material-icons text-accent fs-1 mb-3">handshake</i>
+                        <h4 class="text-white fw-bold h5">Integrity</h4>
+                        <p class="text-white-50 small mb-0">Absolute transparency, honesty, and respect in all client relationships.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-card bg-transparent border border-secondary border-opacity-25 rounded-4 p-4 text-center h-100 hover-bg-glass transition-all neon-glow-card">
+                        <i class="material-icons text-accent fs-1 mb-3">speed</i>
+                        <h4 class="text-white fw-bold h5">Agility</h4>
+                        <p class="text-white-50 small mb-0">Rapid deployment and swift adaptability to changing market demands.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section py-5 position-relative z-index-2 overflow-hidden border-top border-secondary border-opacity-10">
+        <div class="bg-abstract-shapes opacity-50"></div>
+        <div class="container py-5 text-center position-relative z-index-2" data-aos="zoom-in">
+            <h2 class="display-5 fw-bold text-white mb-4">Ready to Partner with the Best?</h2>
+            <p class="lead text-white-50 mb-5 max-w-700 mx-auto">Join a growing list of successful brands that trust G-Max Tech to architect their digital future.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="contact.html" class="btn premium-primary-btn btn-lg px-5 py-3 rounded-pill shadow-glow hover-lift fs-6 fw-semibold">Contact Our Team</a>
+            </div>
+        </div>
+    </section>
+
   </main>
 
   <footer id="footer" class="footer position-relative z-index-2">
-    <div class="footer-top border-top border-secondary border-opacity-10 py-5">
+    <div class="footer-top border-top border-secondary border-opacity-25 py-5 bg-darker">
       <div class="container mt-4">
         <div class="row gy-5">
+          
           <div class="col-lg-4 col-md-12 footer-about pe-lg-5">
             <a href="index.html" class="logo d-flex align-items-center mb-4 text-decoration-none">
-              <img src="assets/img/gmax.png" alt="G-Max Tech" height="40" class="me-2">
+              <img src="assets/img/gmax.png" alt="G-Max Tech Logo" height="45" class="me-2">
               <span class="sitename fs-3 fw-bold text-white">G-Max Tech</span>
             </a>
-            <p class="text-white-50 lh-lg pe-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, and elite professional IT training.</p>
-          </div>
-          <div class="col-lg-2 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Navigation</h4>
-            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="index.html" target="_self" class="text-white-50 text-decoration-none">Home</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="about.html" target="_self" class="text-white-50 text-decoration-none">About Us</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" target="_self" class="text-white-50 text-decoration-none">Services</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="Portfolio.html" target="_self" class="text-white-50 text-decoration-none">Portfolio</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="contact.html" target="_self" class="text-white-50 text-decoration-none">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Services</h4>
-            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Graphic Design</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">eCitizen Support</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Web Development</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">IT Training</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start mt-5 mt-lg-0">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact</h4>
-            <div class="text-white-50 mt-3 lh-lg">
-              <p class="mb-1"><i class="bi bi-geo-alt-fill text-accent me-2"></i> Thika Road, Nairobi, Kenya</p>
-              <p class="mb-1"><i class="bi bi-telephone-fill text-accent me-2"></i> +254 798 667 892</p>
-              <p class="mb-3"><i class="bi bi-envelope-fill text-accent me-2"></i> gmaxkedesigns@gmail.com</p>
+            <p class="text-white-50 lh-lg pe-4 mb-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, robust web development, and elite professional IT training in Kenya.</p>
+            <div class="social-links d-flex gap-2">
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
+          
+          <div class="col-lg-2 col-6 footer-links">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Quick Links</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="index.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Home</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Services</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="about.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">About Us</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="Portfolio.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Portfolio</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="contact.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-6 footer-links">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Services</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">Graphic Design</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">Web Development</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">eCitizen Support</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">IT Masterclasses</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4 col-md-12 footer-contact text-center text-md-start mt-5 mt-lg-0">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact Info</h4>
+            <div class="text-white-50 mt-3 lh-lg mb-4">
+              <p class="mb-2"><i class="bi bi-geo-alt-fill text-accent me-2 fs-5 align-middle"></i> Thika Road, Nairobi, Kenya</p>
+              <p class="mb-2"><i class="bi bi-telephone-fill text-accent me-2 fs-5 align-middle"></i> +254 798 667 892</p>
+              <p class="mb-2"><i class="bi bi-envelope-fill text-accent me-2 fs-5 align-middle"></i> gmaxkedesigns@gmail.com</p>
+            </div>
+            
+            <h5 class="text-white fw-semibold h6 mb-3">Subscribe to our Newsletter</h5>
+            <form action="#" class="d-flex position-relative">
+                <input type="email" class="form-control bg-dark-glass border-secondary border-opacity-25 text-white pe-5 py-2 rounded-pill" placeholder="Email address" required>
+                <button type="submit" class="btn premium-primary-btn position-absolute end-0 top-0 bottom-0 rounded-pill px-4">Subscribe</button>
+            </form>
+          </div>
+          
         </div>
       </div>
     </div>
-    <div class="footer-bottom bg-black bg-opacity-50 py-4">
-      <div class="container text-center">
-        <p class="mb-0 text-white-50 small">© 2026 <strong class="text-white px-1">G-Max Tech</strong> All Rights Reserved.</p>
+    <div class="footer-bottom bg-black py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-0 text-white-50 small">© <span id="currentYear">2026</span> <strong class="text-white px-1">G-Max Tech</strong> All Rights Reserved.</p>
+        <div class="text-white-50 small mt-2 mt-md-0 d-flex gap-3">
+            <a href="#" class="text-white-50 text-decoration-none hover-text-white">Privacy Policy</a>
+            <a href="#" class="text-white-50 text-decoration-none hover-text-white">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center hover-lift shadow-glow bg-gradient-premium rounded-circle" aria-label="Scroll to Top">
+      <i class="material-icons text-white">arrow_upward</i>
+  </a>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  
   <script src="assets/js/main.js"></script>
+  <script>
+      // Quick script for dynamic year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

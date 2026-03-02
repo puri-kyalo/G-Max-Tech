@@ -3,9 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Our Portfolio | G-Max Tech - Premium Digital Solutions</title>
-  <link href="assets/img/gmax.png" rel="icon">
   
+  <title>Our Portfolio & Case Studies | G-Max Tech</title>
+  <meta name="title" content="Our Portfolio & Case Studies | G-Max Tech">
+  <meta name="description" content="Explore G-Max Tech's exclusive portfolio of premium digital projects. Discover our high-end graphic design, stunning web development, and branding case studies.">
+  <meta name="keywords" content="G-Max Tech Portfolio, Tech Agency Work, Web Design Portfolio, Graphic Design Gallery, Branding Examples, Nairobi Tech Projects">
+  <meta name="author" content="G-Max Tech">
+  <meta name="robots" content="index, follow">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,221 +23,401 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="starter-page-page premium-layout">
+<body class="starter-page-page premium-layout portfolio-page">
 
-  <div id="preloader"><div class="loader-content"><div class="neon-ring"></div><div class="loader-text">INITIALIZING...</div></div></div>
+  <div id="preloader">
+      <div class="loader-content">
+          <div class="neon-ring"></div>
+          <div class="loader-text">INITIALIZING...</div>
+      </div>
+  </div>
+  
   <canvas id="neuron-canvas"></canvas>
 
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <nav class="sidebar" id="sidebar">
+  <nav class="sidebar" id="sidebar" aria-label="Mobile Navigation">
       <div class="sidebar-header">
           <a class="navbar-brand d-flex align-items-center" href="index.html" target="_self">
-              <img src="assets/img/gmax.png" alt="Logo" style="height: 35px;">
+              <img src="assets/img/gmax.png" alt="G-Max Tech Logo" style="height: 35px;">
               <span class="ms-2 fw-bold text-white">G-Max Tech</span>
           </a>
-          <button class="sidebar-close" id="sidebarClose"><span class="material-icons">close</span></button>
+          <button class="sidebar-close" id="sidebarClose" aria-label="Close Sidebar">
+              <span class="material-icons">close</span>
+          </button>
       </div>
       <ul class="sidebar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><span class="material-icons">home</span> Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html" target="_self"><span class="material-icons">info</span> About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><span class="material-icons">design_services</span> Services</a></li>
-          <li class="nav-item"><a class="nav-link active" href="Portfolio.html" target="_self"><span class="material-icons">work</span> Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><span class="material-icons">contact_mail</span> Contact</a></li>
+          <li class="nav-item">
+              <a class="nav-link" href="index.html" target="_self"><span class="material-icons">home</span> Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="service.html" target="_self"><span class="material-icons">layers</span> Services</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="about.html" target="_self"><span class="material-icons">info</span> About Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" href="Portfolio.html" target="_self"><span class="material-icons">work</span> Portfolio</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="contact.html" target="_self"><span class="material-icons">contact_mail</span> Contact</a>
+          </li>
       </ul>
   </nav>
 
-  <nav class="navbar navbar-expand-lg fixed-top premium-header glass-effect">
-      <div class="container">
-          <button class="sidebar-toggle d-xl-none me-3" type="button" id="sidebarToggle"><span class="material-icons">menu</span></button>
-          <a class="navbar-brand d-flex align-items-center me-auto" href="index.html" target="_self">
-              <img src="assets/img/gmax.png" alt="Logo" style="height: 40px;">
-              <span class="ms-2 fw-bold text-white fs-4 d-none d-sm-block">G-Max Tech</span>
-          </a>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto align-items-center">
-                  <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><i class="material-icons me-1">home</i> Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html" target="_self"><i class="material-icons me-1">info</i> About</a></li>
-                  <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><i class="material-icons me-1">design_services</i> Services</a></li>
-                  <li class="nav-item"><a class="nav-link active" href="Portfolio.html" target="_self"><i class="material-icons me-1">work</i> Portfolio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><i class="material-icons me-1">contact_mail</i> Contact</a></li>
-              </ul>
-              <a href="contact.html" target="_self" class="btn premium-primary-btn ms-4 rounded-pill shadow-glow hover-lift">Get Quote</a>
+  <header>
+      <nav class="navbar navbar-expand-lg fixed-top premium-header glass-effect" aria-label="Main Navigation">
+          <div class="container">
+              <button class="sidebar-toggle d-xl-none me-3" type="button" id="sidebarToggle" aria-label="Toggle Navigation">
+                  <span class="material-icons">menu</span>
+              </button>
+
+              <a class="navbar-brand d-flex align-items-center me-auto" href="index.html" target="_self">
+                  <img src="assets/img/gmax.png" alt="G-Max Tech Logo" style="height: 40px;">
+                  <span class="ms-2 fw-bold text-white fs-4 d-none d-sm-block">G-Max Tech</span>
+              </a>
+              
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto align-items-center">
+                      <li class="nav-item"><a class="nav-link" href="index.html" target="_self"><i class="material-icons me-1">home</i> Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><i class="material-icons me-1">layers</i> Services</a></li>
+                      <li class="nav-item"><a class="nav-link" href="about.html" target="_self"><i class="material-icons me-1">info</i> About</a></li>
+                      <li class="nav-item"><a class="nav-link active" href="Portfolio.html" target="_self"><i class="material-icons me-1">work</i> Portfolio</a></li>
+                      <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><i class="material-icons me-1">contact_mail</i> Contact</a></li>
+                  </ul>
+                  <a href="contact.html" target="_self" class="btn premium-primary-btn ms-4 rounded-pill shadow-glow hover-lift">Get a Quote</a>
+              </div>
           </div>
-      </div>
-  </nav>
+      </nav>
+  </header>
 
   <main class="main premium-main pt-5 mt-4 z-index-2 position-relative">
+    
     <div class="page-title premium-page-hero position-relative overflow-hidden pt-5 pb-5 border-bottom border-secondary border-opacity-10 text-center">
-      <div class="container position-relative z-index-2">
-        <span class="badge premium-badge mb-3" data-aos="fade-up">Our Showcase</span>
-        <h1 class="display-4 fw-bold text-white mb-3" data-aos="fade-up" data-aos-delay="100">Our Premium Projects</h1>
-        <p class="lead text-white-50 max-w-600 mx-auto" data-aos="fade-up" data-aos-delay="200">Explore an exclusive gallery of our highly acclaimed creative projects.</p>
+      <div class="hero-glow-orb position-absolute top-50 start-50 translate-middle" style="width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,136,112,0.25) 0%, transparent 70%); z-index: 0; filter: blur(50px);"></div>
+      <div class="container position-relative z-index-2 py-5">
+        <span class="badge premium-badge mb-3 px-4 py-2" data-aos="fade-down">Our Masterpieces</span>
+        <h1 class="display-3 fw-black text-white mb-4" data-aos="fade-up" data-aos-delay="100">Premium <span class="text-gradient">Showcase</span></h1>
+        <p class="lead text-white-50 max-w-700 mx-auto" data-aos="fade-up" data-aos-delay="200">Explore an exclusive gallery of our highly acclaimed creative projects. Each piece is a testament to our relentless pursuit of digital perfection.</p>
       </div>
     </div>
 
-    <section id="portfolio" class="portfolio section premium-section overflow-hidden mt-5 pt-0">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
+    <section class="clients-section py-4 border-bottom border-secondary border-opacity-10 premium-bg-darker z-index-2 position-relative">
+        <div class="container text-center">
+            <p class="text-white-50 small text-uppercase letter-spacing-2 fw-semibold mb-4">Brands we've transformed</p>
+            <div class="d-flex justify-content-center align-items-center flex-wrap gap-5 opacity-50 grayscale-filter">
+                <h5 class="fw-black text-white m-0 hover-opacity-100 transition-all cursor-pointer">Global<span class="text-accent">Corp</span></h5>
+                <h5 class="fw-black text-white m-0 hover-opacity-100 transition-all cursor-pointer"><i class="bi bi-hexagon-fill text-accent me-1"></i> Apex Media</h5>
+                <h5 class="fw-black text-white m-0 hover-opacity-100 transition-all cursor-pointer">Tech<span class="fw-light">Flow</span></h5>
+                <h5 class="fw-black text-white m-0 hover-opacity-100 transition-all cursor-pointer"><i class="bi bi-triangle-fill text-accent me-1"></i> Zenith</h5>
+                <h5 class="fw-black text-white m-0 hover-opacity-100 transition-all cursor-pointer">Urban<span class="text-accent">Style</span></h5>
+            </div>
+        </div>
+    </section>
 
-          <div class="portfolio-filters-wrapper mb-5" data-aos="fade-up" data-aos-delay="100">
-            <ul class="portfolio-filters isotope-filters premium-filters nav-pills d-flex justify-content-center gap-3 flex-wrap">
-              <li data-filter="*" class="filter-active rounded-pill px-4 py-2">All Projects</li>
-              <li data-filter=".filter-branding" class="rounded-pill px-4 py-2">Branding</li>
-              <li data-filter=".filter-web" class="rounded-pill px-4 py-2">Logos</li>
-              <li data-filter=".filter-print" class="rounded-pill px-4 py-2">Posters</li>
-              <li data-filter=".filter-motion" class="rounded-pill px-4 py-2">Banners</li>
-              <li data-filter=".filter-websites" class="rounded-pill px-4 py-2">Websites</li>
+    <section id="portfolio" class="portfolio section premium-section overflow-hidden py-5 z-index-2 position-relative">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="portfolio-filters-wrapper mb-5 pb-3" data-aos="fade-up" data-aos-delay="200">
+            <ul class="portfolio-filters isotope-filters premium-filters nav-pills d-flex justify-content-center gap-3 flex-wrap m-0 p-0 list-unstyled">
+              <li data-filter="*" class="filter-active bg-dark-glass text-white border border-secondary border-opacity-25 rounded-pill px-4 py-2 cursor-pointer transition-all hover-glow">All Projects</li>
+              <li data-filter=".filter-branding" class="bg-dark-glass text-white border border-secondary border-opacity-25 rounded-pill px-4 py-2 cursor-pointer transition-all hover-glow">Branding</li>
+              <li data-filter=".filter-logos" class="bg-dark-glass text-white border border-secondary border-opacity-25 rounded-pill px-4 py-2 cursor-pointer transition-all hover-glow">Logos</li>
+              <li data-filter=".filter-posters" class="bg-dark-glass text-white border border-secondary border-opacity-25 rounded-pill px-4 py-2 cursor-pointer transition-all hover-glow">Posters</li>
+              <li data-filter=".filter-banners" class="bg-dark-glass text-white border border-secondary border-opacity-25 rounded-pill px-4 py-2 cursor-pointer transition-all hover-glow">Banners</li>
+              <li data-filter=".filter-websites" class="bg-dark-glass text-white border border-secondary border-opacity-25 rounded-pill px-4 py-2 cursor-pointer transition-all hover-glow">Websites</li>
             </ul>
           </div>
 
-          <div class="row gy-5 portfolio-grid isotope-container pb-5" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
-                <div class="image-container flex-shrink-0 position-relative">
-                  <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid w-100" alt="Brand Identity">
-                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <a href="assets/img/portfolio/portfolio-3.webp" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+          <div class="row gy-5 portfolio-grid isotope-container pb-5" data-aos="fade-up" data-aos-delay="300">
+            
+            <div class="col-xl-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-card neon-glow-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100 position-relative border border-secondary border-opacity-10">
+                <div class="neon-border"></div>
+                <div class="image-container flex-shrink-0 position-relative overflow-hidden aspect-ratio-4x3">
+                  <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid w-100 h-100 object-fit-cover transition-transform" alt="Tech Startup Brand Identity">
+                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center opacity-0 transition-all position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div class="d-flex gap-3">
+                        <a href="assets/img/portfolio/portfolio-3.webp" class="glightbox btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center shadow-glow" style="width: 50px; height: 50px;" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+                        <a href="portfolio-details.html" class="btn premium-outline-btn rounded-circle d-flex align-items-center justify-content-center bg-dark-glass text-white" style="width: 50px; height: 50px;" title="View Case Study"><i class="material-icons">link</i></a>
+                    </div>
                   </div>
                 </div>
-                <div class="content p-4 text-center">
+                <div class="content p-4 text-center bg-black bg-opacity-25 relative z-index-2 border-top border-secondary border-opacity-10">
+                  <span class="badge bg-accent-soft text-accent rounded-pill mb-2 px-3 py-1 text-uppercase letter-spacing-1 small">Branding</span>
                   <h3 class="fw-bold text-white mb-2 fs-5">Tech Startup Identity</h3>
-                  <p class="text-white-50 small mb-0">Corporate branding and visual identity system</p>
+                  <p class="text-white-50 small mb-0">Complete corporate visual identity system</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-websites">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
-                <div class="image-container flex-shrink-0 position-relative">
-                  <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid w-100" alt="E-commerce">
-                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+
+            <div class="col-xl-4 col-md-6 portfolio-item isotope-item filter-websites">
+              <div class="portfolio-card neon-glow-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100 position-relative border border-secondary border-opacity-10">
+                <div class="neon-border border-accent-alt"></div>
+                <div class="image-container flex-shrink-0 position-relative overflow-hidden aspect-ratio-4x3">
+                  <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid w-100 h-100 object-fit-cover transition-transform" alt="E-commerce Application">
+                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center opacity-0 transition-all position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div class="d-flex gap-3">
+                        <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center shadow-glow" style="width: 50px; height: 50px;" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+                        <a href="portfolio-details.html" class="btn premium-outline-btn rounded-circle d-flex align-items-center justify-content-center bg-dark-glass text-white" style="width: 50px; height: 50px;" title="View Case Study"><i class="material-icons">link</i></a>
+                    </div>
                   </div>
                 </div>
-                <div class="content p-4 text-center">
+                <div class="content p-4 text-center bg-black bg-opacity-25 relative z-index-2 border-top border-secondary border-opacity-10">
+                  <span class="badge bg-accent-soft text-accent rounded-pill mb-2 px-3 py-1 text-uppercase letter-spacing-1 small">Websites</span>
                   <h3 class="fw-bold text-white mb-2 fs-5">E-Commerce App</h3>
-                  <p class="text-white-50 small mb-0">Modern online shopping experience</p>
+                  <p class="text-white-50 small mb-0">High-conversion online shopping experience</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-print">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
-                <div class="image-container flex-shrink-0 position-relative">
-                  <img src="assets/img/portfolio/portfolio-portrait-5.png" class="img-fluid w-100" alt="Editorial">
-                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <a href="assets/img/portfolio/portfolio-portrait-5.png" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+
+            <div class="col-xl-4 col-md-6 portfolio-item isotope-item filter-posters">
+              <div class="portfolio-card neon-glow-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100 position-relative border border-secondary border-opacity-10">
+                <div class="neon-border"></div>
+                <div class="image-container flex-shrink-0 position-relative overflow-hidden aspect-ratio-4x3">
+                  <img src="assets/img/portfolio/portfolio-portrait-5.png" class="img-fluid w-100 h-100 object-fit-cover transition-transform" alt="Editorial Layout Design">
+                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center opacity-0 transition-all position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div class="d-flex gap-3">
+                        <a href="assets/img/portfolio/portfolio-portrait-5.png" class="glightbox btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center shadow-glow" style="width: 50px; height: 50px;" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+                        <a href="portfolio-details.html" class="btn premium-outline-btn rounded-circle d-flex align-items-center justify-content-center bg-dark-glass text-white" style="width: 50px; height: 50px;" title="View Case Study"><i class="material-icons">link</i></a>
+                    </div>
                   </div>
                 </div>
-                <div class="content p-4 text-center">
-                  <h3 class="fw-bold text-white mb-2 fs-5">Editorial Layout</h3>
-                  <p class="text-white-50 small mb-0">High-end editorial design and typography</p>
+                <div class="content p-4 text-center bg-black bg-opacity-25 relative z-index-2 border-top border-secondary border-opacity-10">
+                  <span class="badge bg-accent-soft text-accent rounded-pill mb-2 px-3 py-1 text-uppercase letter-spacing-1 small">Posters</span>
+                  <h3 class="fw-bold text-white mb-2 fs-5">Editorial Typography</h3>
+                  <p class="text-white-50 small mb-0">High-end editorial design and layout</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-motion">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
-                <div class="image-container flex-shrink-0 position-relative">
-                  <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid w-100" alt="Motion Graphics">
-                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <a href="assets/img/portfolio/portfolio-8.webp" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+
+            <div class="col-xl-4 col-md-6 portfolio-item isotope-item filter-banners">
+              <div class="portfolio-card neon-glow-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100 position-relative border border-secondary border-opacity-10">
+                <div class="neon-border"></div>
+                <div class="image-container flex-shrink-0 position-relative overflow-hidden aspect-ratio-4x3">
+                  <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid w-100 h-100 object-fit-cover transition-transform" alt="Motion Graphics Banners">
+                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center opacity-0 transition-all position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div class="d-flex gap-3">
+                        <a href="assets/img/portfolio/portfolio-8.webp" class="glightbox btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center shadow-glow" style="width: 50px; height: 50px;" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+                        <a href="portfolio-details.html" class="btn premium-outline-btn rounded-circle d-flex align-items-center justify-content-center bg-dark-glass text-white" style="width: 50px; height: 50px;" title="View Case Study"><i class="material-icons">link</i></a>
+                    </div>
                   </div>
                 </div>
-                <div class="content p-4 text-center">
-                  <h3 class="fw-bold text-white mb-2 fs-5">Motion Banners</h3>
-                  <p class="text-white-50 small mb-0">Animated visual storytelling</p>
+                <div class="content p-4 text-center bg-black bg-opacity-25 relative z-index-2 border-top border-secondary border-opacity-10">
+                  <span class="badge bg-accent-soft text-accent rounded-pill mb-2 px-3 py-1 text-uppercase letter-spacing-1 small">Banners</span>
+                  <h3 class="fw-bold text-white mb-2 fs-5">Dynamic Ad Banners</h3>
+                  <p class="text-white-50 small mb-0">Animated visual storytelling campaigns</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
-                <div class="image-container flex-shrink-0 position-relative">
-                  <img src="assets/img/portfolio/portfolio-9.webp" class="img-fluid w-100" alt="Logo">
-                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <a href="assets/img/portfolio/portfolio-9.webp" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+
+            <div class="col-xl-4 col-md-6 portfolio-item isotope-item filter-logos">
+              <div class="portfolio-card neon-glow-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100 position-relative border border-secondary border-opacity-10">
+                <div class="neon-border border-accent-alt"></div>
+                <div class="image-container flex-shrink-0 position-relative overflow-hidden aspect-ratio-4x3">
+                  <img src="assets/img/portfolio/portfolio-9.webp" class="img-fluid w-100 h-100 object-fit-cover transition-transform" alt="Logo Design">
+                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center opacity-0 transition-all position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div class="d-flex gap-3">
+                        <a href="assets/img/portfolio/portfolio-9.webp" class="glightbox btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center shadow-glow" style="width: 50px; height: 50px;" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+                        <a href="portfolio-details.html" class="btn premium-outline-btn rounded-circle d-flex align-items-center justify-content-center bg-dark-glass text-white" style="width: 50px; height: 50px;" title="View Case Study"><i class="material-icons">link</i></a>
+                    </div>
                   </div>
                 </div>
-                <div class="content p-4 text-center">
+                <div class="content p-4 text-center bg-black bg-opacity-25 relative z-index-2 border-top border-secondary border-opacity-10">
+                  <span class="badge bg-accent-soft text-accent rounded-pill mb-2 px-3 py-1 text-uppercase letter-spacing-1 small">Logos</span>
                   <h3 class="fw-bold text-white mb-2 fs-5">Logo Architecture</h3>
                   <p class="text-white-50 small mb-0">Diverse brand mark explorations</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-websites">
-              <div class="portfolio-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100">
-                <div class="image-container flex-shrink-0 position-relative">
-                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid w-100" alt="Packaging">
-                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center">
-                    <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox btn btn-icon-premium rounded-circle" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+
+            <div class="col-xl-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-card neon-glow-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100 position-relative border border-secondary border-opacity-10">
+                <div class="neon-border"></div>
+                <div class="image-container flex-shrink-0 position-relative overflow-hidden aspect-ratio-4x3">
+                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid w-100 h-100 object-fit-cover transition-transform" alt="Product Packaging">
+                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center opacity-0 transition-all position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div class="d-flex gap-3">
+                        <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center shadow-glow" style="width: 50px; height: 50px;" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+                        <a href="portfolio-details.html" class="btn premium-outline-btn rounded-circle d-flex align-items-center justify-content-center bg-dark-glass text-white" style="width: 50px; height: 50px;" title="View Case Study"><i class="material-icons">link</i></a>
+                    </div>
                   </div>
                 </div>
-                <div class="content p-4 text-center">
+                <div class="content p-4 text-center bg-black bg-opacity-25 relative z-index-2 border-top border-secondary border-opacity-10">
+                  <span class="badge bg-accent-soft text-accent rounded-pill mb-2 px-3 py-1 text-uppercase letter-spacing-1 small">Branding</span>
                   <h3 class="fw-bold text-white mb-2 fs-5">Product Packaging</h3>
-                  <p class="text-white-50 small mb-0">Sustainable packaging design</p>
+                  <p class="text-white-50 small mb-0">Sustainable & premium packaging design</p>
                 </div>
               </div>
             </div>
+
+            <div class="col-xl-4 col-md-6 portfolio-item isotope-item filter-websites">
+              <div class="portfolio-card neon-glow-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100 position-relative border border-secondary border-opacity-10">
+                <div class="neon-border"></div>
+                <div class="image-container flex-shrink-0 position-relative overflow-hidden aspect-ratio-4x3">
+                  <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid w-100 h-100 object-fit-cover transition-transform" alt="Corporate Website Design">
+                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center opacity-0 transition-all position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div class="d-flex gap-3">
+                        <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center shadow-glow" style="width: 50px; height: 50px;" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+                        <a href="portfolio-details.html" class="btn premium-outline-btn rounded-circle d-flex align-items-center justify-content-center bg-dark-glass text-white" style="width: 50px; height: 50px;" title="View Case Study"><i class="material-icons">link</i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="content p-4 text-center bg-black bg-opacity-25 relative z-index-2 border-top border-secondary border-opacity-10">
+                  <span class="badge bg-accent-soft text-accent rounded-pill mb-2 px-3 py-1 text-uppercase letter-spacing-1 small">Websites</span>
+                  <h3 class="fw-bold text-white mb-2 fs-5">Corporate Web Portal</h3>
+                  <p class="text-white-50 small mb-0">Sleek interface for enterprise clients</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6 portfolio-item isotope-item filter-posters">
+              <div class="portfolio-card neon-glow-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100 position-relative border border-secondary border-opacity-10">
+                <div class="neon-border border-accent-alt"></div>
+                <div class="image-container flex-shrink-0 position-relative overflow-hidden aspect-ratio-4x3">
+                  <img src="assets/img/portfolio/portfolio-portrait-8.png" class="img-fluid w-100 h-100 object-fit-cover transition-transform" alt="Event Marketing Poster">
+                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center opacity-0 transition-all position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div class="d-flex gap-3">
+                        <a href="assets/img/portfolio/portfolio-portrait-8.png" class="glightbox btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center shadow-glow" style="width: 50px; height: 50px;" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+                        <a href="portfolio-details.html" class="btn premium-outline-btn rounded-circle d-flex align-items-center justify-content-center bg-dark-glass text-white" style="width: 50px; height: 50px;" title="View Case Study"><i class="material-icons">link</i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="content p-4 text-center bg-black bg-opacity-25 relative z-index-2 border-top border-secondary border-opacity-10">
+                  <span class="badge bg-accent-soft text-accent rounded-pill mb-2 px-3 py-1 text-uppercase letter-spacing-1 small">Posters</span>
+                  <h3 class="fw-bold text-white mb-2 fs-5">Mega Event Poster</h3>
+                  <p class="text-white-50 small mb-0">High-impact large format print</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6 portfolio-item isotope-item filter-banners">
+              <div class="portfolio-card neon-glow-card premium-hover-card rounded-4 overflow-hidden shadow-lg bg-dark-glass h-100 position-relative border border-secondary border-opacity-10">
+                <div class="neon-border"></div>
+                <div class="image-container flex-shrink-0 position-relative overflow-hidden aspect-ratio-4x3">
+                  <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid w-100 h-100 object-fit-cover transition-transform" alt="Social Media Banner Campaign">
+                  <div class="overlay premium-glass-overlay d-flex flex-column justify-content-center align-items-center opacity-0 transition-all position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div class="d-flex gap-3">
+                        <a href="assets/img/portfolio/portfolio-11.webp" class="glightbox btn premium-primary-btn rounded-circle d-flex align-items-center justify-content-center shadow-glow" style="width: 50px; height: 50px;" title="View Full Image"><i class="material-icons">zoom_in</i></a>
+                        <a href="portfolio-details.html" class="btn premium-outline-btn rounded-circle d-flex align-items-center justify-content-center bg-dark-glass text-white" style="width: 50px; height: 50px;" title="View Case Study"><i class="material-icons">link</i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="content p-4 text-center bg-black bg-opacity-25 relative z-index-2 border-top border-secondary border-opacity-10">
+                  <span class="badge bg-accent-soft text-accent rounded-pill mb-2 px-3 py-1 text-uppercase letter-spacing-1 small">Banners</span>
+                  <h3 class="fw-bold text-white mb-2 fs-5">Social Media Campaign</h3>
+                  <p class="text-white-50 small mb-0">Optimized digital marketing assets</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
+
+    <section class="cta-section py-5 position-relative z-index-2 overflow-hidden border-top border-secondary border-opacity-10">
+        <div class="bg-abstract-shapes opacity-50"></div>
+        <div class="container py-5 text-center position-relative z-index-2" data-aos="zoom-in">
+            <h2 class="display-5 fw-bold text-white mb-4">Impressed by our Work?</h2>
+            <p class="lead text-white-50 mb-5 max-w-700 mx-auto">Your brand deserves the same level of premium attention to detail. Let's discuss how we can elevate your digital presence.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="contact.html" class="btn premium-primary-btn btn-lg px-5 py-3 rounded-pill shadow-glow hover-lift fs-6 fw-semibold">Start Your Project Today</a>
+            </div>
+        </div>
+    </section>
+
   </main>
 
   <footer id="footer" class="footer position-relative z-index-2">
-    <div class="footer-top border-top border-secondary border-opacity-10 py-5">
+    <div class="footer-top border-top border-secondary border-opacity-25 py-5 bg-darker">
       <div class="container mt-4">
         <div class="row gy-5">
+          
           <div class="col-lg-4 col-md-12 footer-about pe-lg-5">
             <a href="index.html" class="logo d-flex align-items-center mb-4 text-decoration-none">
-              <img src="assets/img/gmax.png" alt="G-Max Tech" height="40" class="me-2">
+              <img src="assets/img/gmax.png" alt="G-Max Tech Logo" height="45" class="me-2">
               <span class="sitename fs-3 fw-bold text-white">G-Max Tech</span>
             </a>
-            <p class="text-white-50 lh-lg pe-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, and elite professional IT training.</p>
-          </div>
-          <div class="col-lg-2 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Navigation</h4>
-            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="index.html" target="_self" class="text-white-50 text-decoration-none">Home</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="about.html" target="_self" class="text-white-50 text-decoration-none">About Us</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" target="_self" class="text-white-50 text-decoration-none">Services</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="Portfolio.html" target="_self" class="text-white-50 text-decoration-none">Portfolio</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="contact.html" target="_self" class="text-white-50 text-decoration-none">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Services</h4>
-            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Graphic Design</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">eCitizen Support</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Web Development</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">IT Training</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start mt-5 mt-lg-0">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact</h4>
-            <div class="text-white-50 mt-3 lh-lg">
-              <p class="mb-1"><i class="bi bi-geo-alt-fill text-accent me-2"></i> Thika Road, Nairobi, Kenya</p>
-              <p class="mb-1"><i class="bi bi-telephone-fill text-accent me-2"></i> +254 798 667 892</p>
-              <p class="mb-3"><i class="bi bi-envelope-fill text-accent me-2"></i> gmaxkedesigns@gmail.com</p>
+            <p class="text-white-50 lh-lg pe-4 mb-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, robust web development, and elite professional IT training in Kenya.</p>
+            <div class="social-links d-flex gap-2">
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
+          
+          <div class="col-lg-2 col-6 footer-links">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Quick Links</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="index.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Home</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Services</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="about.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">About Us</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="Portfolio.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Portfolio</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="contact.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-6 footer-links">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Services</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">Graphic Design</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">Web Development</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">eCitizen Support</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">IT Masterclasses</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4 col-md-12 footer-contact text-center text-md-start mt-5 mt-lg-0">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact Info</h4>
+            <div class="text-white-50 mt-3 lh-lg mb-4">
+              <p class="mb-2"><i class="bi bi-geo-alt-fill text-accent me-2 fs-5 align-middle"></i> Thika Road, Nairobi, Kenya</p>
+              <p class="mb-2"><i class="bi bi-telephone-fill text-accent me-2 fs-5 align-middle"></i> +254 798 667 892</p>
+              <p class="mb-2"><i class="bi bi-envelope-fill text-accent me-2 fs-5 align-middle"></i> gmaxkedesigns@gmail.com</p>
+            </div>
+            
+            <h5 class="text-white fw-semibold h6 mb-3">Subscribe to our Newsletter</h5>
+            <form action="#" class="d-flex position-relative">
+                <input type="email" class="form-control bg-dark-glass border-secondary border-opacity-25 text-white pe-5 py-2 rounded-pill" placeholder="Email address" required>
+                <button type="submit" class="btn premium-primary-btn position-absolute end-0 top-0 bottom-0 rounded-pill px-4">Subscribe</button>
+            </form>
+          </div>
+          
         </div>
       </div>
     </div>
-    <div class="footer-bottom bg-black bg-opacity-50 py-4">
-      <div class="container text-center">
-        <p class="mb-0 text-white-50 small">© 2026 <strong class="text-white px-1">G-Max Tech</strong> All Rights Reserved.</p>
+    <div class="footer-bottom bg-black py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-0 text-white-50 small">© <span id="currentYear">2026</span> <strong class="text-white px-1">G-Max Tech</strong> All Rights Reserved.</p>
+        <div class="text-white-50 small mt-2 mt-md-0 d-flex gap-3">
+            <a href="#" class="text-white-50 text-decoration-none hover-text-white">Privacy Policy</a>
+            <a href="#" class="text-white-50 text-decoration-none hover-text-white">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center hover-lift shadow-glow bg-gradient-premium rounded-circle" aria-label="Scroll to Top">
+      <i class="material-icons text-white">arrow_upward</i>
+  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  
   <script src="assets/js/main.js"></script>
+  <script>
+      // Quick script for dynamic year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

@@ -3,10 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Premium Digital Solutions & IT Training - G-Max Tech</title>
-  <meta name="description" content="G-Max Tech transforms ideas into digital reality.">
   
-  <link href="assets/img/gmax.png" rel="icon">
+  <title>Premium Digital Solutions & IT Training | G-Max Tech</title>
+  <meta name="title" content="Premium Digital Solutions & IT Training | G-Max Tech">
+  <meta name="description" content="G-Max Tech transforms raw ideas into digital reality. We specialize in high-end graphic design, web development, eCitizen solutions, and elite IT training in Kenya.">
+  <meta name="keywords" content="Graphic Design, Web Development, eCitizen Services, IT Training, Tech Agency Nairobi, Branding, Logo Design, G-Max Tech, Kenya Tech Solutions">
+  <meta name="author" content="G-Max Tech">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://gmaxtech.co.ke/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gmaxtech.co.ke/">
+  <meta property="og:title" content="Premium Digital Solutions & IT Training | G-Max Tech">
+  <meta property="og:description" content="G-Max Tech transforms raw ideas into digital reality. Discover top-tier graphic design, web development, and seamless eCitizen solutions.">
+  <meta property="og:image" content="assets/img/logo.webp">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gmaxtech.co.ke/">
+  <meta property="twitter:title" content="Premium Digital Solutions & IT Training | G-Max Tech">
+  <meta property="twitter:description" content="Elevate your brand with G-Max Tech's premium digital services, web development, and professional IT training.">
+  <meta property="twitter:image" content="assets/img/logo.webp">
+
+  <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -31,17 +50,16 @@
           <div class="loader-text">INITIALIZING...</div>
       </div>
   </div>
-  <canvas id="neuron-canvas"></canvas>
 
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <nav class="sidebar" id="sidebar">
+  <nav class="sidebar" id="sidebar" aria-label="Mobile Navigation">
       <div class="sidebar-header">
           <a class="navbar-brand d-flex align-items-center" href="index.html" target="_self">
-              <img src="assets/img/gmax.png" alt="Logo" style="height: 35px;">
+              <img src="assets/img/gmax.png" alt="G-Max Tech Logo" style="height: 35px;">
               <span class="ms-2 fw-bold text-white">G-Max Tech</span>
           </a>
-          <button class="sidebar-close" id="sidebarClose">
+          <button class="sidebar-close" id="sidebarClose" aria-label="Close Sidebar">
               <span class="material-icons">close</span>
           </button>
       </div>
@@ -50,10 +68,10 @@
               <a class="nav-link active" href="index.html" target="_self"><span class="material-icons">home</span> Home</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="about.html" target="_self"><span class="material-icons">info</span> About Us</a>
+              <a class="nav-link" href="service.html" target="_self"><span class="material-icons">layers</span> Services</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="service.html" target="_self"><span class="material-icons">design_services</span> Services</a>
+              <a class="nav-link" href="about.html" target="_self"><span class="material-icons">info</span> About Us</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="Portfolio.html" target="_self"><span class="material-icons">work</span> Portfolio</a>
@@ -64,104 +82,188 @@
       </ul>
   </nav>
 
-  <nav class="navbar navbar-expand-lg fixed-top premium-header glass-effect">
-      <div class="container">
-          <button class="sidebar-toggle d-xl-none me-3" type="button" id="sidebarToggle">
-              <span class="material-icons">menu</span>
-          </button>
+  <header>
+      <nav class="navbar navbar-expand-lg fixed-top premium-header glass-effect" aria-label="Main Navigation">
+          <div class="container">
+              <button class="sidebar-toggle d-xl-none me-3" type="button" id="sidebarToggle" aria-label="Toggle Navigation">
+                  <span class="material-icons">menu</span>
+              </button>
 
-          <a class="navbar-brand d-flex align-items-center me-auto" href="index.html" target="_self">
-              <img src="assets/img/gmax.png" alt="Logo" style="height: 40px;">
-              <span class="ms-2 fw-bold text-white fs-4 d-none d-sm-block">G-Max Tech</span>
-          </a>
-          
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto align-items-center">
-                  <li class="nav-item"><a class="nav-link active" href="index.html" target="_self"><i class="material-icons me-1">home</i> Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html" target="_self"><i class="material-icons me-1">info</i> About</a></li>
-                  <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><i class="material-icons me-1">design_services</i> Services</a></li>
-                  <li class="nav-item"><a class="nav-link" href="Portfolio.html" target="_self"><i class="material-icons me-1">work</i> Portfolio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><i class="material-icons me-1">contact_mail</i> Contact</a></li>
-              </ul>
-              <a href="contact.html" target="_self" class="btn premium-primary-btn ms-4 rounded-pill shadow-glow hover-lift">Get Quote</a>
+              <a class="navbar-brand d-flex align-items-center me-auto" href="index.html" target="_self">
+                  <img src="assets/img/gmax.png" alt="G-Max Tech Logo" style="height: 40px;">
+                  <span class="ms-2 fw-bold text-white fs-4 d-none d-sm-block">G-Max Tech</span>
+              </a>
+              
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto align-items-center">
+                      <li class="nav-item"><a class="nav-link active" href="index.html" target="_self"><i class="material-icons me-1">home</i> Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="service.html" target="_self"><i class="material-icons me-1">layers</i> Services</a></li>
+                      <li class="nav-item"><a class="nav-link" href="about.html" target="_self"><i class="material-icons me-1">info</i> About</a></li>
+                      <li class="nav-item"><a class="nav-link" href="Portfolio.html" target="_self"><i class="material-icons me-1">work</i> Portfolio</a></li>
+                      <li class="nav-item"><a class="nav-link" href="contact.html" target="_self"><i class="material-icons me-1">contact_mail</i> Contact</a></li>
+                  </ul>
+                  <a href="contact.html" target="_self" class="btn premium-primary-btn ms-4 rounded-pill shadow-glow hover-lift">Get a Quote</a>
+              </div>
           </div>
-      </div>
-  </nav>
+      </nav>
+  </header>
 
   <main class="main premium-main pt-0">
 
     <section id="hero" class="hero premium-hero-slider position-relative z-index-2">
       <div class="hero-slider">
+        
         <div class="hero-slide active">
           <div class="hero-overlay"></div>
-          <div class="hero-content z-index-2">
-            <span class="badge premium-badge" data-aos="fade-down" data-aos-delay="100">Welcome to Excellence</span>
-            <h1 data-aos="fade-up" data-aos-delay="300" class="hero-title">
-              Graphic Design <span class="typed text-gradient" data-typed-items="Branding & Logo, Company Profiles, Corporate Posters, Web Development"></span>
-            </h1>
-            <p data-aos="fade-up" data-aos-delay="400" class="hero-subtitle">
-              We bridge the gap between complex technology and human potential. Simple, intuitive, and powerfully premium.
-            </p>
-            <div class="hero-btn-group" data-aos="fade-up" data-aos-delay="500">
-              <a href="service.html" target="_self" class="btn premium-primary-btn hover-lift">Explore Services</a>
-              <a href="Portfolio.html" target="_self" class="btn premium-outline-btn ms-3 hover-lift">View Portfolio <i class="material-icons" style="font-size:16px; vertical-align:middle;">arrow_forward</i></a>
+          <div class="container z-index-2 position-relative h-100 d-flex align-items-center pt-5">
+            <div class="row w-100 align-items-center gy-5">
+              
+              <div class="col-lg-7 text-center text-lg-start">
+                <span class="badge premium-badge mb-3" data-aos="fade-down" data-aos-delay="100">Welcome to Excellence</span>
+                <h1 data-aos="fade-up" data-aos-delay="300" class="hero-title display-3 fw-black text-white">
+                  Elevate Your <span class="text-gradient">Brand</span> With <br>
+                  <span class="typed text-gradient text-nowrap" data-typed-items="Graphic Design, Web Development, Corporate Branding, SEO Optimization"></span>
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="400" class="hero-subtitle lead mt-4 mb-5 max-w-700 mx-auto mx-lg-0 text-white-50">
+                  We bridge the gap between complex technology and human potential. Delivering simple, intuitive, and powerfully premium digital experiences tailored for scale.
+                </p>
+                <div class="hero-btn-group d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap" data-aos="fade-up" data-aos-delay="500">
+                  <a href="service.html" target="_self" class="btn premium-primary-btn hover-lift btn-lg px-5">Explore Services</a>
+                  <a href="Portfolio.html" target="_self" class="btn premium-outline-btn hover-lift btn-lg px-5 d-flex align-items-center">
+                    View Portfolio <i class="material-icons ms-2" style="font-size:20px;">arrow_forward</i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 text-center d-none d-lg-block" data-aos="zoom-in" data-aos-delay="400">
+                <div class="hero-image float-animation p-2">
+                  <img src="assets/img/eCitizen.png" alt="Tech Dashboard Interface" class="img-fluid hero-neon-image w-75 mx-auto">
+                </div>
+              </div>
+
             </div>
-          </div>
-          <div class="hero-image float-animation z-index-2" data-aos="zoom-in" data-aos-delay="400">
-            <img src="assets/img/eCitizen.png" alt="Tech Dashboard" class="img-fluid rounded-premium shadow-lg">
           </div>
         </div>
 
         <div class="hero-slide">
           <div class="hero-overlay"></div>
-          <div class="hero-content z-index-2">
-            <span class="badge premium-badge">Innovation First</span>
-            <h1 class="hero-title">Smart <span class="text-gradient">Digital</span> Services</h1>
-            <p class="hero-subtitle">Empowering businesses with scalable digital and cloud solutions tailored for the ultimate growth.</p>
-            <div class="hero-btn-group">
-              <a href="contact.html" target="_self" class="btn premium-primary-btn hover-lift">Get Started</a>
+          <div class="container z-index-2 position-relative h-100 d-flex align-items-center pt-5">
+            <div class="row w-100 align-items-center gy-5">
+              
+              <div class="col-lg-7 text-center text-lg-start">
+                <span class="badge premium-badge mb-3">Innovation First</span>
+                <h1 class="hero-title display-3 fw-black text-white">Smart <span class="text-gradient">Digital</span> Services</h1>
+                <p class="hero-subtitle lead mt-4 mb-5 max-w-700 mx-auto mx-lg-0 text-white-50">Empowering modern businesses with scalable digital architecture, cloud solutions, and seamless eCitizen integrations tailored for ultimate growth.</p>
+                <div class="hero-btn-group d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
+                  <a href="contact.html" target="_self" class="btn premium-primary-btn hover-lift btn-lg px-5">Get Started</a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 text-center d-none d-lg-block">
+                <div class="hero-image float-animation p-2">
+                  <img src="assets/img/cyber.webp" alt="Digital Services Cloud" class="img-fluid hero-neon-image w-75 mx-auto">
+                </div>
+              </div>
+
             </div>
-          </div>
-          <div class="hero-image float-animation z-index-2">
-            <img src="assets/img/cyber.webp" alt="Digital Services" class="img-fluid rounded-premium shadow-lg">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="training-section premium-bg-darker position-relative z-index-2">
+    <section class="partners-section py-4 border-bottom border-secondary border-opacity-10 bg-darker z-index-2 position-relative">
+        <div class="container text-center">
+            <p class="text-white-50 small text-uppercase letter-spacing-2 fw-semibold mb-4">Trusted Technologies & Integrations</p>
+            <div class="d-flex justify-content-center align-items-center flex-wrap gap-5 opacity-50">
+                <i class="bi bi-bootstrap fs-2 text-white hover-opacity-100 transition-all"></i>
+                <i class="bi bi-wordpress fs-2 text-white hover-opacity-100 transition-all"></i>
+                <i class="bi bi-google fs-2 text-white hover-opacity-100 transition-all"></i>
+                <i class="bi bi-apple fs-2 text-white hover-opacity-100 transition-all"></i>
+                <i class="bi bi-windows fs-2 text-white hover-opacity-100 transition-all"></i>
+                <i class="bi bi-github fs-2 text-white hover-opacity-100 transition-all"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="core-services" class="core-services section premium-section overflow-hidden z-index-2 position-relative pt-5 pb-5">
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
+        <span class="description-title text-gradient-bg">What We Do</span>
+        <h2 class="premium-heading display-5 fw-bold text-white mt-2">Comprehensive Digital Solutions</h2>
+        <p class="premium-subheading text-white-50 mt-3 mx-auto" style="max-width: 600px;">End-to-end services engineered to transform your business operations and elevate your digital footprint globally.</p>
+      </div>
+
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card neon-glow-card premium-glass-panel p-5 rounded-4 h-100 hover-lift text-center position-relative overflow-hidden border border-secondary border-opacity-10">
+              <div class="neon-border"></div>
+              <div class="icon-box bg-gradient-premium rounded-circle d-inline-flex align-items-center justify-content-center mb-4 shadow-glow" style="width: 80px; height: 80px;">
+                <i class="material-icons fs-1 text-white">brush</i>
+              </div>
+              <h3 class="h4 text-white fw-bold mb-3 position-relative z-index-2">Creative Design</h3>
+              <p class="text-white-50 position-relative z-index-2">Logos, branding, UI/UX, and marketing materials that capture your unique identity and engage your audience instantly.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card neon-glow-card premium-glass-panel p-5 rounded-4 h-100 hover-lift text-center position-relative overflow-hidden border border-secondary border-opacity-10">
+              <div class="neon-border border-accent-alt"></div>
+              <div class="icon-box bg-gradient-premium rounded-circle d-inline-flex align-items-center justify-content-center mb-4 shadow-glow" style="width: 80px; height: 80px;">
+                <i class="material-icons fs-1 text-white">code</i>
+              </div>
+              <h3 class="h4 text-white fw-bold mb-3 position-relative z-index-2">Web Development</h3>
+              <p class="text-white-50 position-relative z-index-2">Scalable, lightning-fast, and SEO-optimized websites built with the latest technologies to convert visitors into clients.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card neon-glow-card premium-glass-panel p-5 rounded-4 h-100 hover-lift text-center position-relative overflow-hidden border border-secondary border-opacity-10">
+              <div class="neon-border"></div>
+              <div class="icon-box bg-gradient-premium rounded-circle d-inline-flex align-items-center justify-content-center mb-4 shadow-glow" style="width: 80px; height: 80px;">
+                <i class="material-icons fs-1 text-white">public</i>
+              </div>
+              <h3 class="h4 text-white fw-bold mb-3 position-relative z-index-2">eCitizen Solutions</h3>
+              <p class="text-white-50 position-relative z-index-2">Streamlined assistance for business registration, KRA PINs, compliance, and other crucial government portal services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="training-section premium-bg-darker position-relative z-index-2 pb-5">
       <div class="bg-abstract-shapes"></div>
-      <div class="container z-index-2 position-relative" style="padding: 80px 0;">
-        <div class="training-container premium-glass-panel rounded-5 shadow-2xl overflow-hidden p-0">
+      <div class="container z-index-2 position-relative" style="padding: 60px 0;">
+        <div class="training-container premium-glass-panel rounded-5 shadow-2xl overflow-hidden p-0 border border-secondary border-opacity-25">
           <div class="row g-0">
-            <div class="col-lg-4 bg-gradient-premium p-5 text-center text-lg-start d-flex flex-column justify-content-center">
-              <div class="icon fs-1 mb-3 pulse-animation">🎓</div>
-              <h2 class="fw-bold text-white mb-3">Professional Masterclasses</h2>
-              <p class="text-white-50 mb-4">Develop your skills with top-tier industry experts and gain a competitive edge in the digital era.</p>
-              <a href="contact.html" target="_self" class="btn premium-white-btn rounded-pill align-self-start mx-auto mx-lg-0 mt-auto hover-lift">Enroll Now</a>
+            <div class="col-lg-5 bg-gradient-premium p-5 text-center text-lg-start d-flex flex-column justify-content-center">
+              <div class="icon fs-1 mb-4 pulse-animation">🎓</div>
+              <h2 class="fw-bold text-white mb-4 display-6">Professional Masterclasses</h2>
+              <p class="text-white-50 mb-5 fs-5">Develop high-income skills with top-tier industry experts and gain a competitive edge in the modern digital era. Practical, hands-on, and portfolio-driven.</p>
+              
+              <a href="contact.html" target="_self" class="btn premium-enroll-btn rounded-pill align-self-start mx-auto mx-lg-0 mt-auto hover-lift btn-lg px-5 fw-bold">Enroll Now <i class="material-icons ms-2 align-middle">school</i></a>
             </div>
 
-            <div class="col-lg-8 p-5 bg-dark-glass">
-              <div class="training-cards row g-4">
+            <div class="col-lg-7 p-5 bg-dark-glass d-flex align-items-center">
+              <div class="training-cards row g-4 w-100">
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                  <div class="card premium-course-card h-100 border-0 bg-transparent">
-                    <div class="card-body p-4 rounded-4 glass-card-effect hover-lift-sm">
-                      <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="card premium-course-card neon-glow-card h-100 border-0 bg-transparent rounded-4 overflow-hidden position-relative">
+                    <div class="neon-border"></div>
+                    <div class="card-body p-4 glass-card-effect border border-secondary border-opacity-10 position-relative z-index-2">
+                      <div class="d-flex justify-content-between align-items-center mb-4">
                         <h3 class="h5 fw-bold text-white mb-0"><i class="material-icons text-accent me-2 align-middle">palette</i>Graphic Design</h3>
-                        <span class="badge bg-accent-soft text-accent rounded-pill">8 Weeks</span>
+                        <span class="badge bg-accent-soft text-accent rounded-pill px-3 py-2">8 Weeks</span>
                       </div>
-                      <p class="text-white-50 small mb-0">Master Adobe Creative Suite, Advanced Logo Design, and Premium Branding Strategies.</p>
+                      <p class="text-white-50 mb-0 small">Master Adobe Creative Suite (Photoshop, Illustrator, InDesign), Advanced Logo Design, and Premium Corporate Branding Strategies.</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                  <div class="card premium-course-card h-100 border-0 bg-transparent">
-                    <div class="card-body p-4 rounded-4 glass-card-effect hover-lift-sm">
-                      <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h3 class="h5 fw-bold text-white mb-0"><i class="material-icons text-accent me-2 align-middle">code</i>Web Dev</h3>
-                        <span class="badge bg-accent-soft text-accent rounded-pill">12 Weeks</span>
+                  <div class="card premium-course-card neon-glow-card h-100 border-0 bg-transparent rounded-4 overflow-hidden position-relative">
+                    <div class="neon-border border-accent-alt"></div>
+                    <div class="card-body p-4 glass-card-effect border border-secondary border-opacity-10 position-relative z-index-2">
+                      <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="h5 fw-bold text-white mb-0"><i class="material-icons text-accent me-2 align-middle">terminal</i>Web Dev</h3>
+                        <span class="badge bg-accent-soft text-accent rounded-pill px-3 py-2">12 Weeks</span>
                       </div>
-                      <p class="text-white-50 small mb-0">Full-stack basics: HTML5, CSS3, JavaScript ES6, and Modern Responsive Frameworks.</p>
+                      <p class="text-white-50 mb-0 small">Comprehensive Full-stack basics: HTML5, CSS3, JavaScript ES6, React JS, Node environments, and Modern Responsive Frameworks.</p>
                     </div>
                   </div>
                 </div>
@@ -172,51 +274,55 @@
       </div>
     </section>
 
-    <section id="steps" class="steps section premium-section overflow-hidden z-index-2 position-relative">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title text-gradient-bg">Process</span>
-        <h2 class="premium-heading">Our Proven Methodology</h2>
-        <p class="premium-subheading">A seamless, fully transparent roadmap from concept to successful launch</p>
+    <section id="steps" class="steps section premium-section overflow-hidden z-index-2 position-relative py-5">
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
+        <span class="description-title text-gradient-bg">Our Process</span>
+        <h2 class="premium-heading display-5 fw-bold text-white mt-2">Proven Methodology</h2>
+        <p class="premium-subheading text-white-50 mt-3 mx-auto" style="max-width: 600px;">A seamless, fully transparent roadmap from initial concept to successful, high-impact launch.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="steps-wrapper position-relative py-5">
-          <div class="process-line d-none d-lg-block"></div>
-          <div class="row gy-5">
+        <div class="steps-wrapper position-relative py-4">
+          <div class="process-line d-none d-lg-block position-absolute top-50 start-0 w-100 bg-secondary opacity-25" style="height: 2px; transform: translateY(-50%); z-index: 0;"></div>
+          <div class="row gy-5 position-relative z-index-1">
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="process-item premium-step-card text-center position-relative">
-                <div class="step-icon-wrapper rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center">
-                  <i class="material-icons fs-1 text-white">lightbulb</i>
+              <div class="process-item premium-step-card neon-glow-card text-center position-relative overflow-hidden p-4 rounded-4 bg-dark-glass hover-lift border border-secondary border-opacity-10 h-100">
+                <div class="neon-border"></div>
+                <div class="step-icon-wrapper position-relative z-index-2 rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center bg-gradient-premium" style="width: 70px; height: 70px;">
+                  <i class="material-icons fs-2 text-white">lightbulb</i>
                 </div>
-                <h3 class="fw-bold text-white h5 mb-3">01. Discovery & Planning</h3>
-                <p class="text-white-50 small">Deep dive into your brand's core requirements, audience analysis, and strategic milestone mapping.</p>
+                <h3 class="fw-bold text-white h5 mb-3 position-relative z-index-2">01. Discovery</h3>
+                <p class="text-white-50 small mb-0 position-relative z-index-2">Deep dive into your brand's core requirements, competitor analysis, and strategic milestone mapping.</p>
               </div>
             </div>
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-              <div class="process-item premium-step-card text-center position-relative mt-lg-5">
-                <div class="step-icon-wrapper rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center">
-                  <i class="material-icons fs-1 text-white">design_services</i>
+              <div class="process-item premium-step-card neon-glow-card text-center position-relative overflow-hidden mt-lg-5 p-4 rounded-4 bg-dark-glass hover-lift border border-secondary border-opacity-10 h-100">
+                <div class="neon-border border-accent-alt"></div>
+                <div class="step-icon-wrapper position-relative z-index-2 rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center bg-gradient-premium" style="width: 70px; height: 70px;">
+                  <i class="material-icons fs-2 text-white">architecture</i>
                 </div>
-                <h3 class="fw-bold text-white h5 mb-3">02. Design & Dev</h3>
-                <p class="text-white-50 small">Crafting bespoke wireframes, high-fidelity UI/UX designs, and writing extremely robust, clean code.</p>
+                <h3 class="fw-bold text-white h5 mb-3 position-relative z-index-2">02. Design</h3>
+                <p class="text-white-50 small mb-0 position-relative z-index-2">Crafting bespoke wireframes, high-fidelity UI/UX designs, and writing extremely robust, clean code.</p>
               </div>
             </div>
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
-              <div class="process-item premium-step-card text-center position-relative">
-                <div class="step-icon-wrapper rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center">
-                  <i class="material-icons fs-1 text-white">bug_report</i>
+              <div class="process-item premium-step-card neon-glow-card text-center position-relative overflow-hidden p-4 rounded-4 bg-dark-glass hover-lift border border-secondary border-opacity-10 h-100">
+                <div class="neon-border"></div>
+                <div class="step-icon-wrapper position-relative z-index-2 rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center bg-gradient-premium" style="width: 70px; height: 70px;">
+                  <i class="material-icons fs-2 text-white">bug_report</i>
                 </div>
-                <h3 class="fw-bold text-white h5 mb-3">03. Rigorous Testing</h3>
-                <p class="text-white-50 small">Comprehensive QA testing across all devices to guarantee a flawless, bug-free user experience.</p>
+                <h3 class="fw-bold text-white h5 mb-3 position-relative z-index-2">03. Testing</h3>
+                <p class="text-white-50 small mb-0 position-relative z-index-2">Comprehensive QA testing across all devices and browsers to guarantee a flawless, bug-free user experience.</p>
               </div>
             </div>
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="800">
-              <div class="process-item premium-step-card text-center position-relative mt-lg-5">
-                <div class="step-icon-wrapper rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center">
-                  <i class="material-icons fs-1 text-white">rocket_launch</i>
+              <div class="process-item premium-step-card neon-glow-card text-center position-relative overflow-hidden mt-lg-5 p-4 rounded-4 bg-dark-glass hover-lift border border-secondary border-opacity-10 h-100">
+                <div class="neon-border border-accent-alt"></div>
+                <div class="step-icon-wrapper position-relative z-index-2 rounded-circle shadow-glow mx-auto mb-4 d-flex align-items-center justify-content-center bg-gradient-premium" style="width: 70px; height: 70px;">
+                  <i class="material-icons fs-2 text-white">rocket_launch</i>
                 </div>
-                <h3 class="fw-bold text-white h5 mb-3">04. Launch & Scale</h3>
-                <p class="text-white-50 small">Smooth deployment to production, followed by ongoing premium support and performance optimization.</p>
+                <h3 class="fw-bold text-white h5 mb-3 position-relative z-index-2">04. Launch</h3>
+                <p class="text-white-50 small mb-0 position-relative z-index-2">Smooth deployment to production, followed by ongoing premium support and performance optimization.</p>
               </div>
             </div>
           </div>
@@ -224,11 +330,65 @@
       </div>
     </section>
 
-    <section id="testimonials" class="testimonials section premium-bg-alt z-index-2 position-relative">
-      <div class="container section-title" data-aos="fade-up">
+    <section class="faq-section py-5 premium-bg-darker z-index-2 position-relative">
+        <div class="container" data-aos="fade-up">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <span class="description-title text-gradient-bg">Support</span>
+                    <h2 class="premium-heading text-white fw-bold mt-2">Frequently Asked Questions</h2>
+                    <p class="text-white-50 mt-3">Everything you need to know about our services and billing.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion premium-accordion" id="faqAccordion">
+                        <div class="accordion-item bg-transparent border-secondary border-opacity-25 mb-3 rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-dark-glass text-white fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How long does a typical web development project take?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-white-50 bg-black bg-opacity-25">
+                                    A standard corporate website takes approximately 2 to 4 weeks from discovery to final launch. Complex web applications or e-commerce platforms may take 6 to 12 weeks depending on the feature requirements.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-secondary border-opacity-25 mb-3 rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-dark-glass text-white fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Do you offer support after the project is launched?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-white-50 bg-black bg-opacity-25">
+                                    Absolutely. We provide 1 month of free premium support post-launch to handle any bugs or minor adjustments. Extended maintenance and SEO packages are also available.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-secondary border-opacity-25 mb-3 rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-dark-glass text-white fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Are your IT Masterclasses available online?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-white-50 bg-black bg-opacity-25">
+                                    Yes, our Professional Masterclasses are offered both in-person at our Nairobi facility and fully online via interactive virtual classrooms, giving you the flexibility to learn from anywhere.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section premium-bg-alt z-index-2 position-relative py-5">
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
         <span class="description-title text-gradient-bg">Feedback</span>
-        <h2 class="premium-heading">Client Success Stories</h2>
-        <p class="premium-subheading">Hear what our esteemed partners have to say about our premium services</p>
+        <h2 class="premium-heading display-5 fw-bold text-white mt-2">Client Success Stories</h2>
+        <p class="premium-subheading text-white-50 mt-3 mx-auto" style="max-width: 600px;">Hear what our esteemed partners have to say about our premium services and unwavering dedication.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="200">
@@ -236,101 +396,201 @@
           <script type="application/json" class="swiper-config">
             {
               "loop": true, "speed": 1000, "autoplay": { "delay": 4000, "disableOnInteraction": false },
-              "slidesPerView": "auto", "centeredSlides": true, "pagination": { "el": ".swiper-pagination", "clickable": true },
-              "breakpoints": { "320": { "slidesPerView": 1, "spaceBetween": 20 }, "768": { "slidesPerView": 2, "spaceBetween": 30 }, "1200": { "slidesPerView": 3, "spaceBetween": 40 } }
+              "slidesPerView": "auto", "centeredSlides": true, "spaceBetween": 30,
+              "pagination": { "el": ".swiper-pagination", "clickable": true },
+              "breakpoints": { "320": { "slidesPerView": 1 }, "768": { "slidesPerView": 2 }, "1200": { "slidesPerView": 3 } }
             }
           </script>
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="testimonial-card premium-review-card glass-panel rounded-4 p-4 p-md-5 d-flex flex-column h-100">
-                <i class="material-icons fs-1 text-accent opacity-25 mb-3">format_quote</i>
-                <p class="fst-italic text-white-50 mb-4 flex-grow-1">"Absolutely outstanding design work! G-Max Tech completely metamorphosed our entire brand identity. The level of professional service was unmatched."</p>
-                <div class="d-flex align-items-center pt-4 border-top border-secondary border-opacity-25">
-                  <div class="avatar-placeholder rounded-circle d-flex align-items-center justify-content-center fw-bold text-white me-3" style="width:50px;height:50px;background:linear-gradient(135deg,#008870,#004d40)">SM</div>
+              <div class="testimonial-card neon-glow-card premium-review-card glass-panel rounded-4 p-4 p-md-5 d-flex flex-column h-100 border border-secondary border-opacity-10 position-relative overflow-hidden">
+                <div class="neon-border"></div>
+                <i class="material-icons fs-1 text-accent opacity-25 mb-4 position-relative z-index-2">format_quote</i>
+                <p class="fst-italic text-white-50 mb-4 flex-grow-1 fs-6 lh-lg position-relative z-index-2">"Absolutely outstanding design work! G-Max Tech completely metamorphosed our entire brand identity. The level of professional service and attention to detail was unmatched."</p>
+                <div class="d-flex align-items-center pt-4 border-top border-secondary border-opacity-25 position-relative z-index-2">
+                  <div class="avatar-placeholder rounded-circle d-flex align-items-center justify-content-center fw-bold text-white me-3 shadow-glow" style="width:55px;height:55px;background:linear-gradient(135deg,#008870,#004d40)">SM</div>
                   <div>
                     <h5 class="fw-bold text-white mb-1 h6">Sarah M.</h5>
                     <span class="text-accent small fw-semibold">CEO, Tech Startup</span>
-                    <div class="text-warning small mt-1">★★★★★</div>
+                    <div class="text-warning small mt-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="testimonial-card premium-review-card glass-panel rounded-4 p-4 p-md-5 d-flex flex-column h-100">
-                <i class="material-icons fs-1 text-accent opacity-25 mb-3">format_quote</i>
-                <p class="fst-italic text-white-50 mb-4 flex-grow-1">"Lightning fast and incredibly reliable eCitizen services. They handled my complex company registration seamlessly. Highly recommend!"</p>
-                <div class="d-flex align-items-center pt-4 border-top border-secondary border-opacity-25">
-                  <div class="avatar-placeholder rounded-circle d-flex align-items-center justify-content-center fw-bold text-white me-3" style="width:50px;height:50px;background:linear-gradient(135deg,#008870,#004d40)">JK</div>
+              <div class="testimonial-card neon-glow-card premium-review-card glass-panel rounded-4 p-4 p-md-5 d-flex flex-column h-100 border border-secondary border-opacity-10 position-relative overflow-hidden">
+                <div class="neon-border border-accent-alt"></div>
+                <i class="material-icons fs-1 text-accent opacity-25 mb-4 position-relative z-index-2">format_quote</i>
+                <p class="fst-italic text-white-50 mb-4 flex-grow-1 fs-6 lh-lg position-relative z-index-2">"Lightning fast and incredibly reliable eCitizen services. They handled my complex company registration seamlessly within days. Highly recommend for any corporate needs!"</p>
+                <div class="d-flex align-items-center pt-4 border-top border-secondary border-opacity-25 position-relative z-index-2">
+                  <div class="avatar-placeholder rounded-circle d-flex align-items-center justify-content-center fw-bold text-white me-3 shadow-glow" style="width:55px;height:55px;background:linear-gradient(135deg,#008870,#004d40)">JK</div>
                   <div>
                     <h5 class="fw-bold text-white mb-1 h6">John K.</h5>
                     <span class="text-accent small fw-semibold">Business Owner</span>
-                    <div class="text-warning small mt-1">★★★★★</div>
+                    <div class="text-warning small mt-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card neon-glow-card premium-review-card glass-panel rounded-4 p-4 p-md-5 d-flex flex-column h-100 border border-secondary border-opacity-10 position-relative overflow-hidden">
+                <div class="neon-border"></div>
+                <i class="material-icons fs-1 text-accent opacity-25 mb-4 position-relative z-index-2">format_quote</i>
+                <p class="fst-italic text-white-50 mb-4 flex-grow-1 fs-6 lh-lg position-relative z-index-2">"The web development masterclass gave me the exact practical skills I needed to land my first junior dev role. The mentors at G-Max Tech are genuinely invested in your success."</p>
+                <div class="d-flex align-items-center pt-4 border-top border-secondary border-opacity-25 position-relative z-index-2">
+                  <div class="avatar-placeholder rounded-circle d-flex align-items-center justify-content-center fw-bold text-white me-3 shadow-glow" style="width:55px;height:55px;background:linear-gradient(135deg,#008870,#004d40)">EW</div>
+                  <div>
+                    <h5 class="fw-bold text-white mb-1 h6">Eunice W.</h5>
+                    <span class="text-accent small fw-semibold">Full-stack Developer</span>
+                    <div class="text-warning small mt-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card neon-glow-card premium-review-card glass-panel rounded-4 p-4 p-md-5 d-flex flex-column h-100 border border-secondary border-opacity-10 position-relative overflow-hidden">
+                <div class="neon-border border-accent-alt"></div>
+                <i class="material-icons fs-1 text-accent opacity-25 mb-4 position-relative z-index-2">format_quote</i>
+                <p class="fst-italic text-white-50 mb-4 flex-grow-1 fs-6 lh-lg position-relative z-index-2">"We needed a highly scalable e-commerce platform and G-Max delivered flawlessly. The site speed is incredibly fast, and our conversion rate has literally doubled since the launch."</p>
+                <div class="d-flex align-items-center pt-4 border-top border-secondary border-opacity-25 position-relative z-index-2">
+                  <div class="avatar-placeholder rounded-circle d-flex align-items-center justify-content-center fw-bold text-white me-3 shadow-glow" style="width:55px;height:55px;background:linear-gradient(135deg,#008870,#004d40)">DL</div>
+                  <div>
+                    <h5 class="fw-bold text-white mb-1 h6">David L.</h5>
+                    <span class="text-accent small fw-semibold">E-Commerce Director</span>
+                    <div class="text-warning small mt-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card neon-glow-card premium-review-card glass-panel rounded-4 p-4 p-md-5 d-flex flex-column h-100 border border-secondary border-opacity-10 position-relative overflow-hidden">
+                <div class="neon-border"></div>
+                <i class="material-icons fs-1 text-accent opacity-25 mb-4 position-relative z-index-2">format_quote</i>
+                <p class="fst-italic text-white-50 mb-4 flex-grow-1 fs-6 lh-lg position-relative z-index-2">"G-Max Tech handles all our corporate branding and digital marketing. They simply understand how to make a business look premium. A truly reliable partner."</p>
+                <div class="d-flex align-items-center pt-4 border-top border-secondary border-opacity-25 position-relative z-index-2">
+                  <div class="avatar-placeholder rounded-circle d-flex align-items-center justify-content-center fw-bold text-white me-3 shadow-glow" style="width:55px;height:55px;background:linear-gradient(135deg,#008870,#004d40)">GO</div>
+                  <div>
+                    <h5 class="fw-bold text-white mb-1 h6">Grace O.</h5>
+                    <span class="text-accent small fw-semibold">Marketing Manager</span>
+                    <div class="text-warning small mt-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card neon-glow-card premium-review-card glass-panel rounded-4 p-4 p-md-5 d-flex flex-column h-100 border border-secondary border-opacity-10 position-relative overflow-hidden">
+                <div class="neon-border border-accent-alt"></div>
+                <i class="material-icons fs-1 text-accent opacity-25 mb-4 position-relative z-index-2">format_quote</i>
+                <p class="fst-italic text-white-50 mb-4 flex-grow-1 fs-6 lh-lg position-relative z-index-2">"The cyber services team at G-Max saved me hours of document processing. They formatted my executive CV perfectly, resulting in call-backs almost immediately."</p>
+                <div class="d-flex align-items-center pt-4 border-top border-secondary border-opacity-25 position-relative z-index-2">
+                  <div class="avatar-placeholder rounded-circle d-flex align-items-center justify-content-center fw-bold text-white me-3 shadow-glow" style="width:55px;height:55px;background:linear-gradient(135deg,#008870,#004d40)">MT</div>
+                  <div>
+                    <h5 class="fw-bold text-white mb-1 h6">Michael T.</h5>
+                    <span class="text-accent small fw-semibold">Corporate Executive</span>
+                    <div class="text-warning small mt-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-pagination mt-4"></div>
+          <div class="swiper-pagination mt-5"></div>
         </div>
       </div>
+    </section>
+
+    <section class="cta-section py-5 position-relative z-index-2 overflow-hidden">
+        <div class="bg-abstract-shapes opacity-50"></div>
+        <div class="container py-5 text-center position-relative z-index-2" data-aos="zoom-in">
+            <h2 class="display-4 fw-bold text-white mb-4">Ready to Transform Your Digital Presence?</h2>
+            <p class="lead text-white-50 mb-5 max-w-700 mx-auto">Join hundreds of successful businesses that have scaled using our premium tech solutions and design architecture.</p>
+            <a href="contact.html" class="btn premium-primary-btn btn-lg px-5 py-3 rounded-pill shadow-glow hover-lift fs-5 fw-semibold">Let's Talk About Your Project</a>
+        </div>
     </section>
 
   </main>
 
   <footer id="footer" class="footer position-relative z-index-2">
-    <div class="footer-top border-top border-secondary border-opacity-10 py-5">
+    <div class="footer-top border-top border-secondary border-opacity-25 py-5 bg-darker">
       <div class="container mt-4">
         <div class="row gy-5">
+          
           <div class="col-lg-4 col-md-12 footer-about pe-lg-5">
             <a href="index.html" class="logo d-flex align-items-center mb-4 text-decoration-none">
-              <img src="assets/img/gmax.png" alt="G-Max Tech" height="40" class="me-2">
+              <img src="assets/img/gmax.png" alt="G-Max Tech Logo" height="45" class="me-2">
               <span class="sitename fs-3 fw-bold text-white">G-Max Tech</span>
             </a>
-            <p class="text-white-50 lh-lg pe-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, and elite professional IT training.</p>
-          </div>
-          <div class="col-lg-2 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Navigation</h4>
-            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="index.html" target="_self" class="text-white-50 text-decoration-none">Home</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="about.html" target="_self" class="text-white-50 text-decoration-none">About Us</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" target="_self" class="text-white-50 text-decoration-none">Services</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="Portfolio.html" target="_self" class="text-white-50 text-decoration-none">Portfolio</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="contact.html" target="_self" class="text-white-50 text-decoration-none">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-6 footer-links">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Services</h4>
-            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Graphic Design</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">eCitizen Support</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">Web Development</a></li>
-              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none">IT Training</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start mt-5 mt-lg-0">
-            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact</h4>
-            <div class="text-white-50 mt-3 lh-lg">
-              <p class="mb-1"><i class="bi bi-geo-alt-fill text-accent me-2"></i> Thika Road, Nairobi, Kenya</p>
-              <p class="mb-1"><i class="bi bi-telephone-fill text-accent me-2"></i> +254 798 667 892</p>
-              <p class="mb-3"><i class="bi bi-envelope-fill text-accent me-2"></i> gmaxkedesigns@gmail.com</p>
+            <p class="text-white-50 lh-lg pe-4 mb-4">Transforming raw ideas into stunning digital reality. We proudly specialize in high-end graphic design, seamless eCitizen solutions, robust web development, and elite professional IT training in Kenya.</p>
+            <div class="social-links d-flex gap-2">
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center bg-dark-glass text-white rounded-circle hover-lift" style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
+          
+          <div class="col-lg-2 col-6 footer-links">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Quick Links</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="index.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Home</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Services</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="about.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">About Us</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="Portfolio.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Portfolio</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="contact.html" target="_self" class="text-white-50 text-decoration-none hover-text-white transition-all">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-6 footer-links">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Services</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">Graphic Design</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">Web Development</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">eCitizen Support</a></li>
+              <li><i class="bi bi-chevron-right text-accent me-2 small"></i><a href="service.html" class="text-white-50 text-decoration-none hover-text-white transition-all">IT Masterclasses</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4 col-md-12 footer-contact text-center text-md-start mt-5 mt-lg-0">
+            <h4 class="text-white fw-bold h5 mb-4 position-relative pb-2 border-bottom border-accent d-inline-block">Contact Info</h4>
+            <div class="text-white-50 mt-3 lh-lg mb-4">
+              <p class="mb-2"><i class="bi bi-geo-alt-fill text-accent me-2 fs-5 align-middle"></i> Thika Road, Nairobi, Kenya</p>
+              <p class="mb-2"><i class="bi bi-telephone-fill text-accent me-2 fs-5 align-middle"></i> +254 798 667 892</p>
+              <p class="mb-2"><i class="bi bi-envelope-fill text-accent me-2 fs-5 align-middle"></i> gmaxkedesigns@gmail.com</p>
+            </div>
+            
+            <h5 class="text-white fw-semibold h6 mb-3">Subscribe to our Newsletter</h5>
+            <form action="#" class="d-flex position-relative">
+                <input type="email" class="form-control bg-dark-glass border-secondary border-opacity-25 text-white pe-5 py-2 rounded-pill" placeholder="Email address" required>
+                <button type="submit" class="btn premium-primary-btn position-absolute end-0 top-0 bottom-0 rounded-pill px-4">Subscribe</button>
+            </form>
+          </div>
+          
         </div>
       </div>
     </div>
-    <div class="footer-bottom bg-black bg-opacity-50 py-4">
+    <div class="footer-bottom bg-black py-4">
       <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <p class="mb-0 text-white-50 small">© 2026 <strong class="text-white px-1">G-Max Tech</strong> All Rights Reserved.</p>
+        <p class="mb-0 text-white-50 small">© <span id="currentYear">2026</span> <strong class="text-white px-1">G-Max Tech</strong> All Rights Reserved.</p>
+        <div class="text-white-50 small mt-2 mt-md-0 d-flex gap-3">
+            <a href="#" class="text-white-50 text-decoration-none hover-text-white">Privacy Policy</a>
+            <a href="#" class="text-white-50 text-decoration-none hover-text-white">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center hover-lift shadow-glow"><i class="material-icons">arrow_upward</i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center hover-lift shadow-glow bg-gradient-premium rounded-circle" aria-label="Scroll to Top">
+      <i class="material-icons text-white">arrow_upward</i>
+  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  
   <script src="assets/js/main.js"></script>
+  <script>
+      // Quick script for dynamic year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

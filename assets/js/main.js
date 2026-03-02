@@ -1,175 +1,190 @@
 /**
-* G-Max Tech Multi-Page Global Logic (Swiftsync Sidebar integrated)
-*/
+ * ============================================================================
+ * G-MAX TECH PREMIUM MAIN JAVASCRIPT
+ * Handles all interactive elements, animations, and sliders.
+ * Canvas background completely removed for a cleaner experience.
+ * ============================================================================
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
     "use strict";
 
-    /* =====================================================
+    /* ========================================================================
        1. PRELOADER
-    ===================================================== */
-    const preloader = document.getElementById('preloader');
+       ======================================================================== */
+    const preloader = document.querySelector('#preloader');
     if (preloader) {
         window.addEventListener('load', () => {
             setTimeout(() => {
                 preloader.style.opacity = '0';
-                setTimeout(() => { preloader.remove(); }, 600);
-            }, 300);
+                preloader.style.visibility = 'hidden';
+            }, 500); // Slight delay for smooth transition
         });
     }
 
-    /* =====================================================
-       2. SWIFTSYNC SIDEBAR LOGIC (MOBILE NAV)
-    ===================================================== */
+    /* ========================================================================
+       2. PREMIUM HEADER SCROLL EFFECT
+       ======================================================================== */
+    const selectHeader = document.querySelector('.premium-header');
+    if (selectHeader) {
+        const headerScrolled = () => {
+            if (window.scrollY > 50) {
+                selectHeader.classList.add('scrolled');
+            } else {
+                selectHeader.classList.remove('scrolled');
+            }
+        };
+        window.addEventListener('scroll', headerScrolled);
+        headerScrolled(); // Init on load
+    }
+
+    /* ========================================================================
+       3. MOBILE SIDEBAR NAVIGATION
+       ======================================================================== */
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebarToggle');
     const sidebarClose = document.getElementById('sidebarClose');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-    function openSidebar() {
-        if(sidebar) sidebar.classList.add('active');
-        if(sidebarOverlay) sidebarOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Lock background scrolling
+    if (sidebar && sidebarToggle && sidebarClose && sidebarOverlay) {
+        const openSidebar = () => {
+            sidebar.classList.add('active');
+            sidebarOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        };
+
+        const closeSidebar = () => {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        sidebarToggle.addEventListener('click', openSidebar);
+        sidebarClose.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
     }
 
-    function closeSidebar() {
-        if(sidebar) sidebar.classList.remove('active');
-        if(sidebarOverlay) sidebarOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    if (sidebarToggle) sidebarToggle.addEventListener('click', openSidebar);
-    if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
-    if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
-
-    /* =====================================================
-       3. TOP NAVBAR SCROLL EFFECT
-    ===================================================== */
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (navbar) {
-            if (window.scrollY > 50) {
-                navbar.classList.add('glass-effect', 'shadow-sm');
+    /* ========================================================================
+       4. SCROLL TO TOP BUTTON
+       ======================================================================== */
+    const scrollTop = document.querySelector('.scroll-top');
+    if (scrollTop) {
+        const toggleScrollTop = () => {
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('active');
             } else {
-                // Remove effect if completely at top, or keep glass based on preference
-                // navbar.classList.remove('shadow-sm'); 
+                scrollTop.classList.remove('active');
             }
-        }
-    });
-
-    /* =====================================================
-       4. HERO SLIDER LOGIC
-    ===================================================== */
-    const slides = document.querySelectorAll(".hero-slide");
-    if (slides.length > 1) {
-        let slideIndex = 0;
-        setInterval(() => {
-            slides[slideIndex].classList.remove("active");
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].classList.add("active");
-        }, 6000);
-    }
-
-    /* =====================================================
-       5. INITIALIZE PLUGINS (AOS, Swiper, Typed, Isotope, GLightbox)
-    ===================================================== */
-    
-    // AOS
-    if (typeof AOS !== 'undefined') {
-        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
-    }
-
-    // Typed.js
-    if (typeof Typed !== 'undefined') {
-        const typedEl = document.querySelector('.typed');
-        if (typedEl) {
-            const strings = typedEl.getAttribute('data-typed-items');
-            if (strings) {
-                new Typed('.typed', {
-                    strings: strings.split(', '), typeSpeed: 50, backSpeed: 30, backDelay: 2000, loop: true, cursorChar: '|'
-                });
-            }
-        }
-    }
-
-    // Swiper
-    document.querySelectorAll(".premium-swiper-container").forEach((swiperEl) => {
-        const configEl = swiperEl.querySelector(".swiper-config");
-        if (configEl && typeof Swiper !== 'undefined') {
-            try { new Swiper(swiperEl, JSON.parse(configEl.innerHTML.trim())); } 
-            catch (e) { console.warn('Swiper parse error:', e); }
-        }
-    });
-
-    // Isotope (Portfolio Filtering)
-    if (typeof Isotope !== 'undefined') {
-        const isoContainer = document.querySelector('.isotope-container');
-        if (isoContainer) {
-            // Wait for images to load if imagesLoaded is present
-            let initIso = function() {
-                let iso = new Isotope(isoContainer, {
-                    itemSelector: '.isotope-item',
-                    layoutMode: 'fitRows'
-                });
-                const filterButtons = document.querySelectorAll('.isotope-filters li');
-                filterButtons.forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        const filterValue = btn.getAttribute('data-filter');
-                        iso.arrange({ filter: filterValue });
-                        filterButtons.forEach(b => b.classList.remove('filter-active'));
-                        btn.classList.add('filter-active');
-                    });
-                });
-            };
-
-            if(typeof imagesLoaded !== 'undefined') {
-                imagesLoaded(isoContainer, initIso);
-            } else {
-                initIso();
-            }
-        }
-    }
-
-    // GLightbox
-    if (typeof GLightbox !== 'undefined') {
-        GLightbox({ selector: '.glightbox' });
-    }
-
-    /* =====================================================
-       6. NEURON CANVAS BACKGROUND
-    ===================================================== */
-    const canvas = document.getElementById('neuron-canvas');
-    if (canvas) {
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        };
+        window.addEventListener('scroll', toggleScrollTop);
         
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-        
-        const particles = Array.from({ length: 40 }, () => ({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            vx: (Math.random() - 0.5) * 0.5,
-            vy: (Math.random() - 0.5) * 0.5,
-            radius: Math.random() * 2 + 1
-        }));
-
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = 'rgba(0, 136, 112, 0.4)';
-            particles.forEach(p => {
-                p.x += p.vx; p.y += p.vy;
-                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                ctx.fill();
+        scrollTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
-            requestAnimationFrame(draw);
+        });
+    }
+
+    /* ========================================================================
+       5. INITIALIZE AOS (Animate On Scroll)
+       ======================================================================== */
+    function aosInit() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false,
+                offset: 50
+            });
         }
-        draw();
+    }
+    window.addEventListener('load', aosInit);
+
+    /* ========================================================================
+       6. INITIALIZE GLightbox
+       ======================================================================== */
+    if (typeof GLightbox !== 'undefined') {
+        const glightbox = GLightbox({
+            selector: '.glightbox',
+            openEffect: 'zoom',
+            closeEffect: 'fade'
+        });
+    }
+
+    /* ========================================================================
+       7. INITIALIZE SWIPER SLIDERS
+       ======================================================================== */
+    if (typeof Swiper !== 'undefined') {
+        // Find all swiper containers with a JSON config inside
+        document.querySelectorAll('.swiper').forEach(function(swiperElement) {
+            let config = swiperElement.querySelector('.swiper-config');
+            if (config) {
+                let parsedConfig = JSON.parse(config.innerHTML.trim());
+                new Swiper(swiperElement, parsedConfig);
+            }
+        });
+    }
+
+    /* ========================================================================
+       8. ISOTOPE PORTFOLIO FILTERING
+       ======================================================================== */
+    let portfolioIsotope = document.querySelector('.isotope-container');
+    if (portfolioIsotope && typeof Isotope !== 'undefined' && typeof imagesLoaded !== 'undefined') {
+        imagesLoaded(portfolioIsotope, function() {
+            let isotopeInstance = new Isotope(portfolioIsotope, {
+                itemSelector: '.isotope-item',
+                layoutMode: portfolioIsotope.getAttribute('data-layout') || 'masonry',
+                filter: portfolioIsotope.closest('.isotope-layout').getAttribute('data-default-filter') || '*'
+            });
+
+            let portfolioFilters = document.querySelectorAll('.isotope-filters li');
+
+            portfolioFilters.forEach(function(filter) {
+                filter.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all
+                    portfolioFilters.forEach(function(el) {
+                        el.classList.remove('filter-active');
+                    });
+                    
+                    // Add active class to clicked
+                    this.classList.add('filter-active');
+
+                    // Filter items
+                    isotopeInstance.arrange({
+                        filter: this.getAttribute('data-filter')
+                    });
+                    
+                    // Refresh AOS after filtering
+                    if (typeof AOS !== 'undefined') {
+                        setTimeout(() => { AOS.refresh(); }, 300);
+                    }
+                });
+            });
+        });
+    }
+
+    /* ========================================================================
+       9. TYPED.JS (For Hero Section text typing effect)
+       ======================================================================== */
+    const typedElements = document.querySelectorAll('.typed');
+    if (typedElements.length > 0 && typeof Typed !== 'undefined') {
+        typedElements.forEach(el => {
+            let typedItems = el.getAttribute('data-typed-items');
+            if (typedItems) {
+                typedItems = typedItems.split(',');
+                new Typed(el, {
+                    strings: typedItems,
+                    loop: true,
+                    typeSpeed: 80,
+                    backSpeed: 40,
+                    backDelay: 2000
+                });
+            }
+        });
     }
 });
