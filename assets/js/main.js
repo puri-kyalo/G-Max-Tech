@@ -187,4 +187,42 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    /* ========================================================================
+       10. TARGETED GSAP ANIMATIONS (E, Y, B, W)
+       ======================================================================== */
+    if (typeof gsap !== 'undefined') {
+        // 'E' animation - Gently floats up and down
+        gsap.to('.gsap-e', {
+            y: -12,
+            duration: 1.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+
+        // 'Y' animation - Rotates seamlessly on the Y-axis (3D Flip)
+        gsap.to('.gsap-y', {
+            rotationY: 360,
+            duration: 3,
+            repeat: -1,
+            ease: "none"
+        });
+        
+      // 'B' animation - Rotates seamlessly on the Y-axis (3D Flip)
+        gsap.to('.gsap-b', {
+            rotationY: 360,
+            duration: 3,
+            repeat: -1,
+            ease: "none"
+        });
+
+        // 'W' animation - Spins continuously like a wheel
+        gsap.to('.gsap-w', {
+            rotationZ: 360,
+            duration: 4,
+            repeat: -1,
+            ease: "none"
+        });
+    }
 });

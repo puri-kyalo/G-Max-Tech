@@ -318,6 +318,28 @@ a:hover {
     width: 100%;
 }
 
+/* ADDITIONS: Dropdown Menu Enhancements */
+.dropdown-menu.bg-dark-glass {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+.dropdown-item.hover-text-white:hover {
+    color: #fff !important;
+    background: rgba(0, 255, 204, 0.1);
+}
+
+/* ADDITIONS: GSAP Typography Formatting */
+.gsap-word {
+    display: inline-block;
+    white-space: nowrap;
+    perspective: 1000px;
+}
+.gsap-anim-letter {
+    display: inline-block;
+    transform-style: preserve-3d;
+}
+
 /* --------------------------------------------------------------------------
    7. MOBILE SIDEBAR
    -------------------------------------------------------------------------- */
